@@ -1,14 +1,13 @@
-# Bitta yangi Reels tayyorlash (har 5 soatda ishlaydigan vazifa)
+# Bitta yangi Reels tayyorlash va joylash (har kuni, har 5 soatda: 08:17, 13:17, 18:17, 23:17)
 
 Maqsad: Instagram @naziraliyevurinboy uchun **yuqori sifatli, original** o'quv Reels.
 Mavzular FAQAT: Dasturlash / SQL / Flutter (Dart). Til: o'zbek (lotin).
 
-## 1. Qaysi kun uchun
-- Vaqt zonasi: Asia/Tashkent. Joylash kunlari: dushanba–shanba, 13:30.
-- Maqsad sana = 13:30 hali o'tmagan eng yaqin dushanba–shanba kuni
-  (bugun Du–Sha bo'lib, soat 13:30 dan oldin bo'lsa — bugun; aks holda keyingi Du–Sha kuni).
-- `queue/<YYYY-MM-DD>/` ichida allaqachon 4 ta video papkasi bo'lsa — **hech narsa qilmang, to'xtang**.
-- Aks holda keyingi raqamli papkani yarating: `queue/<sana>/01`, `02`, `03`, `04`.
+## 1. Papka
+- Vaqt zonasi: Asia/Tashkent. Sana = bugun.
+- `queue/<bugun>/` ichida keyingi bo'sh raqamli papkani yarating (`01`, `02`, ...).
+- Agar `queue/` da `posted.txt` siz qolgan eski video bo'lsa (oldingi ishga tushirishdan), avval uni POST.md bo'yicha joylang,
+  keyin yangi video yasang va uni ham joylang.
 
 ## 2. Mavzu tanlash
 - `topics.md` ni o'qing — u yerdagi mavzularni TAKRORLAMANG.
@@ -38,3 +37,7 @@ Mavzular FAQAT: Dasturlash / SQL / Flutter (Dart). Til: o'zbek (lotin).
 - `topics.md` ga qator qo'shing: `- <sana> <NN> <topic> — <qisqa sarlavha>`.
 - `preview/` papkasi git'ga qo'shilmaydi (.gitignore).
 - Commit va `git push` (main). Push 413/xato bersa — avval `git pull --rebase`.
+
+## 6. Joylash
+- Push'dan keyin POST.md bo'yicha shu videoni darhol Instagram'ga joylang (`posted.txt`, commit, push).
+- Kuniga bir marta (13:17 dagi ishga tushirishda) statistikani yig'ib `stats.md` ni yangilang.
