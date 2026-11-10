@@ -4,3 +4,4 @@
 - Videoning yuqorisida username / brend yozuvi YO'Q.
 - Har bir videoga tools/music.py bilan original fon musiqasi qo'shiladi (har safar boshqa seed).
 - Ommabop formatlar/trendlar ilhom sifatida olinadi, lekin kontent har doim original.
+- Videolar tools/render.py bilan yasaladi; qo'llanma: PRODUCE.md (tayyorlash), POST.md (joylash).
