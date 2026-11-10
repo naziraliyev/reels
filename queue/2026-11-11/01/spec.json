@@ -1,0 +1,14 @@
+{
+  "topic": "flutter-stateless-vs-stateful",
+  "lang": "dart",
+  "accent": "#38bdf8",
+  "caption": "StatelessWidget yoki StatefulWidget? 🤔\nFlutter'da eng ko'p adashtiradigan savol — 30 soniyada tushuntiramiz.\n📌 Saqlab qo'ying, keyin kerak bo'ladi.\n💬 Siz qaysi birini ko'proq ishlatasiz?\n👉 Har kuni Flutter, SQL va dasturlash bo'yicha qisqa darslar — obuna bo'ling!\n\n#flutter #dart #dasturlash #mobildasturlash #flutterdev #programmalash #it #uzbekistan #dasturchi #android",
+  "scenes": [
+    {"type": "hook", "dur": 3.5, "title": "Flutter", "lines": ["Stateless", "yoki Stateful?"], "sub": "Qachon qaysi biri kerak", "footer": "30 soniyada tushuning"},
+    {"type": "text", "dur": 4.5, "title": "Asosiy farq", "lines": ["Stateless — o'zgarmaydi. Bir marta chiziladi.", "Stateful — ichki holati bor. setState() bilan qayta chiziladi."]},
+    {"type": "code", "dur": 6, "title": "StatelessWidget", "desc": ["Matn, ikonka, statik dizayn"], "code": ["class Salom extends StatelessWidget {", "  @override", "  Widget build(BuildContext context) {", "    return Text('Salom!');", "  }", "}"]},
+    {"type": "code", "dur": 7, "title": "StatefulWidget", "desc": ["Tugma bosilganda son oshadi"], "code": ["class Hisob extends StatefulWidget {", "  @override", "  State<Hisob> createState() => _H();", "}", "class _H extends State<Hisob> {", "  int son = 0;", "  @override", "  Widget build(BuildContext c) {", "    return ElevatedButton(", "      onPressed: () => setState(() => son++),", "      child: Text('$son'),", "    );", "  }", "}"]},
+    {"type": "bullets", "dur": 5.5, "title": "Qoidasi oddiy", "items": ["Ma'lumot o'zgarmasa — Stateless", "Foydalanuvchi bosganda o'zgarsa — Stateful", "Imkon qadar Stateless ishlating: tezroq va soddaroq"]},
+    {"type": "cta", "dur": 4, "title": "Saqlab qo'ying", "lines": ["Flutter suhbatlarida", "ko'p so'raladi"], "box_title": "Obuna bo'ling", "box_text": "Flutter  ·  SQL  ·  Dasturlash", "footer": ["Izohda yozing: siz qaysi", "birini ko'proq ishlatasiz?"]}
+  ]
+}

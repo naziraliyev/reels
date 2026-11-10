@@ -1,0 +1,7 @@
+StatelessWidget yoki StatefulWidget? 🤔
+Flutter'da eng ko'p adashtiradigan savol — 30 soniyada tushuntiramiz.
+📌 Saqlab qo'ying, keyin kerak bo'ladi.
+💬 Siz qaysi birini ko'proq ishlatasiz?
+👉 Har kuni Flutter, SQL va dasturlash bo'yicha qisqa darslar — obuna bo'ling!
+
+#flutter #dart #dasturlash #mobildasturlash #flutterdev #programmalash #it #uzbekistan #dasturchi #android
