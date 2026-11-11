@@ -1,0 +1,114 @@
+{
+  "topic": "dart-final-vs-const-list",
+  "lang": "dart",
+  "accent": "#a78bfa",
+  "caption": "Bu Dart kodi nimani chiqaradi? 🤯\nfinal va const ro'yxatga add() qilsak — biri ishlaydi, biri xato beradi!\nfinal — o'zgaruvchini qotiradi, const — qiymatning o'zini. Farqi videoda.\n📌 Saqlab qo'ying, Flutter suhbatlarida ko'p so'raladi.\n💬 Siz birinchi urinishda to'g'ri javob berdingizmi? Izohda yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#flutter #dart #dasturlash #flutterdev #mobildasturlash #programmalash #dasturchi #coding #it #uzbekistan #suhbatsavollari",
+  "scenes": [
+    {
+      "type": "hook",
+      "dur": 3.5,
+      "title": "Dart / Flutter",
+      "lines": [
+        "Qaysi qator",
+        "xato beradi?"
+      ],
+      "sub": "final yoki const ro'yxat",
+      "footer": "3 soniya o'ylab ko'ring"
+    },
+    {
+      "type": "code",
+      "dur": 7,
+      "title": "Savol",
+      "desc": [
+        "Ikkala ro'yxatga element qo'shamiz"
+      ],
+      "code": [
+        "void main() {",
+        "  final a = [1, 2];",
+        "  a.add(3);",
+        "  print(a);",
+        "",
+        "  const b = [1, 2];",
+        "  b.add(3);",
+        "  print(b);",
+        "}"
+      ],
+      "out_title": "Natija:",
+      "out": [
+        "?"
+      ]
+    },
+    {
+      "type": "code",
+      "dur": 7,
+      "title": "Javob",
+      "desc": [
+        "final ishladi, const — xato!"
+      ],
+      "code": [
+        "final a = [1, 2];",
+        "a.add(3);",
+        "print(a);",
+        "",
+        "const b = [1, 2];",
+        "b.add(3);"
+      ],
+      "out_title": "Natija:",
+      "out": [
+        "[1, 2, 3]",
+        "!Unsupported operation:",
+        "!Cannot add to an unmodifiable list"
+      ]
+    },
+    {
+      "type": "text",
+      "dur": 6.5,
+      "title": "Nega?",
+      "lines": [
+        "final — o'zgaruvchini qayta tayinlab bo'lmaydi, lekin ichidagi ro'yxat o'zgaradi.",
+        "const — qiymatning o'zi o'zgarmas."
+      ]
+    },
+    {
+      "type": "code",
+      "dur": 7,
+      "title": "Farqi",
+      "desc": [
+        "const qiymat kompilyatsiyada aniq bo'ladi"
+      ],
+      "code": [
+        "final a = [1, 2];",
+        "a = [5];   // XATO: qayta tayinlash",
+        "a.add(3);  // OK",
+        "",
+        "const b = [1, 2];",
+        "b = [5];   // XATO",
+        "b.add(3);  // XATO (ishlash vaqtida)"
+      ]
+    },
+    {
+      "type": "bullets",
+      "dur": 5,
+      "title": "Flutter'da",
+      "items": [
+        "const Text('Salom') — vidjet qayta yaratilmaydi",
+        "Imkon bo'lsa const yozing: ilova tezroq ishlaydi"
+      ]
+    },
+    {
+      "type": "cta",
+      "dur": 4,
+      "title": "Saqlab qo'ying",
+      "lines": [
+        "Flutter suhbatlarida",
+        "ko'p beriladi"
+      ],
+      "box_title": "Obuna bo'ling",
+      "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+      "footer": [
+        "Izohda yozing: siz to'g'ri",
+        "javob berdingizmi?"
+      ]
+    }
+  ]
+}

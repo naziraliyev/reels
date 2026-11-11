@@ -17,6 +17,7 @@ Scene types:
   text     {title, lines[]}                     big readable explanation
   bullets  {title, items[]}
   code     {title, desc[], code[], out_title, out[] | table:{cols[],rows[][]}}
+           (a code/out line starting with "!" is drawn as plain red error text)
   compare  {title, bad_label, bad[], good_label, good[], note}
   table    {title, tables:[{name, cols[], rows[][]}], note[]}
   cta      {title, lines[], box_title, box_text, footer[]}
@@ -115,6 +116,9 @@ class Canvas:
 
     def code_line(self, d, x, y, line, size):
         # tokens: strings, comments, numbers, words, other
+        if line.startswith("!"):  # error/exception output line: plain red text
+            d.text((x, y), line[1:], font=mono(size), fill=RED)
+            return
         if self.lang in ("sql",) and line.strip().startswith("--") or line.strip().startswith("//") or line.strip().startswith("#"):
             d.text((x, y), line, font=mono(size), fill=COMMENT)
             return

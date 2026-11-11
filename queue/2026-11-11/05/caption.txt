@@ -1,0 +1,8 @@
+Bu Dart kodi nimani chiqaradi? 🤯
+final va const ro'yxatga add() qilsak — biri ishlaydi, biri xato beradi!
+final — o'zgaruvchini qotiradi, const — qiymatning o'zini. Farqi videoda.
+📌 Saqlab qo'ying, Flutter suhbatlarida ko'p so'raladi.
+💬 Siz birinchi urinishda to'g'ri javob berdingizmi? Izohda yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#flutter #dart #dasturlash #flutterdev #mobildasturlash #programmalash #dasturchi #coding #it #uzbekistan #suhbatsavollari
