@@ -1,0 +1,14 @@
+{
+  "topic": "python-mutable-default-arg",
+  "lang": "python",
+  "accent": "#a78bfa",
+  "caption": "Bu Python kodi nimani chiqaradi? 🤯\nStandart argumentga [] qo'yish — boshlovchilarning eng ko'p uchraydigan xatolaridan biri.\nNega shunday bo'ladi va qanday to'g'ri yoziladi — videoda.\n📌 Saqlab qo'ying, keyin kerak bo'ladi.\n💬 Siz bu xatoga duch kelganmisiz? Izohda yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #dasturlash #pythonuz #programmalash #dasturchi #coding #it #uzbekistan #pythontips #backend #boshlovchi",
+  "scenes": [
+    {"type": "hook", "dur": 3.5, "title": "Python", "lines": ["Bu xato sizni", "soatlab qiynaydi"], "sub": "Standart argument tuzog'i", "footer": "30 soniyada tushuning"},
+    {"type": "code", "dur": 7, "title": "Natija nima bo'ladi?", "desc": ["Funksiyani 2 marta chaqiramiz"], "code": ["def qosh(x, lst=[]):", "    lst.append(x)", "    return lst", "", "print(qosh(1))", "print(qosh(2))"], "out_title": "Natija:", "out": ["[1]", "[1, 2]   ← [2] emas!"]},
+    {"type": "text", "dur": 7, "title": "Nega?", "lines": ["Standart qiymat faqat BIR MARTA yaratiladi — funksiya e'lon qilinganda.", "Keyingi har chaqiruvda o'sha bitta ro'yxat qayta ishlatiladi."]},
+    {"type": "compare", "dur": 7.5, "title": "Yechim", "bad_label": "Noto'g'ri", "bad": ["def qosh(x, lst=[]):", "    lst.append(x)", "    return lst"], "good_label": "To'g'ri", "good": ["def qosh(x, lst=None):", "    if lst is None:", "        lst = []", "    lst.append(x)", "    return lst"], "note": "Endi har chaqiruvda yangi ro'yxat: [1], [2]"},
+    {"type": "bullets", "dur": 5.5, "title": "Eslab qoling", "items": ["Standart qiymatga [] yoki {} qo'ymang", "O'rniga None ishlating", "Bu savol suhbatlarda ko'p beriladi"]},
+    {"type": "cta", "dur": 4, "title": "Saqlab qo'ying", "lines": ["Python suhbatlarida", "ko'p so'raladi"], "box_title": "Obuna bo'ling", "box_text": "Dasturlash  ·  SQL  ·  Flutter", "footer": ["Izohda yozing: siz bu", "xatoga duch kelganmisiz?"]}
+  ]
+}
