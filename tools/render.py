@@ -9,6 +9,7 @@ Spec format (see tools/example_spec.json):
   "lang": "sql" | "dart" | "python" | "js",   # code highlighting
   "accent": "#facc15",                         # optional
   "caption": "full Instagram caption with hashtags",
+  "music": "lofi" | "sql" | "flutter",         # optional; default from lang: sql->sql, dart->flutter, else lofi
   "scenes": [ {"type": ..., "dur": seconds, ...}, ... ]
 }
 Scene types:
@@ -318,7 +319,8 @@ def render(spec_path, out_dir):
     silent = os.path.join(tmp, "v.mp4")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", listfile, "-c", "copy", silent], check=True)
     wav = os.path.join(tmp, "m.wav")
-    subprocess.run([sys.executable, os.path.join(HERE, "music.py"), wav, str(total + 0.5), str(random.randint(1, 10 ** 6))], check=True, stdout=subprocess.DEVNULL)
+    style = spec.get("music") or {"sql": "sql", "dart": "flutter"}.get(spec.get("lang"), "lofi")
+    subprocess.run([sys.executable, os.path.join(HERE, "music.py"), wav, str(total + 0.5), str(random.randint(1, 10 ** 6)), style], check=True, stdout=subprocess.DEVNULL)
     out = os.path.join(out_dir, "video.mp4")
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", silent, "-i", wav, "-map", "0:v", "-map", "1:a",
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", out + ".tmp.mp4"], check=True)
