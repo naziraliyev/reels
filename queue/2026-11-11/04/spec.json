@@ -1,0 +1,15 @@
+{
+  "topic": "js-array-sort-numbers",
+  "lang": "js",
+  "accent": "#facc15",
+  "caption": "Bu JavaScript kodi nimani chiqaradi? 🤯\n[10, 1, 5, 2].sort() — javob [1, 2, 5, 10] emas!\nsort() standartda sonlarni MATN sifatida solishtiradi. To'g'ri usuli — videoda.\n📌 Saqlab qo'ying, suhbatda asqotadi.\n💬 Siz birinchi urinishda to'g'ri javob berdingizmi? Izohda yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#javascript #dasturlash #js #frontend #webdasturlash #programmalash #dasturchi #coding #it #uzbekistan #suhbatsavollari",
+  "scenes": [
+    {"type": "hook", "dur": 3.5, "title": "JavaScript", "lines": ["Bu kod nima", "chiqaradi?"], "sub": "[10, 1, 5, 2].sort()", "footer": "3 soniya o'ylab ko'ring"},
+    {"type": "code", "dur": 6, "title": "Savol", "desc": ["Sonlarni o'sish tartibida saralaymiz"], "code": ["const sonlar = [10, 1, 5, 2];", "sonlar.sort();", "console.log(sonlar);"], "out_title": "Natija:", "out": ["?"]},
+    {"type": "code", "dur": 6.5, "title": "Javob", "desc": ["Kutilmagan natija!"], "code": ["const sonlar = [10, 1, 5, 2];", "sonlar.sort();", "console.log(sonlar);"], "out_title": "Natija:", "out": ["[1, 10, 2, 5]"]},
+    {"type": "text", "dur": 6, "title": "Nega?", "lines": ["sort() standartda elementlarni MATN (string) sifatida solishtiradi.", "\"10\" < \"2\", chunki birinchi belgi '1' < '2'."]},
+    {"type": "compare", "dur": 7, "title": "To'g'ri usuli", "bad_label": "Noto'g'ri", "bad": ["sonlar.sort();", "// [1, 10, 2, 5]"], "good_label": "To'g'ri", "good": ["sonlar.sort((a, b) => a - b);", "// [1, 2, 5, 10]"], "note": "Kamayish tartibi uchun: b - a yozing"},
+    {"type": "bullets", "dur": 5, "title": "Esda tuting", "items": ["sort() massivning o'zini o'zgartiradi", "Sonlar uchun doim solishtiruvchi funksiya bering"]},
+    {"type": "cta", "dur": 4, "title": "Saqlab qo'ying", "lines": ["Suhbatlarda ko'p", "beriladigan tuzoq"], "box_title": "Obuna bo'ling", "box_text": "Dasturlash  ·  SQL  ·  Flutter", "footer": ["Izohda yozing: siz to'g'ri", "javob berdingizmi?"]}
+  ]
+}
