@@ -1,0 +1,15 @@
+{
+  "topic": "sql-count-star-vs-count-column",
+  "lang": "sql",
+  "accent": "#fb923c",
+  "caption": "Bu SQL so'rov nimani chiqaradi: 4 mi yoki 2? 🤯\nCOUNT(*) va COUNT(ustun) bir xil emas — NULL qiymatlar hammasini o'zgartiradi!\nCOUNT(*) — barcha qatorlar, COUNT(ustun) — faqat NULL bo'lmaganlar.\n📌 Saqlab qo'ying, SQL suhbatlarida ko'p so'raladi.\n💬 Siz birinchi urinishda to'g'ri javob berdingizmi? Izohda yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#sql #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #coding #it #uzbekistan #suhbatsavollari",
+  "scenes": [
+    {"type": "hook", "dur": 3.5, "title": "SQL quiz", "lines": ["Natija: 4 mi", "yoki 2?"], "sub": "COUNT(*) va COUNT(tel)", "footer": "3 soniya o'ylab ko'ring"},
+    {"type": "table", "dur": 5, "title": "Jadval", "tables": [{"name": "users", "cols": ["id", "ism", "tel"], "rows": [["1", "Ali", "901234567"], ["2", "Vali", "NULL"], ["3", "Gani", "991112233"], ["4", "Sardor", "NULL"]]}], "note": ["4 ta qator, 2 tasida tel — NULL"]},
+    {"type": "code", "dur": 6.5, "title": "Savol", "desc": ["Ikkala son bir xil chiqadimi?"], "code": ["SELECT COUNT(*),", "       COUNT(tel)", "FROM users;"], "out_title": "Natija:", "out": ["?"]},
+    {"type": "code", "dur": 6.5, "title": "Javob", "desc": ["Sonlar har xil chiqdi!"], "code": ["SELECT COUNT(*),", "       COUNT(tel)", "FROM users;"], "out_title": "Natija:", "table": {"cols": ["count(*)", "count(tel)"], "rows": [["4", "2"]]}},
+    {"type": "text", "dur": 5.5, "title": "Nega?", "lines": ["COUNT(*) — barcha qatorlarni sanaydi.", "COUNT(tel) — faqat NULL bo'lmagan qiymatlarni sanaydi."]},
+    {"type": "code", "dur": 6.5, "title": "Bonus", "desc": ["Telefoni yo'qlar soni — bitta so'rovda"], "code": ["SELECT COUNT(*) - COUNT(tel)", "       AS tel_yoq", "FROM users;"], "out_title": "Natija:", "table": {"cols": ["tel_yoq"], "rows": [["2"]]}},
+    {"type": "cta", "dur": 4, "title": "Saqlab qo'ying", "lines": ["SQL suhbatlarida", "ko'p beriladi"], "box_title": "Obuna bo'ling", "box_text": "Dasturlash  ·  SQL  ·  Flutter", "footer": ["Izohda yozing: siz to'g'ri", "javob berdingizmi?"]}
+  ]
+}

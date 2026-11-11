@@ -6,3 +6,4 @@
 - 2026-11-11 03 python-mutable-default-arg (qayta joylash) — 2026-11-10/01 video Instagram'da ijro bo'lmagani uchun qayta render
 - 2026-11-11 04 js-array-sort-numbers — JS: [10, 1, 5, 2].sort() nimani chiqaradi? (quiz)
 - 2026-11-11 05 dart-final-vs-const-list — Dart: final va const ro'yxatga add() — qaysi biri xato beradi? (quiz)
+- 2026-11-11 06 sql-count-star-vs-count-column — SQL: COUNT(*) va COUNT(tel) — natija 4 mi yoki 2? (quiz)

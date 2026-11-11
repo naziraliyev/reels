@@ -1,0 +1,8 @@
+Bu SQL so'rov nimani chiqaradi: 4 mi yoki 2? 🤯
+COUNT(*) va COUNT(ustun) bir xil emas — NULL qiymatlar hammasini o'zgartiradi!
+COUNT(*) — barcha qatorlar, COUNT(ustun) — faqat NULL bo'lmaganlar.
+📌 Saqlab qo'ying, SQL suhbatlarida ko'p so'raladi.
+💬 Siz birinchi urinishda to'g'ri javob berdingizmi? Izohda yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#sql #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #coding #it #uzbekistan #suhbatsavollari
