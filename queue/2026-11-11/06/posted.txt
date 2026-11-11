@@ -1,2 +1,1 @@
-media_id: 18099708206545193
-posted_at: 2026-11-11 23:19 (Asia/Tashkent)
+media_id=18099708206545193 posted_at=2026-11-11 23:19 +05
