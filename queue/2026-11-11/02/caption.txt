@@ -1,0 +1,8 @@
+WHERE yoki HAVING — farqini bilasizmi? 🤔
+SQL suhbatlarida eng ko'p beriladigan savollardan biri.
+WHERE qatorlarni guruhlashdan OLDIN, HAVING esa guruhlarni GROUP BY dan KEYIN filtrlaydi.
+📌 Saqlab qo'ying, suhbatda asqotadi.
+💬 Siz WHERE ichida SUM() yozib xato olganmisiz? Izohda yozing!
+👉 Har kuni SQL, Flutter va dasturlash bo'yicha qisqa darslar — obuna bo'ling!
+
+#sql #dasturlash #sqluz #database #malumotlarbazasi #backend #dasturchi #programmalash #it #uzbekistan #suhbatsavollari

@@ -1,0 +1,16 @@
+{
+  "topic": "sql-where-vs-having",
+  "lang": "sql",
+  "accent": "#4ade80",
+  "caption": "WHERE yoki HAVING — farqini bilasizmi? 🤔\nSQL suhbatlarida eng ko'p beriladigan savollardan biri.\nWHERE qatorlarni guruhlashdan OLDIN, HAVING esa guruhlarni GROUP BY dan KEYIN filtrlaydi.\n📌 Saqlab qo'ying, suhbatda asqotadi.\n💬 Siz WHERE ichida SUM() yozib xato olganmisiz? Izohda yozing!\n👉 Har kuni SQL, Flutter va dasturlash bo'yicha qisqa darslar — obuna bo'ling!\n\n#sql #dasturlash #sqluz #database #malumotlarbazasi #backend #dasturchi #programmalash #it #uzbekistan #suhbatsavollari",
+  "scenes": [
+    {"type": "hook", "dur": 3.5, "title": "SQL", "lines": ["WHERE", "yoki HAVING?"], "sub": "Suhbatda albatta so'raladi", "footer": "30 soniyada tushuning"},
+    {"type": "table", "dur": 4, "title": "Misol jadval", "tables": [{"name": "sotuvlar", "cols": ["ism", "summa"], "rows": [["Ali", "100"], ["Ali", "300"], ["Vali", "50"], ["Vali", "80"], ["Gul", "500"]]}], "note": ["Har bir qator — bitta sotuv"]},
+    {"type": "text", "dur": 4.5, "title": "Asosiy farq", "lines": ["WHERE — guruhlashdan OLDIN qatorlarni filtrlaydi.", "HAVING — GROUP BY dan KEYIN guruhlarni filtrlaydi."]},
+    {"type": "code", "dur": 6.5, "title": "WHERE", "desc": ["Avval 90 dan kichik sotuvlar tashlanadi"], "code": ["SELECT ism, SUM(summa) AS jami", "FROM sotuvlar", "WHERE summa > 90", "GROUP BY ism;"], "out_title": "Natija:", "table": {"cols": ["ism", "jami"], "rows": [["Ali", "400"], ["Gul", "500"]]}},
+    {"type": "code", "dur": 6.5, "title": "HAVING", "desc": ["1 tadan ko'p sotuvi bor guruhlar qoladi"], "code": ["SELECT ism, SUM(summa) AS jami", "FROM sotuvlar", "GROUP BY ism", "HAVING COUNT(*) > 1;"], "out_title": "Natija:", "table": {"cols": ["ism", "jami"], "rows": [["Ali", "400"], ["Vali", "130"]]}},
+    {"type": "compare", "dur": 6.5, "title": "Ko'p uchraydigan xato", "bad_label": "Xato beradi", "bad": ["SELECT ism FROM sotuvlar", "WHERE SUM(summa) > 200", "GROUP BY ism;"], "good_label": "To'g'ri", "good": ["SELECT ism FROM sotuvlar", "GROUP BY ism", "HAVING SUM(summa) > 200;"], "note": "SUM, COUNT, AVG — WHERE ichida ishlamaydi"},
+    {"type": "bullets", "dur": 4.5, "title": "Qoidasi oddiy", "items": ["Qator sharti — WHERE", "Guruh (SUM, COUNT) sharti — HAVING"]},
+    {"type": "cta", "dur": 4, "title": "Saqlab qo'ying", "lines": ["SQL suhbatlarida", "ko'p so'raladi"], "box_title": "Obuna bo'ling", "box_text": "SQL  ·  Flutter  ·  Dasturlash", "footer": ["Izohda yozing: HAVING'ni", "qachon ishlatgansiz?"]}
+  ]
+}
