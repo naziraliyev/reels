@@ -1,0 +1,8 @@
+Dart quiz: bu kod qaysi tartibda chiqaradi — A B C D mi yoki A D C B? 🤔
+Javob: A D C B! Avval sinxron kod, keyin microtask navbati, eng oxirida event navbati (Future, Timer).
+Flutter'da await, setState va animatsiyalar aynan shu tartibga bo'ysunadi.
+📌 Saqlab qo'ying — Dart/Flutter suhbatlarida tez-tez so'raladi.
+💬 Siz qaysi javobni tanladingiz? Izohga ADCB yoki ABCD deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#flutter #dart #dartquiz #flutterdev #async #eventloop #mobiledev #dasturlash #dasturchi #it #uzbekistan #suhbatsavollari

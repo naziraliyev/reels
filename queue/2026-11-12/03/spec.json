@@ -1,0 +1,100 @@
+{
+ "topic": "dart-event-loop-print-order",
+ "lang": "dart",
+ "accent": "#4ade80",
+ "caption": "Dart quiz: bu kod qaysi tartibda chiqaradi — A B C D mi yoki A D C B? 🤔\nJavob: A D C B! Avval sinxron kod, keyin microtask navbati, eng oxirida event navbati (Future, Timer).\nFlutter'da await, setState va animatsiyalar aynan shu tartibga bo'ysunadi.\n📌 Saqlab qo'ying — Dart/Flutter suhbatlarida tez-tez so'raladi.\n💬 Siz qaysi javobni tanladingiz? Izohga ADCB yoki ABCD deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#flutter #dart #dartquiz #flutterdev #async #eventloop #mobiledev #dasturlash #dasturchi #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart quiz",
+   "lines": [
+    "A B C D",
+    "yoki A D C B?"
+   ],
+   "sub": "print qaysi tartibda chiqadi",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Savol",
+   "desc": [
+    "Konsolda nima chiqadi?"
+   ],
+   "code": [
+    "import 'dart:async';",
+    "",
+    "void main() {",
+    "  print('A');",
+    "  Future(() => print('B'));",
+    "  scheduleMicrotask(() => print('C'));",
+    "  print('D');",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Javob",
+   "desc": [
+    "B eng oxirida chiqdi!"
+   ],
+   "code": [
+    "import 'dart:async';",
+    "",
+    "void main() {",
+    "  print('A');",
+    "  Future(() => print('B'));",
+    "  scheduleMicrotask(() => print('C'));",
+    "  print('D');",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "A",
+    "D",
+    "C",
+    "B"
+   ]
+  },
+  {
+   "type": "bullets",
+   "dur": 7,
+   "title": "Nega?",
+   "items": [
+    "Sinxron kod: A, D",
+    "Microtask navbati: C",
+    "Event navbati: B"
+   ]
+  },
+  {
+   "type": "text",
+   "dur": 5,
+   "title": "Flutter'da",
+   "lines": [
+    "Future(...) darhol emas, navbatga qo'yiladi.",
+    "Microtask'lar har doim undan oldin bajariladi."
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 4,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Dart suhbatlarida",
+    "ko'p so'raladigan savol"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "ADCB yoki ABCD?"
+   ]
+  }
+ ]
+}
