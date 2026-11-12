@@ -1,0 +1,9 @@
+Bu Python kod nimani chiqaradi? Faqat bitta element o'zgardimi? 🤯
+[[0]*3]*3 — 3 ta alohida ro'yxat emas, BITTA ro'yxatga 3 ta havola!
+Shuning uchun bitta qatorni o'zgartirsangiz, hammasi o'zgaradi.
+To'g'ri yo'l: [[0]*3 for _ in range(3)]
+📌 Saqlab qo'ying — matritsa yasashda ko'p uchraydigan xato.
+💬 Siz birinchi urinishda to'g'ri topdingizmi? Izohda yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythonquiz #dasturlash #dasturchi #programming #coding #pythondasturlash #backend #it #uzbekistan #suhbatsavollari

@@ -1,0 +1,113 @@
+{
+ "topic": "python-list-multiply-nested",
+ "lang": "python",
+ "accent": "#4ade80",
+ "caption": "Bu Python kod nimani chiqaradi? Faqat bitta element o'zgardimi? 🤯\n[[0]*3]*3 — 3 ta alohida ro'yxat emas, BITTA ro'yxatga 3 ta havola!\nShuning uchun bitta qatorni o'zgartirsangiz, hammasi o'zgaradi.\nTo'g'ri yo'l: [[0]*3 for _ in range(3)]\n📌 Saqlab qo'ying — matritsa yasashda ko'p uchraydigan xato.\n💬 Siz birinchi urinishda to'g'ri topdingizmi? Izohda yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #pythonquiz #dasturlash #dasturchi #programming #coding #pythondasturlash #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python quiz",
+   "lines": [
+    "a[0][0] = 1",
+    "Nechta 1 chiqadi?"
+   ],
+   "sub": "a = [[0]*3]*3",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Savol",
+   "desc": [
+    "Faqat a[0][0] ni o'zgartirdik."
+   ],
+   "code": [
+    "a = [[0] * 3] * 3",
+    "a[0][0] = 1",
+    "print(a)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Javob",
+   "desc": [
+    "Uchala qator ham o'zgardi!"
+   ],
+   "code": [
+    "a = [[0] * 3] * 3",
+    "a[0][0] = 1",
+    "print(a)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "[[1, 0, 0],",
+    " [1, 0, 0],",
+    " [1, 0, 0]]"
+   ]
+  },
+  {
+   "type": "text",
+   "dur": 5.5,
+   "title": "Nega?",
+   "lines": [
+    "Tashqi * 3 ichki ro'yxatni nusxalamaydi.",
+    "U bitta ro'yxatga 3 ta havola yaratadi: a[0] is a[1] → True"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7,
+   "title": "To'g'ri yo'l",
+   "bad_label": "Xato",
+   "bad": [
+    "a = [[0] * 3] * 3"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "a = [[0] * 3",
+    "     for _ in range(3)]"
+   ],
+   "note": "Har qator — alohida yangi ro'yxat"
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Tekshiramiz",
+   "desc": [
+    "Endi faqat bitta qator o'zgaradi"
+   ],
+   "code": [
+    "a = [[0] * 3 for _ in range(3)]",
+    "a[0][0] = 1",
+    "print(a)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "[[1, 0, 0],",
+    " [0, 0, 0],",
+    " [0, 0, 0]]"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 4,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Matritsa yasashda",
+    "ko'p uchraydigan xato"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohda yozing: siz to'g'ri",
+    "javob berdingizmi?"
+   ]
+  }
+ ]
+}
