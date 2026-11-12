@@ -8,3 +8,4 @@
 - 2026-11-11 05 dart-final-vs-const-list — Dart: final va const ro'yxatga add() — qaysi biri xato beradi? (quiz)
 - 2026-11-11 06 sql-count-star-vs-count-column — SQL: COUNT(*) va COUNT(tel) — natija 4 mi yoki 2? (quiz)
 - 2026-11-12 01 python-list-multiply-nested — Python: [[0]*3]*3 tuzog'i — nechta 1 chiqadi? (quiz)
+- 2026-11-12 02 sql-not-in-null-trap — SQL: NOT IN ichida NULL — 2 qator yoki 0? (quiz)

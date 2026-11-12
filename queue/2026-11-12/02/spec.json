@@ -1,0 +1,156 @@
+{
+ "topic": "sql-not-in-null-trap",
+ "lang": "sql",
+ "accent": "#38bdf8",
+ "caption": "Bu SQL so'rov nechta qator qaytaradi: 2 mi yoki 0? 🤯\nNOT IN ichida bitta NULL bo'lsa — natija BO'SH chiqadi!\nSababi: id <> NULL har doim UNKNOWN, shuning uchun hech bir qator shartdan o'tmaydi.\nXavfsiz yo'l: NOT EXISTS yoki IS NOT NULL filtri.\n📌 Saqlab qo'ying — SQL suhbatlarida eng ko'p beriladigan tuzoq.\n💬 Siz birinchi urinishda to'g'ri topdingizmi? Izohda yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#sql #sqlquiz #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL quiz",
+   "lines": [
+    "Nechta qator:",
+    "2 mi yoki 0?"
+   ],
+   "sub": "NOT IN va bitta NULL",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "table",
+   "dur": 5,
+   "title": "Jadvallar",
+   "tables": [
+    {
+     "name": "xodimlar",
+     "cols": [
+      "id",
+      "ism"
+     ],
+     "rows": [
+      [
+       "1",
+       "Ali"
+      ],
+      [
+       "2",
+       "Vali"
+      ],
+      [
+       "3",
+       "Sardor"
+      ]
+     ]
+    },
+    {
+     "name": "bloklangan",
+     "cols": [
+      "xodim_id"
+     ],
+     "rows": [
+      [
+       "1"
+      ],
+      [
+       "NULL"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "Faqat Ali bloklangan"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Savol",
+   "desc": [
+    "Bloklanmagan xodimlarni olamiz"
+   ],
+   "code": [
+    "SELECT ism FROM xodimlar",
+    "WHERE id NOT IN (",
+    "  SELECT xodim_id",
+    "  FROM bloklangan",
+    ");"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Javob",
+   "desc": [
+    "Bitta ham qator chiqmadi!"
+   ],
+   "code": [
+    "SELECT ism FROM xodimlar",
+    "WHERE id NOT IN (",
+    "  SELECT xodim_id",
+    "  FROM bloklangan",
+    ");"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "!Bo'sh — 0 ta qator"
+   ]
+  },
+  {
+   "type": "text",
+   "dur": 6,
+   "title": "Nega?",
+   "lines": [
+    "NOT IN (1, NULL) aslida:",
+    "id <> 1 AND id <> NULL",
+    "id <> NULL — UNKNOWN. Demak, hech bir qator o'tmaydi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "To'g'ri yo'l",
+   "desc": [
+    "NOT EXISTS NULL'dan qo'rqmaydi"
+   ],
+   "code": [
+    "SELECT ism FROM xodimlar x",
+    "WHERE NOT EXISTS (",
+    "  SELECT 1 FROM bloklangan b",
+    "  WHERE b.xodim_id = x.id",
+    ");"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "ism"
+    ],
+    "rows": [
+     [
+      "Vali"
+     ],
+     [
+      "Sardor"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "cta",
+   "dur": 4,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "SQL suhbatlarida",
+    "ko'p so'raladigan tuzoq"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohda yozing: siz to'g'ri",
+    "javob berdingizmi?"
+   ]
+  }
+ ]
+}

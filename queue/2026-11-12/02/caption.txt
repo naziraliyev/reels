@@ -1,0 +1,9 @@
+Bu SQL so'rov nechta qator qaytaradi: 2 mi yoki 0? 🤯
+NOT IN ichida bitta NULL bo'lsa — natija BO'SH chiqadi!
+Sababi: id <> NULL har doim UNKNOWN, shuning uchun hech bir qator shartdan o'tmaydi.
+Xavfsiz yo'l: NOT EXISTS yoki IS NOT NULL filtri.
+📌 Saqlab qo'ying — SQL suhbatlarida eng ko'p beriladigan tuzoq.
+💬 Siz birinchi urinishda to'g'ri topdingizmi? Izohda yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#sql #sqlquiz #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari
