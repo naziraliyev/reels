@@ -1,0 +1,8 @@
+JS quiz: bu sikl nimani chiqaradi — 0 1 2 mi yoki 3 3 3? 🤔
+Javob: 3 3 3! var funksiya darajasida bitta o'zgaruvchi — setTimeout ishlaganda sikl allaqachon tugagan va i = 3.
+let esa har bir iteratsiyada yangi i yaratadi — shuning uchun 0 1 2 chiqadi.
+📌 Saqlab qo'ying — JavaScript suhbatlarida eng ko'p so'raladigan savollardan biri.
+💬 Siz qaysi javobni tanladingiz? Izohga 012 yoki 333 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#javascript #js #jsquiz #webdev #frontend #closure #dasturlash #dasturchi #programming #it #uzbekistan #suhbatsavollari

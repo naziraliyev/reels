@@ -1,0 +1,21 @@
+{
+ "topic": "js-var-let-settimeout-loop",
+ "lang": "js",
+ "accent": "#fb923c",
+ "caption": "JS quiz: bu sikl nimani chiqaradi — 0 1 2 mi yoki 3 3 3? 🤔\nJavob: 3 3 3! var funksiya darajasida bitta o'zgaruvchi — setTimeout ishlaganda sikl allaqachon tugagan va i = 3.\nlet esa har bir iteratsiyada yangi i yaratadi — shuning uchun 0 1 2 chiqadi.\n📌 Saqlab qo'ying — JavaScript suhbatlarida eng ko'p so'raladigan savollardan biri.\n💬 Siz qaysi javobni tanladingiz? Izohga 012 yoki 333 deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#javascript #js #jsquiz #webdev #frontend #closure #dasturlash #dasturchi #programming #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {"type": "hook", "dur": 3.5, "title": "JS quiz", "lines": ["0 1 2", "yoki 3 3 3?"], "sub": "sikl nimani chiqaradi", "footer": "3 soniya o'ylab ko'ring"},
+  {"type": "code", "dur": 7.5, "title": "Savol", "desc": ["Konsolda nima chiqadi?"],
+   "code": ["for (var i = 0; i < 3; i++) {", "  setTimeout(() => {", "    console.log(i);", "  }, 0);", "}"],
+   "out_title": "Natija:", "out": ["?"]},
+  {"type": "code", "dur": 7, "title": "Javob", "desc": ["0 1 2 emas — 3 3 3!"],
+   "code": ["for (var i = 0; i < 3; i++) {", "  setTimeout(() => {", "    console.log(i);", "  }, 0);", "}"],
+   "out_title": "Natija:", "out": ["3", "3", "3"]},
+  {"type": "bullets", "dur": 7, "title": "Nega?", "items": ["var — bitta umumiy i", "setTimeout sikldan keyin ishlaydi", "O'sha paytda i = 3"]},
+  {"type": "code", "dur": 7, "title": "Yechim: let", "desc": ["let har iteratsiyada yangi i yaratadi"],
+   "code": ["for (let i = 0; i < 3; i++) {", "  setTimeout(() => {", "    console.log(i);", "  }, 0);", "}"],
+   "out_title": "Natija:", "out": ["0", "1", "2"]},
+  {"type": "cta", "dur": 4, "title": "Saqlab qo'ying", "lines": ["JS suhbatlarida", "ko'p so'raladigan savol"],
+   "box_title": "Obuna bo'ling", "box_text": "Dasturlash  ·  SQL  ·  Flutter", "footer": ["Izohga yozing:", "012 yoki 333?"]}
+ ]
+}
