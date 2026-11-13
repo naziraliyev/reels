@@ -16,6 +16,23 @@ Mavzular FAQAT: Dasturlash / SQL / Flutter (Dart). Til: o'zbek (lotin).
 - Yaxshi formatlar: "X ning 3 turi", "Ko'p uchraydigan xato", "Suhbat savoli", "A vs B", "1 qatorli trick",
   "Boshlovchi bilishi shart bo'lgan ...". Trend formatlardan ilhom oling, kontent esa doim original bo'lsin.
 
+### O'rgatuvchi kontent (MAJBURIY — foydalanuvchi talabi)
+Video faqat "qiziq quiz" bo'lib qolmasin — tomoshabin undan aniq bilim olib ketsin.
+- Har kuni kamida 2 ta video (4 tadan) **dars formatida** bo'lsin: bitta tushunchani bosqichma-bosqich o'rgatadi
+  (masalan: "SQL GROUP BY 30 soniyada", "Flutter'da ListView.builder qanday ishlaydi", "Python dict metodlari",
+  "SQL'da 3 qadamda JOIN yozish", "Dart'da null safety: ?, !, ??"). Qolganlari quiz bo'lishi mumkin.
+  Kunlik navbat: 08:17 dars, 13:17 quiz, 18:17 dars, 23:17 quiz (statistikaga qarab moslashtirish mumkin).
+- Dars tuzilishi: hook (muammo/va'da) → tushuncha 1 jumlada → oddiy misol (kod + natija) → amaliy misol
+  (real loyihadan: do'kon, talabalar, foydalanuvchilar jadvali; Flutter ekrani) → ko'p uchraydigan xato yoki maslahat →
+  "Esda tuting" xulosa sahnasi (`bullets`, 2–3 band) → cta.
+- Quiz videolarida ham "Nega?" tushuntirishi + to'g'ri yozish usuli + qachon ishlatish sahnasi bo'lishi shart.
+- Har bir video oxirida tomoshabin bitta qoidani yodlab qolsin (xulosa sahnasi yoki cta matnida).
+- Darajasi: boshlovchi va o'rta daraja; atamalarni o'zbekcha izohlang (masalan, "closure — funksiya o'zi yaratilgan
+  joydagi o'zgaruvchilarni eslab qoladi").
+- Mavzularni ketma-ket seriya qilib qurish mumkin (masalan, SQL asoslari: SELECT → WHERE → GROUP BY → JOIN),
+  caption'da "Seriya: SQL asoslari #3" deb belgilang. topics.md da seriyaning keyingi qismini kuzatib boring.
+- Caption'da ham 2–3 qatorlik qisqa konspekt bo'lsin (asosiy qoida + misol), saqlashga undaydigan.
+
 ## 3. Spec yozish va render
 - `tools/example_spec.json` namunasidek `queue/<sana>/<NN>/spec.json` yozing (sahna turlari `tools/render.py` boshida).
 - Qoidalar: 25–40 soniya; 1-sahna `hook` (3–3.5 s, kuchli savol/va'da); oxirgi sahna `cta`;
@@ -31,6 +48,7 @@ Mavzular FAQAT: Dasturlash / SQL / Flutter (Dart). Til: o'zbek (lotin).
 ## 4. Sifat nazorati (majburiy)
 - `queue/<sana>/<NN>/preview/*.png` dagi HAR BIR kadrni Read bilan ko'ring:
   matn kesilmagan, ustma-ust tushmagan, o'qilishi oson, imlo xatosi yo'q, kod to'g'ri.
+- O'rgatuvchi sifatni ham tekshiring: boshlovchi shu videodan nimani o'rgandi? Javob aniq bo'lmasa — sahna qo'shing/tuzating.
 - Muammo bo'lsa — spec'ni tuzatib qayta render qiling. Mukammal bo'lmaguncha commit qilmang.
 
 ## 5. Saqlash

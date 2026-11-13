@@ -8,4 +8,6 @@
   - Flutter/Dart → `flutter`: yorqin, quvnoq pop — major, 112–120 BPM, marimba + qo'ng'iroq, chapak, shaker.
   - Dasturlash (python/js/umumiy) → `lofi`: sokin lo-fi hip-hop — 80–92 BPM, e-piano, swing baraban, vinil shitirlashi.
 - Ommabop formatlar/trendlar ilhom sifatida olinadi, lekin kontent har doim original.
+- Har bir video O'RGATADI: kuniga kamida 2 ta dars formatidagi video (bosqichma-bosqich tushuntirish, oddiy → amaliy misol,
+  "Esda tuting" xulosasi); quizlarda ham tushuntirish va to'g'ri usul bo'lishi shart. Batafsil: PRODUCE.md "O'rgatuvchi kontent".
 - Videolar tools/render.py bilan yasaladi; qo'llanma: PRODUCE.md (tayyorlash), POST.md (joylash).
