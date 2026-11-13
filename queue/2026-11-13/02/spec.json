@@ -1,0 +1,105 @@
+{
+ "topic": "dart-closure-for-loop",
+ "lang": "dart",
+ "accent": "#38bdf8",
+ "caption": "Dart quiz: bu kod 0 1 2 chiqaradimi yoki 3 3 3? 🤔\nJavob: 0 1 2! Dart'da for sikli har aylanishda i ning YANGI nusxasini yaratadi — har bir closure o'z qiymatini eslab qoladi (JS'dagi var tuzog'i bu yerda yo'q).\nLekin i sikldan TASHQARIDA e'lon qilinsa — barcha closure bitta o'zgaruvchini ko'radi va 3 3 3 chiqadi.\n📌 Saqlab qo'ying — Flutter'da ro'yxatdagi tugmalarga onPressed berishda aynan shu muhim.\n💬 Siz qaysi javobni tanladingiz? Izohga 012 yoki 333 deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #flutterdev #dartlang #closure #mobiledev #dasturlash #dasturchi #programming #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart quiz",
+   "lines": [
+    "Nima chiqadi:",
+    "0 1 2 yoki 3 3 3?"
+   ],
+   "sub": "for sikli va closure",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Savol",
+   "desc": [
+    "Har bir funksiya i ni chiqaradi"
+   ],
+   "code": [
+    "void main() {",
+    "  final fns = <void Function()>[];",
+    "  for (var i = 0; i < 3; i++) {",
+    "    fns.add(() => print(i));",
+    "  }",
+    "  for (final f in fns) f();",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Javob",
+   "desc": [
+    "3 3 3 emas — 0 1 2!"
+   ],
+   "code": [
+    "for (var i = 0; i < 3; i++) {",
+    "  fns.add(() => print(i));",
+    "}",
+    "for (final f in fns) f();"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "0",
+    "1",
+    "2"
+   ]
+  },
+  {
+   "type": "text",
+   "dur": 6,
+   "title": "Nega?",
+   "lines": [
+    "Har aylanishda — yangi i.",
+    "Har closure o'z i sini eslaydi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Tuzoq: i tashqarida",
+   "desc": [
+    "Endi hamma bitta i ni ko'radi"
+   ],
+   "code": [
+    "var i = 0;",
+    "for (; i < 3; i++) {",
+    "  fns.add(() => print(i));",
+    "}",
+    "for (final f in fns) f();"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "3",
+    "3",
+    "3"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 4,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Flutter'da ro'yxat tugmalari",
+    "uchun juda muhim"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "012 yoki 333?"
+   ]
+  }
+ ]
+}
