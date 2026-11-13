@@ -1,0 +1,21 @@
+{
+ "topic": "sql-avg-null-trap",
+ "lang": "sql",
+ "accent": "#facc15",
+ "caption": "SQL quiz: AVG(ball) nechani qaytaradi — 15 mi yoki 10? 🤔\nJavob: 15! AVG, SUM, MIN, MAX kabi funksiyalar NULL qiymatlarni butunlay tashlab ketadi: (10 + 20) / 2 = 15.\nAgar NULL'ni 0 deb hisoblash kerak bo'lsa — AVG(COALESCE(ball, 0)) yozing, natija 10 bo'ladi.\n📌 Saqlab qo'ying — hisobotlarda o'rtacha qiymat aynan shu sabab xato chiqadi.\n💬 Siz qaysi javobni tanladingiz? Izohga 15 yoki 10 deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#sql #sqlquiz #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {"type": "hook", "dur": 3.5, "title": "SQL quiz", "lines": ["O'rtacha ball:", "15 mi yoki 10?"], "sub": "AVG va bitta NULL", "footer": "3 soniya o'ylab ko'ring"},
+  {"type": "table", "dur": 4.5, "title": "Jadval", "tables": [
+    {"name": "talabalar", "cols": ["ism", "ball"], "rows": [["Ali", "10"], ["Vali", "NULL"], ["Sardor", "20"]]}
+   ], "note": ["Vali hali imtihon topshirmagan"]},
+  {"type": "code", "dur": 6.5, "title": "Savol", "desc": ["O'rtacha ball nechchi?"],
+   "code": ["SELECT AVG(ball)", "FROM talabalar;"], "out_title": "Natija:", "out": ["?"]},
+  {"type": "code", "dur": 6.5, "title": "Javob", "desc": ["10 emas — 15!"],
+   "code": ["SELECT AVG(ball)", "FROM talabalar;"], "out_title": "Natija:", "out": ["15"]},
+  {"type": "text", "dur": 6, "title": "Nega?", "lines": ["AVG NULL qatorni hisobga olmaydi:", "(10 + 20) / 2 = 15", "SUM, MIN, MAX ham NULL'ni tashlab ketadi."]},
+  {"type": "code", "dur": 7, "title": "NULL = 0 bo'lsa", "desc": ["COALESCE NULL'ni 0 ga almashtiradi"],
+   "code": ["SELECT AVG(COALESCE(ball, 0))", "FROM talabalar;"], "out_title": "Natija:", "out": ["10"]},
+  {"type": "cta", "dur": 4, "title": "Saqlab qo'ying", "lines": ["SQL suhbatlarida", "ko'p so'raladigan tuzoq"],
+   "box_title": "Obuna bo'ling", "box_text": "Dasturlash  ·  SQL  ·  Flutter", "footer": ["Izohga yozing:", "15 yoki 10?"]}
+ ]
+}

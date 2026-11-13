@@ -1,0 +1,8 @@
+SQL quiz: AVG(ball) nechani qaytaradi — 15 mi yoki 10? 🤔
+Javob: 15! AVG, SUM, MIN, MAX kabi funksiyalar NULL qiymatlarni butunlay tashlab ketadi: (10 + 20) / 2 = 15.
+Agar NULL'ni 0 deb hisoblash kerak bo'lsa — AVG(COALESCE(ball, 0)) yozing, natija 10 bo'ladi.
+📌 Saqlab qo'ying — hisobotlarda o'rtacha qiymat aynan shu sabab xato chiqadi.
+💬 Siz qaysi javobni tanladingiz? Izohga 15 yoki 10 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#sql #sqlquiz #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari

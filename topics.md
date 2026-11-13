@@ -11,3 +11,4 @@
 - 2026-11-12 02 sql-not-in-null-trap — SQL: NOT IN ichida NULL — 2 qator yoki 0? (quiz)
 - 2026-11-12 03 dart-event-loop-print-order — Dart: print tartibi — A B C D yoki A D C B? (Future vs microtask quiz)
 - 2026-11-12 04 js-var-let-settimeout-loop — JS: var + setTimeout sikli — 0 1 2 mi yoki 3 3 3? (quiz)
+- 2026-11-13 01 sql-avg-null-trap — SQL: AVG(ball) bitta NULL bilan — 15 mi yoki 10? (quiz)
