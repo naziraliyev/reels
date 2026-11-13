@@ -13,3 +13,4 @@
 - 2026-11-12 04 js-var-let-settimeout-loop — JS: var + setTimeout sikli — 0 1 2 mi yoki 3 3 3? (quiz)
 - 2026-11-13 01 sql-avg-null-trap — SQL: AVG(ball) bitta NULL bilan — 15 mi yoki 10? (quiz)
 - 2026-11-13 02 dart-closure-for-loop — Dart: for sikli va closure — 0 1 2 mi yoki 3 3 3? (quiz)
+- 2026-11-13 03 python-dict-get-items-update — Python dars: dict'ning 3 ta kerakli metodi (get, items, update) — Seriya: Python asoslari #1

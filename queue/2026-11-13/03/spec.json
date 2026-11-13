@@ -1,0 +1,122 @@
+{
+ "topic": "python-dict-get-items-update",
+ "lang": "python",
+ "accent": "#a78bfa",
+ "caption": "Python dict bilan ishlashda 3 ta eng kerakli metod 🐍\nSeriya: Python asoslari #1\n✅ get(kalit, 0) — kalit yo'q bo'lsa KeyError o'rniga 0 qaytaradi\n✅ items() — kalit va qiymatni birga aylanib chiqadi: for nom, n in narx.items()\n✅ update({...}) — bir nechta qiymatni birdan qo'shadi yoki yangilaydi\n📌 Saqlab qo'ying — har bir Python loyihada kerak bo'ladi.\n💬 Siz dict[\"kalit\"] bilan KeyError olganmisiz? Izohga \"ha\" yoki \"yo'q\" deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #backend",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python dars",
+   "lines": [
+    "dict bilan",
+    "3 ta kerakli metod"
+   ],
+   "sub": "get · items · update",
+   "footer": "35 soniyada o'rganing"
+  },
+  {
+   "type": "text",
+   "dur": 4,
+   "title": "dict nima?",
+   "lines": [
+    "dict (lug'at) — kalit: qiymat juftliklari.",
+    "Qiymatni kalit orqali darhol topadi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "1. get()",
+   "desc": [
+    "Xavfsiz o'qish: kalit yo'q bo'lsa — xato emas, None yoki standart qiymat"
+   ],
+   "code": [
+    "narx = {\"non\": 5000, \"sut\": 12000}",
+    "print(narx.get(\"sut\"))",
+    "print(narx.get(\"choy\"))",
+    "print(narx.get(\"choy\", 0))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "12000",
+    "None",
+    "0"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "narx[\"choy\"]",
+    "!KeyError: 'choy'"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "narx.get(\"choy\", 0)",
+    "# 0"
+   ],
+   "note": "Kalit bo'lmasligi mumkin bo'lsa — get()"
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "2. items()",
+   "desc": [
+    "Kalit va qiymat birga. Do'kon narxlari:"
+   ],
+   "code": [
+    "for nom, n in narx.items():",
+    "    print(nom, \"-\", n, \"soʻm\")"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "non - 5000 soʻm",
+    "sut - 12000 soʻm"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "3. update()",
+   "desc": [
+    "Bor kalit yangilanadi, yangisi qo'shiladi"
+   ],
+   "code": [
+    "narx.update({\"sut\": 13000, \"choy\": 8000})",
+    "print(narx)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "{'non': 5000, 'sut': 13000,",
+    " 'choy': 8000}"
+   ]
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "get(k, 0) — KeyError'siz o'qish",
+    "items() — kalit va qiymat birga",
+    "update() — bir nechtasini birdan yozish"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari #1"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: dict bilan",
+    "KeyError olganmisiz?"
+   ]
+  }
+ ]
+}

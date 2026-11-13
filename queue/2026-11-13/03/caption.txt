@@ -1,0 +1,10 @@
+Python dict bilan ishlashda 3 ta eng kerakli metod 🐍
+Seriya: Python asoslari #1
+✅ get(kalit, 0) — kalit yo'q bo'lsa KeyError o'rniga 0 qaytaradi
+✅ items() — kalit va qiymatni birga aylanib chiqadi: for nom, n in narx.items()
+✅ update({...}) — bir nechta qiymatni birdan qo'shadi yoki yangilaydi
+📌 Saqlab qo'ying — har bir Python loyihada kerak bo'ladi.
+💬 Siz dict["kalit"] bilan KeyError olganmisiz? Izohga "ha" yoki "yo'q" deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #backend
