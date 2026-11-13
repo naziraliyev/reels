@@ -1,0 +1,180 @@
+{
+ "topic": "sql-null-is-null-coalesce",
+ "lang": "sql",
+ "accent": "#fb923c",
+ "caption": "SQL'da NULL bilan to'g'ri ishlash: = NULL nega 0 qator qaytaradi? 🧐\nSeriya: SQL va NULL #1\n✅ WHERE tel = NULL — hech qachon ishlamaydi. To'g'risi: WHERE tel IS NULL (yoki IS NOT NULL)\n✅ NULL bilan hisob ham NULL: 5000 - NULL = NULL\n✅ COALESCE(chegirma, 0) — NULL o'rniga 0 qo'yadi: narx - COALESCE(chegirma, 0)\n📌 Saqlab qo'ying — bu xato suhbatlarda ham, real loyihada ham ko'p uchraydi.\n💬 Siz = NULL deb yozib, bo'sh natija olganmisiz? Izohga \"ha\" yoki \"yo'q\" deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#sql #sqldars #database #malumotlarbazasi #dasturlash #dasturchi #programming #coding #backend #boshlovchilar #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL dars",
+   "lines": [
+    "WHERE tel = NULL",
+    "nega 0 qator beradi?"
+   ],
+   "sub": "IS NULL · COALESCE",
+   "footer": "35 soniyada o'rganing"
+  },
+  {
+   "type": "text",
+   "dur": 4.5,
+   "title": "NULL nima?",
+   "lines": [
+    "NULL — qiymat yo'q (noma'lum).",
+    "Bu 0 ham, bo'sh matn '' ham emas.",
+    "NULL bilan = yoki <> natijasi ham NULL."
+   ]
+  },
+  {
+   "type": "table",
+   "dur": 4.5,
+   "title": "Misol jadval",
+   "tables": [
+    {
+     "name": "talabalar",
+     "cols": [
+      "id",
+      "ism",
+      "tel"
+     ],
+     "rows": [
+      [
+       "1",
+       "Ali",
+       "901234567"
+      ],
+      [
+       "2",
+       "Vali",
+       "NULL"
+      ],
+      [
+       "3",
+       "Sora",
+       "NULL"
+      ],
+      [
+       "4",
+       "Olim",
+       "937654321"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "Vazifa: telefoni yo'q talabalarni topish"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 6,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "WHERE tel = NULL",
+    "!0 qator (bo'sh natija)"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "WHERE tel IS NULL",
+    "-- Vali, Sora"
+   ],
+   "note": "NULL faqat IS NULL / IS NOT NULL bilan tekshiriladi"
+  },
+  {
+   "type": "table",
+   "dur": 5,
+   "title": "Amaliy misol: do'kon",
+   "tables": [
+    {
+     "name": "mahsulotlar",
+     "cols": [
+      "nom",
+      "narx",
+      "chegirma"
+     ],
+     "rows": [
+      [
+       "non",
+       "5000",
+       "NULL"
+      ],
+      [
+       "sut",
+       "12000",
+       "2000"
+      ],
+      [
+       "choy",
+       "8000",
+       "NULL"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "narx - chegirma: non va choy → NULL",
+    "Chunki 5000 - NULL = NULL"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Yechim: COALESCE",
+   "desc": [
+    "COALESCE(a, b) — a NULL bo'lsa, b ni qaytaradi"
+   ],
+   "code": [
+    "SELECT nom,",
+    "       narx - COALESCE(chegirma, 0)",
+    "         AS yakuniy",
+    "FROM mahsulotlar;"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "nom",
+     "yakuniy"
+    ],
+    "rows": [
+     [
+      "non",
+      "5000"
+     ],
+     [
+      "sut",
+      "10000"
+     ],
+     [
+      "choy",
+      "8000"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "= NULL emas — IS NULL / IS NOT NULL",
+    "NULL bilan hisob ham NULL bo'ladi",
+    "COALESCE(x, 0) — NULL o'rniga 0"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL va NULL #1"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: = NULL deb",
+    "xato qilganmisiz?"
+   ]
+  }
+ ]
+}

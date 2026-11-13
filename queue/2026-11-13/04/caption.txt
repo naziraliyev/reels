@@ -1,0 +1,10 @@
+SQL'da NULL bilan to'g'ri ishlash: = NULL nega 0 qator qaytaradi? 🧐
+Seriya: SQL va NULL #1
+✅ WHERE tel = NULL — hech qachon ishlamaydi. To'g'risi: WHERE tel IS NULL (yoki IS NOT NULL)
+✅ NULL bilan hisob ham NULL: 5000 - NULL = NULL
+✅ COALESCE(chegirma, 0) — NULL o'rniga 0 qo'yadi: narx - COALESCE(chegirma, 0)
+📌 Saqlab qo'ying — bu xato suhbatlarda ham, real loyihada ham ko'p uchraydi.
+💬 Siz = NULL deb yozib, bo'sh natija olganmisiz? Izohga "ha" yoki "yo'q" deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#sql #sqldars #database #malumotlarbazasi #dasturlash #dasturchi #programming #coding #backend #boshlovchilar #it #uzbekistan
