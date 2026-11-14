@@ -1,0 +1,130 @@
+{
+ "topic": "python-list-comprehension",
+ "lang": "python",
+ "accent": "#4ade80",
+ "caption": "3 qatorlik for siklini 1 qatorga yozish — list comprehension 🐍\nSeriya: Python asoslari #2\n✅ Shablon: [ifoda for x in ro'yxat] → [x * x for x in sonlar]\n✅ Filtr: if shart OXIRIDA → [n for n in narx if n < 10000]\n✅ if-else for'dan OLDIN → [x if x > 2 else 0 for x in sonlar]\n📌 Saqlab qo'ying — Python'da eng ko'p ishlatiladigan usullardan biri.\n💬 Mashq: [1, 2, 3, 4, 5, 6] dan faqat juft sonlarni 1 qatorda ajrating — javobingizni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #listcomprehension #boshlovchilar #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python dars",
+   "lines": [
+    "3 qatorlik for'ni",
+    "1 qatorga yozing"
+   ],
+   "sub": "list comprehension",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "text",
+   "dur": 4,
+   "title": "Bu nima?",
+   "lines": [
+    "Ro'yxatdan yangi ro'yxat yasashning qisqa usuli.",
+    "Shablon:",
+    "[ifoda for x in ro'yxat]"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "1. Oddiy misol",
+   "desc": [
+    "Har bir sonning kvadrati"
+   ],
+   "code": [
+    "sonlar = [1, 2, 3, 4]",
+    "",
+    "# Uzun yo'l: 3 qator",
+    "kv = []",
+    "for x in sonlar:",
+    "    kv.append(x * x)",
+    "",
+    "# Qisqa yo'l: 1 qator",
+    "kv = [x * x for x in sonlar]",
+    "print(kv)"
+   ],
+   "out_title": "Natija (ikkalasida bir xil):",
+   "out": [
+    "[1, 4, 9, 16]"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "2. Filtr: if oxirida",
+   "desc": [
+    "Faqat 10 000 so'mdan arzon narxlar"
+   ],
+   "code": [
+    "narx = [5000, 12000, 8000, 30000]",
+    "arzon = [n for n in narx if n < 10000]",
+    "print(arzon)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "[5000, 8000]"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "3. Amaliy misol",
+   "desc": [
+    "Talabalar: imtihondan o'tganlar (60+ ball)"
+   ],
+   "code": [
+    "ballar = {\"Ali\": 85, \"Vali\": 52, \"Sora\": 91}",
+    "otdi = [ism for ism, b in ballar.items()",
+    "        if b >= 60]",
+    "print(otdi)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "['Ali', 'Sora']"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "[x for x in sonlar",
+    "  if x > 2 else 0]",
+    "!SyntaxError"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "[x if x > 2 else 0",
+    "  for x in sonlar]",
+    "# [0, 0, 3, 4]"
+   ],
+   "note": "if-else bo'lsa — for'dan OLDIN yoziladi"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "[ifoda for x in ro'yxat]",
+    "Filtr: faqat if — oxirida",
+    "if-else — for'dan oldin"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari #2"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Mashq: sonlar ichidan juftlarini",
+    "1 qatorda ajrating — izohga yozing!"
+   ]
+  }
+ ]
+}

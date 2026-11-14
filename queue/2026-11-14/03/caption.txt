@@ -1,0 +1,10 @@
+3 qatorlik for siklini 1 qatorga yozish — list comprehension 🐍
+Seriya: Python asoslari #2
+✅ Shablon: [ifoda for x in ro'yxat] → [x * x for x in sonlar]
+✅ Filtr: if shart OXIRIDA → [n for n in narx if n < 10000]
+✅ if-else for'dan OLDIN → [x if x > 2 else 0 for x in sonlar]
+📌 Saqlab qo'ying — Python'da eng ko'p ishlatiladigan usullardan biri.
+💬 Mashq: [1, 2, 3, 4, 5, 6] dan faqat juft sonlarni 1 qatorda ajrating — javobingizni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #listcomprehension #boshlovchilar #it #uzbekistan
