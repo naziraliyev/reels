@@ -18,3 +18,4 @@
 - 2026-11-14 01 dart-null-safety-operators — Dart dars: null safety — ?, ??, ?. va ! (xavfli) — Seriya: Dart asoslari #1
 - 2026-11-14 02 sql-sum-empty-null-vs-count-zero — SQL: bo'sh natijada SUM — 0 mi yoki NULL? COUNT esa 0 (quiz) — Seriya: SQL va NULL #2
 - 2026-11-14 03 python-list-comprehension — Python dars: list comprehension — for'ni 1 qatorga, if filtr, if-else joyi — Seriya: Python asoslari #2
+- 2026-11-14 04 js-string-plus-minus-coercion — JS: "5" + 3 va "5" - 3 — 53 mi yoki 8? + ulaydi, - hisoblaydi, Number() (quiz) — Seriya: JS tuzoqlari

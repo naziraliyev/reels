@@ -1,0 +1,10 @@
+JS quiz: "5" + 3 va "5" - 3 — nima chiqadi? 🤔
+Javob videoda — oxirigacha ko'ring!
+✅ Qoida: + ichida bitta string bo'lsa — matnlar ulanadi
+✅ - * / esa doim son bilan ishlaydi
+✅ input'dan kelgan qiymatni avval Number() ga o'giring
+📌 Saqlab qo'ying — formadagi "jami" noto'g'ri chiqishining sababi ko'pincha shu.
+💬 Siz nima deb o'yladingiz? Javobingizni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#javascript #jsquiz #js #frontend #webdasturlash #dasturlash #dasturchi #programming #coding #it #uzbekistan #suhbatsavollari
