@@ -1,0 +1,10 @@
+SQL quiz: hech qator topilmasa SUM nima qaytaradi — 0 mi yoki NULL? 🤔
+Javob: NULL! COUNT(*) esa 0 qaytaradi.
+✅ SUM, AVG, MIN, MAX — qator bo'lmasa NULL
+✅ COUNT(*) va COUNT(ustun) — har doim son, bo'sh bo'lsa 0
+✅ Hisobotda 0 kerak bo'lsa: COALESCE(SUM(summa), 0)
+📌 Saqlab qo'ying — bo'sh oyda "Jami: NULL" chiqishining sababi aynan shu.
+💬 Siz qaysi javobni tanladingiz? Izohga 0 yoki NULL deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#sql #sqlquiz #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari

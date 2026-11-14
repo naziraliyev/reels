@@ -1,0 +1,160 @@
+{
+ "topic": "sql-sum-empty-null-vs-count-zero",
+ "lang": "sql",
+ "accent": "#a78bfa",
+ "caption": "SQL quiz: hech qator topilmasa SUM nima qaytaradi — 0 mi yoki NULL? 🤔\nJavob: NULL! COUNT(*) esa 0 qaytaradi.\n✅ SUM, AVG, MIN, MAX — qator bo'lmasa NULL\n✅ COUNT(*) va COUNT(ustun) — har doim son, bo'sh bo'lsa 0\n✅ Hisobotda 0 kerak bo'lsa: COALESCE(SUM(summa), 0)\n📌 Saqlab qo'ying — bo'sh oyda \"Jami: NULL\" chiqishining sababi aynan shu.\n💬 Siz qaysi javobni tanladingiz? Izohga 0 yoki NULL deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#sql #sqlquiz #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL quiz",
+   "lines": [
+    "Qator yo'q bo'lsa",
+    "SUM nima beradi?"
+   ],
+   "sub": "0 mi yoki NULL?",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "table",
+   "dur": 4,
+   "title": "Jadval",
+   "tables": [
+    {
+     "name": "buyurtmalar",
+     "cols": [
+      "id",
+      "oy",
+      "summa"
+     ],
+     "rows": [
+      [
+       "1",
+       "noyabr",
+       "50000"
+      ],
+      [
+       "2",
+       "noyabr",
+       "30000"
+      ],
+      [
+       "3",
+       "noyabr",
+       "20000"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "Dekabrda hali buyurtma yo'q"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Savol",
+   "desc": [
+    "Dekabr oyi uchun natija qanday?"
+   ],
+   "code": [
+    "SELECT SUM(summa),",
+    "       COUNT(*)",
+    "FROM buyurtmalar",
+    "WHERE oy = 'dekabr';"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "SUM = ?",
+    "COUNT = ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Javob",
+   "desc": [
+    "SUM — NULL, COUNT — 0!"
+   ],
+   "code": [
+    "SELECT SUM(summa),",
+    "       COUNT(*)",
+    "FROM buyurtmalar",
+    "WHERE oy = 'dekabr';"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "sum",
+     "count"
+    ],
+    "rows": [
+     [
+      "NULL",
+      "0"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "text",
+   "dur": 5.5,
+   "title": "Nega?",
+   "lines": [
+    "Qo'shiladigan qator yo'q.",
+    "SUM, AVG, MIN, MAX",
+    "esa NULL qaytaradi.",
+    "COUNT sanaydi: 0 qator = 0"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "To'g'ri usul",
+   "desc": [
+    "Hisobotda 0 chiqishi uchun COALESCE"
+   ],
+   "code": [
+    "SELECT COALESCE(SUM(summa), 0)",
+    "         AS jami",
+    "FROM buyurtmalar",
+    "WHERE oy = 'dekabr';"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "jami"
+    ],
+    "rows": [
+     [
+      "0"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "Bo'sh natijada SUM = NULL",
+    "COUNT doim son: bo'sh = 0",
+    "COALESCE(SUM(x), 0) — xavfsiz jami"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL va NULL #2"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "0 yoki NULL?"
+   ]
+  }
+ ]
+}
