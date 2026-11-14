@@ -1,0 +1,11 @@
+Dart'da null xatosidan qanday qutulish mumkin? ?  ??  ?.  ! — 35 soniyada 🎯
+Seriya: Dart asoslari #1
+✅ String? tel — ? qo'shsangiz, o'zgaruvchi null bo'lishi mumkin
+✅ tel ?? "Raqam yo'q" — null bo'lsa, standart qiymat
+✅ t.email?.toLowerCase() — null bo'lsa, metod chaqirilmaydi
+⚠️ tel! — null bo'lsa ilova yiqiladi. Avval if (tel != null) bilan tekshiring
+📌 Saqlab qo'ying — Flutter'da har kuni kerak bo'ladi.
+💬 Siz "Null check operator used on a null value" xatosini ko'rganmisiz? Izohga "ha" yoki "yo'q" deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #nullsafety #flutterdev #dasturlash #dasturchi #mobildasturlash #programming #coding #boshlovchilar #it #uzbekistan

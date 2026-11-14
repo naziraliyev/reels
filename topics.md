@@ -15,3 +15,4 @@
 - 2026-11-13 02 dart-closure-for-loop — Dart: for sikli va closure — 0 1 2 mi yoki 3 3 3? (quiz)
 - 2026-11-13 03 python-dict-get-items-update — Python dars: dict'ning 3 ta kerakli metodi (get, items, update) — Seriya: Python asoslari #1
 - 2026-11-13 04 sql-null-is-null-coalesce — SQL dars: = NULL nega ishlamaydi? IS NULL va COALESCE — Seriya: SQL va NULL #1
+- 2026-11-14 01 dart-null-safety-operators — Dart dars: null safety — ?, ??, ?. va ! (xavfli) — Seriya: Dart asoslari #1

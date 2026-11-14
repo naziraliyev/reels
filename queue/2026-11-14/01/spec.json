@@ -1,0 +1,15 @@
+{
+ "topic": "dart-null-safety-operators",
+ "lang": "dart",
+ "accent": "#38bdf8",
+ "caption": "Dart'da null xatosidan qanday qutulish mumkin? ?  ??  ?.  ! — 35 soniyada 🎯\nSeriya: Dart asoslari #1\n✅ String? tel — ? qo'shsangiz, o'zgaruvchi null bo'lishi mumkin\n✅ tel ?? \"Raqam yo'q\" — null bo'lsa, standart qiymat\n✅ t.email?.toLowerCase() — null bo'lsa, metod chaqirilmaydi\n⚠️ tel! — null bo'lsa ilova yiqiladi. Avval if (tel != null) bilan tekshiring\n📌 Saqlab qo'ying — Flutter'da har kuni kerak bo'ladi.\n💬 Siz \"Null check operator used on a null value\" xatosini ko'rganmisiz? Izohga \"ha\" yoki \"yo'q\" deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #nullsafety #flutterdev #dasturlash #dasturchi #mobildasturlash #programming #coding #boshlovchilar #it #uzbekistan",
+ "scenes": [
+  {"type": "hook", "dur": 3.5, "title": "Dart dars", "lines": ["?   ??   ?.   !", "null xatosiga chek qo'ying"], "sub": "Null safety", "footer": "35 soniyada o'rganing"},
+  {"type": "text", "dur": 5, "title": "Null safety nima?", "lines": ["Dart'da oddiy o'zgaruvchi null bo'la olmaydi.", "String? — ? qo'shsangiz, null ham bo'lishi mumkin.", "Xato ilova ishlashidan OLDIN ushlanadi."]},
+  {"type": "code", "dur": 6.5, "title": "1) ?? — standart qiymat", "desc": ["a ?? b — a null bo'lsa, b qaytadi"], "code": ["String? tel;", "print(tel ?? \"Raqam yo'q\");", "", "int? chegirma;", "int narx = 5000 - (chegirma ?? 0);", "print(narx);"], "out_title": "Natija:", "out": ["~Raqam yo'q", "~5000"]},
+  {"type": "code", "dur": 7.5, "title": "2) ?. — xavfsiz chaqirish", "desc": ["Obyekt null bo'lsa, metod chaqirilmaydi"], "code": ["class Talaba {", "  final String ism;", "  final String? email;", "  Talaba(this.ism, {this.email});", "}", "", "final t = Talaba('Sora');", "Text(t.email?.toLowerCase()", "    ?? 'Email kiritilmagan')"], "out_title": "Ekranda:", "out": ["~Email kiritilmagan"]},
+  {"type": "compare", "dur": 6.5, "title": "Ko'p uchraydigan xato: !", "bad_label": "Xavfli", "bad": ["String? tel;", "print(tel!.length);", "!Null check operator", "!used on a null value"], "good_label": "To'g'ri", "good": ["if (tel != null) {", "  print(tel.length);", "}"], "note": "! — \"bu null emas, ishoning\" degani. Ishonchingiz komil bo'lmasa ishlatmang"},
+  {"type": "bullets", "dur": 5, "title": "Esda tuting", "items": ["String? — null bo'lishi mumkin", "?? standart qiymat, ?. xavfsiz chaqiruv", "! dan oldin null'ni tekshiring"]},
+  {"type": "cta", "dur": 3.5, "title": "Saqlab qo'ying", "lines": ["Seriya: Dart asoslari #1"], "box_title": "Obuna bo'ling", "box_text": "Dasturlash  ·  SQL  ·  Flutter", "footer": ["Izohga yozing: ! xatosini", "ko'rganmisiz?"]}
+ ]
+}
