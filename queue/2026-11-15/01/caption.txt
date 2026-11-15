@@ -1,0 +1,10 @@
+SQL dars: har mijoz qancha xarid qilgan? GROUP BY bilan 1 so'rovda 📊
+Seriya: SQL asoslari #1
+✅ GROUP BY mijoz — bir xil mijozli qatorlarni bitta guruhga yig'adi
+✅ Har guruh uchun: COUNT(*) — nechta, SUM(summa) — jami, AVG — o'rtacha
+✅ SELECT'da faqat GROUP BY ustuni yoki agregat bo'ladi: SELECT mijoz, id ... GROUP BY mijoz — xato
+📌 Saqlab qo'ying — hisobotlarning 90% shu so'rov bilan yoziladi.
+💬 Savol: har mijozning O'RTACHA xaridini qanday topasiz? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#sql #sqldars #groupby #database #malumotlarbazasi #dasturlash #dasturchi #programming #backend #boshlovchilar #it #uzbekistan

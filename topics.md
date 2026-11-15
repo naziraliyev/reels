@@ -19,3 +19,4 @@
 - 2026-11-14 02 sql-sum-empty-null-vs-count-zero — SQL: bo'sh natijada SUM — 0 mi yoki NULL? COUNT esa 0 (quiz) — Seriya: SQL va NULL #2
 - 2026-11-14 03 python-list-comprehension — Python dars: list comprehension — for'ni 1 qatorga, if filtr, if-else joyi — Seriya: Python asoslari #2
 - 2026-11-14 04 js-string-plus-minus-coercion — JS: "5" + 3 va "5" - 3 — 53 mi yoki 8? + ulaydi, - hisoblaydi, Number() (quiz) — Seriya: JS tuzoqlari
+- 2026-11-15 01 sql-group-by-count-sum — SQL dars: GROUP BY + COUNT/SUM — har mijoz qancha xarid qilgan, SELECT'da guruh ustuni + agregat xatosi — Seriya: SQL asoslari #1
