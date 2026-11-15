@@ -1,0 +1,11 @@
+Dart dars: List'ning 3 ta kerakli metodi — where, map, fold 🎯
+Seriya: Dart asoslari #2
+✅ where — shartga mos elementlarni ajratadi (filtr)
+✅ map — har bir elementni o'zgartiradi
+✅ fold — hammasini bitta qiymatga yig'adi (masalan, jami summa)
+⚠️ where va map List emas, Iterable qaytaradi — List kerak bo'lsa .toList() qo'shing
+📌 Saqlab qo'ying — Flutter'da savat, ro'yxat va hisobotlar shu 3 metod bilan yoziladi.
+💬 Savol: [1, 2, 3, 4] dan juft sonlar kvadratlari yig'indisini qanday topasiz? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutteruz #dartlang #dasturlash #dasturchi #mobildasturlash #programming #boshlovchilar #it #uzbekistan

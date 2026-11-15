@@ -21,3 +21,4 @@
 - 2026-11-14 04 js-string-plus-minus-coercion — JS: "5" + 3 va "5" - 3 — 53 mi yoki 8? + ulaydi, - hisoblaydi, Number() (quiz) — Seriya: JS tuzoqlari
 - 2026-11-15 01 sql-group-by-count-sum — SQL dars: GROUP BY + COUNT/SUM — har mijoz qancha xarid qilgan, SELECT'da guruh ustuni + agregat xatosi — Seriya: SQL asoslari #1
 - 2026-11-15 02 python-list-alias-copy — Python: b = a, b.append(4) — a ham o'zgaradimi? Nusxa: copy(), a[:], deepcopy (quiz) — Seriya: Python asoslari #3
+- 2026-11-15 03 dart-list-where-map-fold — Dart dars: List'ning 3 ta kerakli metodi — where (filtr), map (o'zgartirish), fold (yig'ish), savat chegirma misoli, .toList() xatosi — Seriya: Dart asoslari #2

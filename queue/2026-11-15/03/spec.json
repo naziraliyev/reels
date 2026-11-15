@@ -1,0 +1,141 @@
+{
+ "topic": "dart-list-where-map-fold",
+ "lang": "dart",
+ "accent": "#4ade80",
+ "caption": "Dart dars: List'ning 3 ta kerakli metodi — where, map, fold 🎯\nSeriya: Dart asoslari #2\n✅ where — shartga mos elementlarni ajratadi (filtr)\n✅ map — har bir elementni o'zgartiradi\n✅ fold — hammasini bitta qiymatga yig'adi (masalan, jami summa)\n⚠️ where va map List emas, Iterable qaytaradi — List kerak bo'lsa .toList() qo'shing\n📌 Saqlab qo'ying — Flutter'da savat, ro'yxat va hisobotlar shu 3 metod bilan yoziladi.\n💬 Savol: [1, 2, 3, 4] dan juft sonlar kvadratlari yig'indisini qanday topasiz? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #flutteruz #dartlang #dasturlash #dasturchi #mobildasturlash #programming #boshlovchilar #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart dars",
+   "lines": [
+    "List'ning 3 ta",
+    "kerakli metodi"
+   ],
+   "sub": "where · map · fold",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "1. where — filtr",
+   "desc": [
+    "Shartga mos elementlarni qoldiradi"
+   ],
+   "code": [
+    "var ballar = [45, 82, 67, 91, 30];",
+    "",
+    "var otdi = ballar.where((b) => b >= 60);",
+    "print(otdi.toList());"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~[82, 67, 91]"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "2. map — o'zgartirish",
+   "desc": [
+    "Har bir elementdan yangi qiymat yasaydi"
+   ],
+   "code": [
+    "var narxlar = [10000, 25000, 8000];",
+    "",
+    "var matn = narxlar.map((n) => \"$n so'm\");",
+    "print(matn.toList());"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~[10000 so'm, 25000 so'm, 8000 so'm]"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "3. fold — yig'ish",
+   "desc": [
+    "Hammasini bitta qiymatga yig'adi:",
+    "s — yig'indi, n — navbatdagi element"
+   ],
+   "code": [
+    "var savat = [12000, 35000, 8000];",
+    "",
+    "var jami = savat.fold<int>(",
+    "    0, (s, n) => s + n);",
+    "print(jami);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~55000"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Amaliy misol: savat",
+   "desc": [
+    "10 000 dan qimmat mahsulotlarga",
+    "10% chegirma — jami qancha?"
+   ],
+   "code": [
+    "var savat = [12000, 35000, 8000, 50000];",
+    "",
+    "var jami = savat",
+    "    .where((n) => n >= 10000)",
+    "    .map((n) => n * 9 ~/ 10)",
+    "    .fold<int>(0, (s, n) => s + n);",
+    "",
+    "print(jami);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~87300"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "List<int> otdi = ballar",
+    "  .where((b) => b >= 60);",
+    "!Xato: bu Iterable, List emas"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "List<int> otdi = ballar",
+    "  .where((b) => b >= 60)",
+    "  .toList();"
+   ],
+   "note": "where va map → Iterable. List kerak bo'lsa: .toList()"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "where — filtrlaydi",
+    "map — o'zgartiradi",
+    "fold — bitta qiymatga yig'adi",
+    "List kerak bo'lsa — .toList()"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Dart asoslari #2"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: juft sonlar",
+    "kvadratlari yig'indisi?"
+   ]
+  }
+ ]
+}
