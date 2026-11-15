@@ -1,0 +1,11 @@
+Python quiz: b = a dedik, b'ga 4 qo'shdik — a nima bo'ldi? 🤔
+Javob videoda — oxirigacha ko'ring!
+✅ Qoida: b = a nusxa EMAS — ikkala nom bitta ro'yxatga qaraydi
+✅ Alohida nusxa uchun: b = a.copy() yoki b = a[:]
+✅ Ichma-ich ro'yxat bo'lsa: copy.deepcopy(a)
+📌 Saqlab qo'ying — "ro'yxatim o'zi o'zgarib qoldi" xatosining sababi ko'pincha shu.
+💬 Siz nima deb o'yladingiz: [1, 2, 3] mi yoki [1, 2, 3, 4]? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: Python asoslari #3
+
+#python #pythonquiz #pythonuz #dasturlash #dasturchi #programming #coding #backend #it #uzbekistan #suhbatsavollari
