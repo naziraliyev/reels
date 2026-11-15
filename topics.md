@@ -22,3 +22,4 @@
 - 2026-11-15 01 sql-group-by-count-sum — SQL dars: GROUP BY + COUNT/SUM — har mijoz qancha xarid qilgan, SELECT'da guruh ustuni + agregat xatosi — Seriya: SQL asoslari #1
 - 2026-11-15 02 python-list-alias-copy — Python: b = a, b.append(4) — a ham o'zgaradimi? Nusxa: copy(), a[:], deepcopy (quiz) — Seriya: Python asoslari #3
 - 2026-11-15 03 dart-list-where-map-fold — Dart dars: List'ning 3 ta kerakli metodi — where (filtr), map (o'zgartirish), fold (yig'ish), savat chegirma misoli, .toList() xatosi — Seriya: Dart asoslari #2
+- 2026-11-15 04 js-float-0.1-plus-0.2 — JS: 0.1 + 0.2 === 0.3 — true mi yoki false? Nega 0.30000000000000004, savat 1.1*3 xatosi, sentlarda hisoblash, Number.EPSILON, toFixed(2) (quiz) — Seriya: JS tuzoqlari #2

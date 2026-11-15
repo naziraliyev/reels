@@ -1,0 +1,129 @@
+{
+ "topic": "js-float-0.1-plus-0.2",
+ "lang": "js",
+ "accent": "#a78bfa",
+ "caption": "JS quiz: 0.1 + 0.2 === 0.3 — true mi yoki false? 🤔\nJavob videoda — oxirigacha ko'ring!\n✅ Qoida: kasr sonlar xotirada ikkilik ko'rinishda saqlanadi — 0.1 aniq emas\n✅ Taqqoslashda: Math.abs(a - b) < Number.EPSILON\n✅ Pul hisobida: tiyin/sentlarda butun son bilan ishlang (110 * 3 = 330)\n📌 Saqlab qo'ying — savatdagi \"jami\" 3.3000000000000003 chiqsa, sababi shu.\n💬 Siz nima deb o'yladingiz? Javobingizni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: JS tuzoqlari #2\n\n#javascript #jsquiz #js #frontend #webdasturlash #dasturlash #dasturchi #programming #coding #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "JS quiz",
+   "lines": [
+    "0.1 + 0.2 === 0.3",
+    "true yoki false?"
+   ],
+   "sub": "Ko'pchilik xato qiladi",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "Savol",
+   "desc": [
+    "Konsolda nima chiqadi?"
+   ],
+   "code": [
+    "console.log(0.1 + 0.2);",
+    "console.log(0.1 + 0.2 === 0.3);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~?",
+    "~?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Javob",
+   "desc": [
+    "Yig'indi aniq 0.3 emas!"
+   ],
+   "code": [
+    "console.log(0.1 + 0.2);",
+    "console.log(0.1 + 0.2 === 0.3);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~0.30000000000000004",
+    "!false"
+   ]
+  },
+  {
+   "type": "text",
+   "dur": 5.5,
+   "title": "Nega?",
+   "lines": [
+    "Kasr sonlar xotirada",
+    "ikkilik (0 va 1) ko'rinishda",
+    "saqlanadi.",
+    "0.1 ni aniq yozib bo'lmaydi —",
+    "kichik xato qoladi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Real xato: savat",
+   "desc": [
+    "Narx 1.1 $, soni 3 ta"
+   ],
+   "code": [
+    "const jami = 1.1 * 3;",
+    "",
+    "// To'g'ri: sentlarda hisoblang",
+    "const sent = 110 * 3;",
+    "const jami2 = sent / 100;"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "!jami  = 3.3000000000000003",
+    "~jami2 = 3.3"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "To'g'ri taqqoslash",
+   "desc": [
+    "=== o'rniga farqni tekshiring"
+   ],
+   "code": [
+    "const a = 0.1 + 0.2;",
+    "",
+    "Math.abs(a - 0.3) < Number.EPSILON;",
+    "",
+    "a.toFixed(2); // ekranga chiqarish"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~true",
+    "~\"0.30\""
+   ]
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "Kasr sonlarni === bilan solishtirmang",
+    "Pul — sentlarda, butun son bilan",
+    "Ko'rsatish uchun toFixed(2)"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "JS'dagi tuzoqlar seriyasi"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "siz nima deb o'yladingiz?"
+   ]
+  }
+ ]
+}

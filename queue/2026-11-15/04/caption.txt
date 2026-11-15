@@ -1,0 +1,11 @@
+JS quiz: 0.1 + 0.2 === 0.3 — true mi yoki false? 🤔
+Javob videoda — oxirigacha ko'ring!
+✅ Qoida: kasr sonlar xotirada ikkilik ko'rinishda saqlanadi — 0.1 aniq emas
+✅ Taqqoslashda: Math.abs(a - b) < Number.EPSILON
+✅ Pul hisobida: tiyin/sentlarda butun son bilan ishlang (110 * 3 = 330)
+📌 Saqlab qo'ying — savatdagi "jami" 3.3000000000000003 chiqsa, sababi shu.
+💬 Siz nima deb o'yladingiz? Javobingizni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: JS tuzoqlari #2
+
+#javascript #jsquiz #js #frontend #webdasturlash #dasturlash #dasturchi #programming #coding #it #uzbekistan #suhbatsavollari
