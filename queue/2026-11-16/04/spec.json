@@ -1,0 +1,118 @@
+{
+ "topic": "python-round-bankers",
+ "lang": "python",
+ "accent": "#4ade80",
+ "caption": "Python quiz: round(2.5) — 3 mi yoki 2? 🤔\nJavob videoda — oxirigacha ko'ring!\n✅ Qoida: Python .5 ni eng yaqin JUFT songa yaxlitlaydi — round(2.5) = 2, round(3.5) = 4\n✅ Bu \"bank yaxlitlashi\": ko'p hisoblashda xatolar yig'ilib ketmasligi uchun\n✅ Narx/pul uchun maktabdagidek yaxlitlash: Decimal + ROUND_HALF_UP\n📌 Saqlab qo'ying — chek va narx hisoblashda aynan shu xato chiqadi.\n💬 Siz nima deb o'yladingiz: 3 mi yoki 2? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: Python asoslari #5\n\n#python #pythonquiz #pythonuz #dasturlash #dasturchi #programming #coding #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python quiz",
+   "lines": [
+    "round(2.5)",
+    "= 3 mi",
+    "yoki 2?"
+   ],
+   "sub": "Ko'pchilik xato qiladi",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Savol",
+   "desc": [
+    "Ekranda nima chiqadi?"
+   ],
+   "code": [
+    "print(round(2.5))",
+    "print(round(3.5))",
+    "print(round(0.5))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~?",
+    "~?",
+    "~?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Javob",
+   "desc": [
+    "2.5 → 2, lekin 3.5 → 4!"
+   ],
+   "code": [
+    "print(round(2.5))",
+    "print(round(3.5))",
+    "print(round(0.5))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "!2   (3 emas!)",
+    "~4",
+    "!0   (1 emas!)"
+   ]
+  },
+  {
+   "type": "text",
+   "dur": 6.5,
+   "title": "Nega?",
+   "lines": [
+    "Son aniq o'rtada (.5) bo'lsa,",
+    "Python eng yaqin JUFT",
+    "songa yaxlitlaydi.",
+    "Bu \"bank yaxlitlashi\" —",
+    "xatolar yig'ilmasligi uchun."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "To'g'ri usul",
+   "desc": [
+    "Pul uchun: .5 doim yuqoriga"
+   ],
+   "code": [
+    "from decimal import Decimal, ROUND_HALF_UP",
+    "",
+    "x = Decimal(\"2.5\")",
+    "print(x.quantize(Decimal(\"1\"),",
+    "      rounding=ROUND_HALF_UP))",
+    "",
+    "narx = Decimal(\"12.345\")",
+    "print(narx.quantize(Decimal(\"0.01\"),",
+    "      rounding=ROUND_HALF_UP))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~3",
+    "~12.35"
+   ]
+  },
+  {
+   "type": "bullets",
+   "dur": 6,
+   "title": "Esda tuting",
+   "items": [
+    "round(): .5 → juft songa",
+    "round(2.5) = 2, (3.5) = 4",
+    "Pul: Decimal + HALF_UP"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Python asoslari seriyasi #5"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "siz nima deb o'yladingiz?"
+   ]
+  }
+ ]
+}

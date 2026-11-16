@@ -26,3 +26,4 @@
 - 2026-11-16 01 python-str-strip-split-join — Python dars: matn bilan 3 ta kerakli metod — strip (chet bo'sh joy), split (matn → ro'yxat), join (ro'yxat → matn), formadan ismlarni tozalash misoli, join'ga son berish TypeError xatosi — Seriya: Python asoslari #4
 - 2026-11-16 02 sql-left-join-where-trap — SQL: LEFT JOIN + WHERE — 3 qator mi yoki 1? O'ng jadval sharti WHERE'da LEFT JOIN'ni INNER'ga aylantiradi, filtrni ON ... AND ichiga yozish (quiz) — Seriya: SQL tuzoqlari
 - 2026-11-16 03 dart-division-operators — Dart dars: 7 / 2 = 3 mi yoki 3.5? Bo'lishning 3 operatori — / (doim double, 6/2 → 3.0), ~/ (butun bo'lish), % (qoldiq, juft son tekshirish), taymer 125 s → 2:05 misoli, int x = 7 / 2 xatosi — Seriya: Dart asoslari #3
+- 2026-11-16 04 python-round-bankers — Python: round(2.5) — 3 mi yoki 2? .5 eng yaqin juft songa (bank yaxlitlashi), round(3.5)=4, round(0.5)=0, pul uchun Decimal + ROUND_HALF_UP, 12.345 → 12.35 (quiz) — Seriya: Python asoslari #5

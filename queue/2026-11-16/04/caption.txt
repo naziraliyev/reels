@@ -1,0 +1,11 @@
+Python quiz: round(2.5) — 3 mi yoki 2? 🤔
+Javob videoda — oxirigacha ko'ring!
+✅ Qoida: Python .5 ni eng yaqin JUFT songa yaxlitlaydi — round(2.5) = 2, round(3.5) = 4
+✅ Bu "bank yaxlitlashi": ko'p hisoblashda xatolar yig'ilib ketmasligi uchun
+✅ Narx/pul uchun maktabdagidek yaxlitlash: Decimal + ROUND_HALF_UP
+📌 Saqlab qo'ying — chek va narx hisoblashda aynan shu xato chiqadi.
+💬 Siz nima deb o'yladingiz: 3 mi yoki 2? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: Python asoslari #5
+
+#python #pythonquiz #pythonuz #dasturlash #dasturchi #programming #coding #backend #it #uzbekistan #suhbatsavollari
