@@ -1,0 +1,10 @@
+Python'da matn bilan ishlashning 3 ta eng kerakli metodi 🐍
+Seriya: Python asoslari #4
+✅ strip() — boshi va oxiridagi bo'sh joy, \n ni olib tashlaydi: "  Ali \n".strip() → 'Ali'
+✅ split(",") — matnni ro'yxatga bo'ladi: "olma,nok".split(",") → ['olma', 'nok']
+✅ ", ".join(ro'yxat) — ro'yxatni bitta matnga ulaydi (faqat str! sonlar bo'lsa map(str, ...))
+📌 Saqlab qo'ying — formadan kelgan har qanday matnni tozalashda kerak bo'ladi.
+💬 Savol: "-".join(["a", "b", "c"]) nima chiqaradi? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #backend

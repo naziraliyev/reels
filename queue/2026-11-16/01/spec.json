@@ -1,0 +1,135 @@
+{
+ "topic": "python-str-strip-split-join",
+ "lang": "python",
+ "accent": "#fb923c",
+ "caption": "Python'da matn bilan ishlashning 3 ta eng kerakli metodi 🐍\nSeriya: Python asoslari #4\n✅ strip() — boshi va oxiridagi bo'sh joy, \\n ni olib tashlaydi: \"  Ali \\n\".strip() → 'Ali'\n✅ split(\",\") — matnni ro'yxatga bo'ladi: \"olma,nok\".split(\",\") → ['olma', 'nok']\n✅ \", \".join(ro'yxat) — ro'yxatni bitta matnga ulaydi (faqat str! sonlar bo'lsa map(str, ...))\n📌 Saqlab qo'ying — formadan kelgan har qanday matnni tozalashda kerak bo'ladi.\n💬 Savol: \"-\".join([\"a\", \"b\", \"c\"]) nima chiqaradi? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #backend",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python dars",
+   "lines": [
+    "Matn bilan",
+    "3 ta kerakli metod"
+   ],
+   "sub": "strip · split · join",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "1. strip()",
+   "desc": [
+    "Boshi va oxiridagi bo'sh joy va \\n ni olib tashlaydi"
+   ],
+   "code": [
+    "ism = \"   Ali  \\n\"",
+    "print(repr(ism))",
+    "print(repr(ism.strip()))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "'   Ali  \\n'",
+    "'Ali'"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "2. split()",
+   "desc": [
+    "Matnni ro'yxatga bo'ladi (ajratuvchi bo'yicha)"
+   ],
+   "code": [
+    "s = \"olma,nok,uzum\"",
+    "print(s.split(\",\"))",
+    "print(\"salom dunyo\".split())"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "['olma', 'nok', 'uzum']",
+    "['salom', 'dunyo']"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "3. join()",
+   "desc": [
+    "Teskarisi: ro'yxatni bitta matnga ulaydi"
+   ],
+   "code": [
+    "meva = [\"olma\", \"nok\", \"uzum\"]",
+    "print(\", \".join(meva))",
+    "print(\" - \".join(meva))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "olma, nok, uzum",
+    "olma - nok - uzum"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Amaliy misol",
+   "desc": [
+    "Formadan kelgan ismlar ro'yxatini tozalash"
+   ],
+   "code": [
+    "matn = \" ali , VALI,  soli \"",
+    "",
+    "ismlar = [x.strip().title()",
+    "          for x in matn.split(\",\")]",
+    "",
+    "print(ismlar)",
+    "print(\", \".join(ismlar))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "['Ali', 'Vali', 'Soli']",
+    "Ali, Vali, Soli"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "\", \".join([1, 2, 3])",
+    "!TypeError: expected str"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "\", \".join(map(str, [1, 2, 3]))",
+    "# '1, 2, 3'"
+   ],
+   "note": "join() faqat matnlarni ulaydi — sonni avval str() qiling"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "strip() — chetdagi bo'sh joyni tozalaydi",
+    "split(\",\") — matn → ro'yxat",
+    "\", \".join() — ro'yxat → matn"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari #4"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "\"-\".join([\"a\",\"b\",\"c\"]) = ?"
+   ]
+  }
+ ]
+}
