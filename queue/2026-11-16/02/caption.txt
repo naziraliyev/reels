@@ -1,0 +1,11 @@
+SQL quiz: LEFT JOIN + WHERE — 3 qator chiqadimi yoki 1? 🤔
+Javob videoda — oxirigacha ko'ring!
+📝 Qisqa konspekt:
+✅ LEFT JOIN chap jadvaldagi barcha qatorlarni saqlaydi
+✅ O'ng jadval sharti WHERE'da bo'lsa — NULL qatorlar o'chadi
+✅ Shartni ON ichiga yozing: ON ... AND b.holat = 'yangi'
+📌 Saqlab qo'ying — hisobotda "yo'qolgan mijozlar" sababi ko'pincha shu.
+💬 Siz nechta deb o'yladingiz? Izohga 3 yoki 1 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#sql #sqlquiz #leftjoin #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #uzbekistan #suhbatsavollari

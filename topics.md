@@ -24,3 +24,4 @@
 - 2026-11-15 03 dart-list-where-map-fold — Dart dars: List'ning 3 ta kerakli metodi — where (filtr), map (o'zgartirish), fold (yig'ish), savat chegirma misoli, .toList() xatosi — Seriya: Dart asoslari #2
 - 2026-11-15 04 js-float-0.1-plus-0.2 — JS: 0.1 + 0.2 === 0.3 — true mi yoki false? Nega 0.30000000000000004, savat 1.1*3 xatosi, sentlarda hisoblash, Number.EPSILON, toFixed(2) (quiz) — Seriya: JS tuzoqlari #2
 - 2026-11-16 01 python-str-strip-split-join — Python dars: matn bilan 3 ta kerakli metod — strip (chet bo'sh joy), split (matn → ro'yxat), join (ro'yxat → matn), formadan ismlarni tozalash misoli, join'ga son berish TypeError xatosi — Seriya: Python asoslari #4
+- 2026-11-16 02 sql-left-join-where-trap — SQL: LEFT JOIN + WHERE — 3 qator mi yoki 1? O'ng jadval sharti WHERE'da LEFT JOIN'ni INNER'ga aylantiradi, filtrni ON ... AND ichiga yozish (quiz) — Seriya: SQL tuzoqlari

@@ -1,0 +1,189 @@
+{
+ "topic": "sql-left-join-where-trap",
+ "lang": "sql",
+ "accent": "#38bdf8",
+ "caption": "SQL quiz: LEFT JOIN + WHERE — 3 qator chiqadimi yoki 1? 🤔\nJavob videoda — oxirigacha ko'ring!\n📝 Qisqa konspekt:\n✅ LEFT JOIN chap jadvaldagi barcha qatorlarni saqlaydi\n✅ O'ng jadval sharti WHERE'da bo'lsa — NULL qatorlar o'chadi\n✅ Shartni ON ichiga yozing: ON ... AND b.holat = 'yangi'\n📌 Saqlab qo'ying — hisobotda \"yo'qolgan mijozlar\" sababi ko'pincha shu.\n💬 Siz nechta deb o'yladingiz? Izohga 3 yoki 1 deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#sql #sqlquiz #leftjoin #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL quiz",
+   "lines": [
+    "LEFT JOIN + WHERE",
+    "nechta qator beradi?"
+   ],
+   "sub": "3 mi yoki 1?",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "table",
+   "dur": 4,
+   "title": "Jadvallar",
+   "tables": [
+    {
+     "name": "mijozlar",
+     "cols": [
+      "id",
+      "ism"
+     ],
+     "rows": [
+      [
+       "1",
+       "Ali"
+      ],
+      [
+       "2",
+       "Vali"
+      ],
+      [
+       "3",
+       "Sardor"
+      ]
+     ]
+    },
+    {
+     "name": "buyurtmalar",
+     "cols": [
+      "id",
+      "mijoz_id",
+      "holat"
+     ],
+     "rows": [
+      [
+       "1",
+       "1",
+       "yangi"
+      ],
+      [
+       "2",
+       "2",
+       "bekor"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "Sardorda buyurtma yo'q"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.3,
+   "title": "Savol",
+   "desc": [
+    "Barcha mijozlar chiqadimi?"
+   ],
+   "code": [
+    "SELECT m.ism, b.holat",
+    "FROM mijozlar m",
+    "LEFT JOIN buyurtmalar b",
+    "  ON b.mijoz_id = m.id",
+    "WHERE b.holat = 'yangi';"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "Nechta qator? 3 yoki 1?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.7,
+   "title": "Javob",
+   "desc": [
+    "Faqat 1 qator! Vali va Sardor yo'qoldi"
+   ],
+   "code": [
+    "SELECT m.ism, b.holat",
+    "FROM mijozlar m",
+    "LEFT JOIN buyurtmalar b",
+    "  ON b.mijoz_id = m.id",
+    "WHERE b.holat = 'yangi';"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "ism",
+     "holat"
+    ],
+    "rows": [
+     [
+      "Ali",
+      "yangi"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "text",
+   "dur": 5.5,
+   "title": "Nega?",
+   "lines": [
+    "LEFT JOIN 3 qator berdi:",
+    "Sardorning holati NULL.",
+    "Keyin WHERE filtrlaydi:",
+    "NULL = 'yangi' — rost emas,",
+    "'bekor' ham mos emas."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "To'g'ri usul",
+   "desc": [
+    "O'ng jadval shartini ON ichiga yozing"
+   ],
+   "code": [
+    "SELECT m.ism, b.holat",
+    "FROM mijozlar m",
+    "LEFT JOIN buyurtmalar b",
+    "  ON b.mijoz_id = m.id",
+    " AND b.holat = 'yangi';"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "ism",
+     "holat"
+    ],
+    "rows": [
+     [
+      "Ali",
+      "yangi"
+     ],
+     [
+      "Vali",
+      "NULL"
+     ],
+     [
+      "Sardor",
+      "NULL"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "LEFT JOIN chapdagi hammani saqlaydi",
+    "O'ng jadval sharti WHERE'da — LEFT JOIN INNER'ga aylanadi",
+    "Filtrni ON ... AND ichiga yozing"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL tuzoqlari"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "3 yoki 1?"
+   ]
+  }
+ ]
+}
