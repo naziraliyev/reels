@@ -1,0 +1,136 @@
+{
+ "topic": "dart-division-operators",
+ "lang": "dart",
+ "accent": "#a78bfa",
+ "caption": "Dart'da 7 / 2 = ? 3 mi yoki 3.5? 🎯\nSeriya: Dart asoslari #3\n📝 Qisqa konspekt:\n✅ / — doim double qaytaradi: 7 / 2 → 3.5, hatto 6 / 2 → 3.0\n✅ ~/ — butun bo'lish, int qaytaradi: 7 ~/ 2 → 3\n✅ % — qoldiq: 7 % 2 → 1 (juft sonni tekshirish: n % 2 == 0)\n⚠️ int x = 7 / 2; — xato! O'rniga 7 ~/ 2 yoki (7 / 2).toInt()\n📌 Saqlab qo'ying — taymer, sahifalash, narx hisoblashda har kuni kerak bo'ladi.\n💬 Savol: 17 ~/ 5 va 17 % 5 nechaga teng? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #flutteruz #dartlang #dasturlash #dasturchi #programming #coding #mobiledevelopment #boshlovchilar #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart dars",
+   "lines": [
+    "7 / 2 Dart'da",
+    "3 mi yoki 3.5?"
+   ],
+   "sub": "/   ·   ~/   ·   %",
+   "footer": "Bo'lishning 3 ta operatori"
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "1. /  — oddiy bo'lish",
+   "desc": [
+    "Natija DOIMO double (kasr son)",
+    "Hatto 6 / 2 ham → 3.0"
+   ],
+   "code": [
+    "print(7 / 2);",
+    "print(6 / 2);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "3.5",
+    "3.0"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "2. ~/  — butun bo'lish",
+   "desc": [
+    "Kasr qismini tashlaydi, int qaytaradi"
+   ],
+   "code": [
+    "print(7 ~/ 2);",
+    "print(9 ~/ 4);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "3",
+    "2"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "3. %  — qoldiq",
+   "desc": [
+    "Bo'lishdan keyin qolgan son"
+   ],
+   "code": [
+    "print(7 % 2);",
+    "print(10 % 3);",
+    "",
+    "// juft sonni tekshirish:",
+    "print(8 % 2 == 0);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "1",
+    "1",
+    "true"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Amaliy misol",
+   "desc": [
+    "Taymer: 125 soniya → 2:05"
+   ],
+   "code": [
+    "int jami = 125; // soniya",
+    "",
+    "int daqiqa = jami ~/ 60;",
+    "int soniya = jami % 60;",
+    "",
+    "String s = soniya.toString().padLeft(2, '0');",
+    "print('$daqiqa:$s');"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "2:05"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "int yarim = 7 / 2;",
+    "!Xato: double int'ga sig'maydi"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "int yarim = 7 ~/ 2; // 3",
+    "// yoki (7 / 2).toInt()"
+   ],
+   "note": "int kerak bo'lsa — / emas, ~/ ishlating"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "/  — doim double: 7 / 2 = 3.5",
+    "~/ — butun qism: 7 ~/ 2 = 3",
+    "%  — qoldiq: 7 % 2 = 1"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Dart asoslari #3"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "17 ~/ 5 va 17 % 5 = ?"
+   ]
+  }
+ ]
+}

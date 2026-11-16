@@ -1,0 +1,12 @@
+Dart'da 7 / 2 = ? 3 mi yoki 3.5? 🎯
+Seriya: Dart asoslari #3
+📝 Qisqa konspekt:
+✅ / — doim double qaytaradi: 7 / 2 → 3.5, hatto 6 / 2 → 3.0
+✅ ~/ — butun bo'lish, int qaytaradi: 7 ~/ 2 → 3
+✅ % — qoldiq: 7 % 2 → 1 (juft sonni tekshirish: n % 2 == 0)
+⚠️ int x = 7 / 2; — xato! O'rniga 7 ~/ 2 yoki (7 / 2).toInt()
+📌 Saqlab qo'ying — taymer, sahifalash, narx hisoblashda har kuni kerak bo'ladi.
+💬 Savol: 17 ~/ 5 va 17 % 5 nechaga teng? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutteruz #dartlang #dasturlash #dasturchi #programming #coding #mobiledevelopment #boshlovchilar #uzbekistan

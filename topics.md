@@ -25,3 +25,4 @@
 - 2026-11-15 04 js-float-0.1-plus-0.2 — JS: 0.1 + 0.2 === 0.3 — true mi yoki false? Nega 0.30000000000000004, savat 1.1*3 xatosi, sentlarda hisoblash, Number.EPSILON, toFixed(2) (quiz) — Seriya: JS tuzoqlari #2
 - 2026-11-16 01 python-str-strip-split-join — Python dars: matn bilan 3 ta kerakli metod — strip (chet bo'sh joy), split (matn → ro'yxat), join (ro'yxat → matn), formadan ismlarni tozalash misoli, join'ga son berish TypeError xatosi — Seriya: Python asoslari #4
 - 2026-11-16 02 sql-left-join-where-trap — SQL: LEFT JOIN + WHERE — 3 qator mi yoki 1? O'ng jadval sharti WHERE'da LEFT JOIN'ni INNER'ga aylantiradi, filtrni ON ... AND ichiga yozish (quiz) — Seriya: SQL tuzoqlari
+- 2026-11-16 03 dart-division-operators — Dart dars: 7 / 2 = 3 mi yoki 3.5? Bo'lishning 3 operatori — / (doim double, 6/2 → 3.0), ~/ (butun bo'lish), % (qoldiq, juft son tekshirish), taymer 125 s → 2:05 misoli, int x = 7 / 2 xatosi — Seriya: Dart asoslari #3
