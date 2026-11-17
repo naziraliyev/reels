@@ -1,0 +1,147 @@
+{
+ "topic": "python-enumerate-zip",
+ "lang": "python",
+ "accent": "#a78bfa",
+ "caption": "for siklini Python'cha chiroyli yozing: enumerate va zip 🐍\nSeriya: Python asoslari #6\n✅ enumerate(ro'yxat, 1) — indeks + qiymat birga: range(len(...)) shart emas\n✅ zip(a, b) — ikki ro'yxatni juft-juft aylanadi: (\"Ali\", 85), (\"Vali\", 92)\n⚠️ zip eng qisqa ro'yxatda to'xtaydi — ortiqcha elementlar tushib qoladi\n📌 Saqlab qo'ying — har qanday ro'yxat bilan ishlashda kerak bo'ladi.\n💬 Savol: list(zip(\"ab\", [1, 2])) nima chiqaradi? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #backend",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python dars",
+   "lines": [
+    "range(len(x))",
+    "yozishni bas qiling"
+   ],
+   "sub": "enumerate · zip",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "Muammo",
+   "desc": [
+    "Indeks kerak bo'lsa, ko'pchilik shunday yozadi"
+   ],
+   "code": [
+    "mevalar = [\"olma\", \"nok\", \"uzum\"]",
+    "",
+    "for i in range(len(mevalar)):",
+    "    print(i, mevalar[i])"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "0 olma",
+    "1 nok",
+    "2 uzum"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "1. enumerate()",
+   "desc": [
+    "Indeks va qiymatni birga beradi",
+    "start=1 — sanoq 1 dan boshlanadi"
+   ],
+   "code": [
+    "mevalar = [\"olma\", \"nok\", \"uzum\"]",
+    "",
+    "for i, m in enumerate(mevalar, start=1):",
+    "    print(i, m)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "1 olma",
+    "2 nok",
+    "3 uzum"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "2. zip()",
+   "desc": [
+    "Ikki ro'yxatni juft-juft aylanadi"
+   ],
+   "code": [
+    "ismlar = [\"Ali\", \"Vali\", \"Soli\"]",
+    "ballar = [85, 92, 78]",
+    "",
+    "for ism, ball in zip(ismlar, ballar):",
+    "    print(ism, ball)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "Ali 85",
+    "Vali 92",
+    "Soli 78"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Amaliy misol",
+   "desc": [
+    "Talabalar reytingi: zip + enumerate birga"
+   ],
+   "code": [
+    "ismlar = [\"Ali\", \"Vali\", \"Soli\"]",
+    "ballar = [85, 92, 78]",
+    "",
+    "juft = sorted(zip(ballar, ismlar),",
+    "              reverse=True)",
+    "",
+    "for o, (b, ism) in enumerate(juft, 1):",
+    "    print(f\"{o}. {ism}: {b} ball\")"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "1. Vali: 92 ball",
+    "2. Ali: 85 ball",
+    "3. Soli: 78 ball"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "for i, m in mevalar:",
+    "    print(i, m)",
+    "!ValueError: too many values",
+    "!to unpack"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "for i, m in enumerate(mevalar):",
+    "    print(i, m)"
+   ],
+   "note": "Indeks + qiymat kerak bo'lsa — enumerate() ni unutmang"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "enumerate(x, 1) — indeks + qiymat",
+    "zip(a, b) — ikki ro'yxat juft-juft",
+    "zip eng qisqa ro'yxatda to'xtaydi"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari #6"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "list(zip(\"ab\", [1, 2])) = ?"
+   ]
+  }
+ ]
+}

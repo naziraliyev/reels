@@ -1,0 +1,10 @@
+for siklini Python'cha chiroyli yozing: enumerate va zip 🐍
+Seriya: Python asoslari #6
+✅ enumerate(ro'yxat, 1) — indeks + qiymat birga: range(len(...)) shart emas
+✅ zip(a, b) — ikki ro'yxatni juft-juft aylanadi: ("Ali", 85), ("Vali", 92)
+⚠️ zip eng qisqa ro'yxatda to'xtaydi — ortiqcha elementlar tushib qoladi
+📌 Saqlab qo'ying — har qanday ro'yxat bilan ishlashda kerak bo'ladi.
+💬 Savol: list(zip("ab", [1, 2])) nima chiqaradi? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #backend
