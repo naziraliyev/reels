@@ -1,0 +1,11 @@
+Dart'da Map bilan ishlashning 3 ta kerakli usuli 🎯
+Seriya: Dart asoslari #4
+✅ narx['uzum'] ?? 0 — yo'q kalit null beradi, ?? standart qiymat qo'yadi
+✅ savat.update('olma', (v) => v + 1, ifAbsent: () => 1) — bor bo'lsa oshiradi, yo'q bo'lsa qo'shadi
+✅ for (var e in narx.entries) — kalit va qiymat birga
+⚠️ narx['olma'] + 1 xato beradi: map[kalit] turi int? (null bo'lishi mumkin)
+📌 Saqlab qo'ying — Flutter'da savat, sanoq, sozlamalar uchun har kuni kerak.
+💬 Savol: {'a': 1}['b'] ?? 5 nima beradi? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #it #uzbekistan

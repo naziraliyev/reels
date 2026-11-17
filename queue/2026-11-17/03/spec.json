@@ -1,0 +1,145 @@
+{
+ "topic": "dart-map-3-methods",
+ "lang": "dart",
+ "accent": "#38bdf8",
+ "caption": "Dart'da Map bilan ishlashning 3 ta kerakli usuli 🎯\nSeriya: Dart asoslari #4\n✅ narx['uzum'] ?? 0 — yo'q kalit null beradi, ?? standart qiymat qo'yadi\n✅ savat.update('olma', (v) => v + 1, ifAbsent: () => 1) — bor bo'lsa oshiradi, yo'q bo'lsa qo'shadi\n✅ for (var e in narx.entries) — kalit va qiymat birga\n⚠️ narx['olma'] + 1 xato beradi: map[kalit] turi int? (null bo'lishi mumkin)\n📌 Saqlab qo'ying — Flutter'da savat, sanoq, sozlamalar uchun har kuni kerak.\n💬 Savol: {'a': 1}['b'] ?? 5 nima beradi? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #flutterdev #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart dars",
+   "lines": [
+    "narx['olma'] + 1",
+    "nega xato beradi?"
+   ],
+   "sub": "Map'ning 3 ta kerakli usuli",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "1. ?? — standart qiymat",
+   "desc": [
+    "Map — kalit → qiymat juftliklari",
+    "Yo'q kalit → null, ?? uni almashtiradi"
+   ],
+   "code": [
+    "var narx = {'olma': 5000, 'nok': 7000};",
+    "",
+    "print(narx['uzum']);",
+    "print(narx['uzum'] ?? 0);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "null",
+    "0"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "2. update()",
+   "desc": [
+    "Kalit bor bo'lsa — qiymatni o'zgartiradi",
+    "Yo'q bo'lsa — ifAbsent bilan qo'shadi"
+   ],
+   "code": [
+    "var savat = {'olma': 2};",
+    "",
+    "savat.update('olma', (v) => v + 1,",
+    "    ifAbsent: () => 1);",
+    "savat.update('nok', (v) => v + 1,",
+    "    ifAbsent: () => 1);",
+    "",
+    "print(savat);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "{olma: 3, nok: 1}"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "3. entries",
+   "desc": [
+    "Kalit va qiymatni birga aylanadi"
+   ],
+   "code": [
+    "var narx = {'olma': 5000, 'nok': 7000};",
+    "",
+    "for (var e in narx.entries) {",
+    "  print(\"${e.key}: ${e.value} so'm\");",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~olma: 5000 so'm",
+    "~nok: 7000 so'm"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Amaliy misol",
+   "desc": [
+    "Do'kon: har mahsulot necha marta sotilgan?"
+   ],
+   "code": [
+    "var sotuv = ['olma', 'nok', 'olma',",
+    "             'uzum', 'olma'];",
+    "var soni = <String, int>{};",
+    "",
+    "for (var s in sotuv) {",
+    "  soni.update(s, (v) => v + 1,",
+    "      ifAbsent: () => 1);",
+    "}",
+    "print(soni);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "{olma: 3, nok: 1, uzum: 1}"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "int n = narx['olma'] + 1;",
+    "!Xato: narx['olma'] turi int?",
+    "!(null bo'lishi mumkin)"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "int n = (narx['olma'] ?? 0) + 1;"
+   ],
+   "note": "map[kalit] doim nullable — ?? bilan standart qiymat bering"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "map[k] ?? 0 — standart qiymat",
+    "update + ifAbsent — sanash",
+    "entries — kalit + qiymat"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Dart asoslari #4"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "{'a': 1}['b'] ?? 5 = ?"
+   ]
+  }
+ ]
+}
