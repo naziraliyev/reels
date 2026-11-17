@@ -1,0 +1,181 @@
+{
+ "topic": "sql-union-vs-union-all",
+ "lang": "sql",
+ "accent": "#facc15",
+ "caption": "SQL quiz: UNION nechta qator qaytaradi — 5 mi yoki 3? 🤔\nJavob videoda — oxirigacha ko'ring!\n📝 Qisqa konspekt:\n✅ UNION — natijalarni birlashtiradi va takrorlarni o'chiradi (hatto bitta jadval ichidagini ham)\n✅ UNION ALL — hammasini saqlaydi va tezroq ishlaydi\n✅ Ustunlar soni va turi ikkala SELECT'da bir xil bo'lishi shart\n📌 Saqlab qo'ying — SQL suhbatlarida eng ko'p so'raladigan savollardan biri.\n💬 Siz nechta deb o'yladingiz? Izohga 5 yoki 3 deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: SQL tuzoqlari #2\n\n#sql #sqlquiz #union #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL quiz",
+   "lines": [
+    "UNION nechta",
+    "qator qaytaradi?"
+   ],
+   "sub": "5 mi yoki 3?",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "table",
+   "dur": 4,
+   "title": "Ikki filial mijozlari",
+   "tables": [
+    {
+     "name": "filial_a",
+     "cols": [
+      "mijoz"
+     ],
+     "rows": [
+      [
+       "Ali"
+      ],
+      [
+       "Vali"
+      ],
+      [
+       "Ali"
+      ]
+     ]
+    },
+    {
+     "name": "filial_b",
+     "cols": [
+      "mijoz"
+     ],
+     "rows": [
+      [
+       "Vali"
+      ],
+      [
+       "Sardor"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "Jami 5 ta qator"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Savol",
+   "desc": [
+    "Ikki ro'yxatni birlashtiramiz"
+   ],
+   "code": [
+    "SELECT mijoz FROM filial_a",
+    "UNION",
+    "SELECT mijoz FROM filial_b",
+    "ORDER BY mijoz;"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "Nechta qator? 5 yoki 3?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Javob: 3 qator!",
+   "desc": [
+    "Takrorlangan ismlar o'chdi"
+   ],
+   "code": [
+    "SELECT mijoz FROM filial_a",
+    "UNION",
+    "SELECT mijoz FROM filial_b",
+    "ORDER BY mijoz;"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "mijoz"
+    ],
+    "rows": [
+     [
+      "Ali"
+     ],
+     [
+      "Sardor"
+     ],
+     [
+      "Vali"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "text",
+   "dur": 5,
+   "title": "Nega?",
+   "lines": [
+    "UNION takrorlarni o'chiradi",
+    "(xuddi DISTINCT kabi).",
+    "Bitta jadval ichidagini ham:",
+    "ikkinchi Ali ham ketdi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Hammasi kerak bo'lsa",
+   "desc": [
+    "UNION ALL — takrorlarni saqlaydi"
+   ],
+   "code": [
+    "SELECT mijoz FROM filial_a",
+    "UNION ALL",
+    "SELECT mijoz FROM filial_b",
+    "ORDER BY mijoz;"
+   ],
+   "out_title": "Natija: 5 qator",
+   "table": {
+    "cols": [
+     "mijoz"
+    ],
+    "rows": [
+     [
+      "Ali"
+     ],
+     [
+      "Ali"
+     ],
+     [
+      "Sardor"
+     ],
+     [
+      "Vali"
+     ],
+     [
+      "Vali"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "bullets",
+   "dur": 6,
+   "title": "Esda tuting",
+   "items": [
+    "UNION — takrorlarni o'chiradi: noyob ro'yxat",
+    "UNION ALL — hammasini saqlaydi, tezroq: hisobot uchun",
+    "Ikkala SELECT'da ustunlar soni bir xil bo'lsin"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL tuzoqlari"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "5 yoki 3?"
+   ]
+  }
+ ]
+}

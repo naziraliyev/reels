@@ -1,0 +1,12 @@
+SQL quiz: UNION nechta qator qaytaradi — 5 mi yoki 3? 🤔
+Javob videoda — oxirigacha ko'ring!
+📝 Qisqa konspekt:
+✅ UNION — natijalarni birlashtiradi va takrorlarni o'chiradi (hatto bitta jadval ichidagini ham)
+✅ UNION ALL — hammasini saqlaydi va tezroq ishlaydi
+✅ Ustunlar soni va turi ikkala SELECT'da bir xil bo'lishi shart
+📌 Saqlab qo'ying — SQL suhbatlarida eng ko'p so'raladigan savollardan biri.
+💬 Siz nechta deb o'yladingiz? Izohga 5 yoki 3 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: SQL tuzoqlari #2
+
+#sql #sqlquiz #union #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #uzbekistan #suhbatsavollari
