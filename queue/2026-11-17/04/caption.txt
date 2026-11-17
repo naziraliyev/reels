@@ -1,0 +1,11 @@
+JS quiz: 0 == "0" true, 0 == "" true... "0" == "" chi? 🤯
+Javob videoda — oxirigacha ko'ring!
+Seriya: JS tuzoqlari #3
+✅ == avval turlarni o'zgartiradi, keyin solishtiradi — shuning uchun natijasi kutilmagan
+✅ === tur va qiymatni birga tekshiradi: 0 === "0" → false
+✅ input'dan kelgan qiymat: Number(id) === 5
+📌 Saqlab qo'ying — if (x == ...) dagi yashirin xatolarning ko'pi shu yerdan.
+💬 Savol: null == 0 nima beradi? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#javascript #jsquiz #js #frontend #webdasturlash #dasturlash #dasturchi #programming #coding #it #uzbekistan #suhbatsavollari

@@ -1,0 +1,133 @@
+{
+ "topic": "js-loose-vs-strict-equality",
+ "lang": "js",
+ "accent": "#a78bfa",
+ "caption": "JS quiz: 0 == \"0\" true, 0 == \"\" true... \"0\" == \"\" chi? 🤯\nJavob videoda — oxirigacha ko'ring!\nSeriya: JS tuzoqlari #3\n✅ == avval turlarni o'zgartiradi, keyin solishtiradi — shuning uchun natijasi kutilmagan\n✅ === tur va qiymatni birga tekshiradi: 0 === \"0\" → false\n✅ input'dan kelgan qiymat: Number(id) === 5\n📌 Saqlab qo'ying — if (x == ...) dagi yashirin xatolarning ko'pi shu yerdan.\n💬 Savol: null == 0 nima beradi? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#javascript #jsquiz #js #frontend #webdasturlash #dasturlash #dasturchi #programming #coding #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "JS quiz",
+   "lines": [
+    "0 == \"0\"  → true",
+    "0 == \"\"   → true",
+    "\"0\" == \"\" → ?"
+   ],
+   "sub": "Mantiq bo'yicha true... shundaymi?",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "Savol",
+   "desc": [
+    "Konsolda nima chiqadi?"
+   ],
+   "code": [
+    "console.log(0 == \"0\");",
+    "console.log(0 == \"\");",
+    "console.log(\"0\" == \"\");"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~true",
+    "~true",
+    "~?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Javob: false!",
+   "desc": [
+    "== da A = B, B = C bo'lsa ham",
+    "A = C bo'lishi shart emas"
+   ],
+   "code": [
+    "console.log(0 == \"0\");",
+    "console.log(0 == \"\");",
+    "console.log(\"0\" == \"\");"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~true",
+    "~true",
+    "!false"
+   ]
+  },
+  {
+   "type": "text",
+   "dur": 6,
+   "title": "Nega?",
+   "lines": [
+    "== turlarni o'zgartiradi:",
+    "\"0\" → 0 va \"\" → 0,",
+    "shuning uchun 0 bilan teng.",
+    "Ikkalasi string bo'lsa —",
+    "o'zgartirmaydi, matn",
+    "solishtiradi: \"0\" ≠ \"\""
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 6,
+   "title": "== yoki ===",
+   "bad_label": "== (bo'sh tenglik)",
+   "bad": [
+    "0 == \"0\"          // true",
+    "null == undefined // true"
+   ],
+   "good_label": "=== (qat'iy tenglik)",
+   "good": [
+    "0 === \"0\"          // false",
+    "null === undefined // false"
+   ],
+   "note": "=== tur + qiymatni birga tekshiradi"
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Real misol",
+   "desc": [
+    "URL yoki input'dan id doim string"
+   ],
+   "code": [
+    "const id = params.get(\"id\"); // \"5\"",
+    "",
+    "if (id === 5) { ... }   // false!",
+    "",
+    "// To'g'ri usul:",
+    "if (Number(id) === 5) { ... }"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "!id === 5         → false",
+    "~Number(id) === 5 → true"
+   ]
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "== turlarni o'zgartiradi",
+    "Doim === va !== ishlating",
+    "Avval Number(), keyin ==="
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "JS tuzoqlari seriyasi #3"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "null == 0 = ?"
+   ]
+  }
+ ]
+}
