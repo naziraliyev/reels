@@ -1,0 +1,11 @@
+Dart'da matn bilan 3 ta kerakli metod 🔎
+Seriya: Dart asoslari #5
+✅ '  Ali  '.trim() → 'Ali' — chetdagi bo'sh joyni oladi
+✅ 'dart,flutter,sql'.split(',') → [dart, flutter, sql] — matn → ro'yxat
+✅ 'Olma'.contains('olma') → false! Katta-kichik harf farqlanadi
+⚠️ Qidiruvda doim: m.toLowerCase().contains(q.trim().toLowerCase())
+📌 Saqlab qo'ying — Flutter'da qidiruv maydoni va formalar uchun har kuni kerak.
+💬 Savol: 'a,b,,c'.split(',').length nechaga teng? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #it #uzbekistan
