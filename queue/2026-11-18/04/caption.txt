@@ -1,0 +1,12 @@
+Python quiz: b = a.sort() — print(b) nima chiqaradi? 🤔 [10, 20, 30] mi yoki None?
+Javob videoda — oxirigacha ko'ring!
+📝 Qisqa konspekt:
+✅ a.sort() — ro'yxatni JOYIDA saralaydi va None qaytaradi
+✅ sorted(a) — YANGI saralangan ro'yxat qaytaradi, asl ro'yxat o'zgarmaydi
+✅ Top-3: sorted(ballar, reverse=True)[:3]
+📌 Saqlab qo'ying — boshlovchilar shu xatoni juda ko'p qiladi.
+💬 Siz nima deb o'yladingiz? Izohga yozing: ro'yxat yoki None?
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: Python asoslari #8
+
+#python #pythonquiz #dasturlash #dasturchi #pythonuz #programmalash #coding #backend #it #uzbekistan #suhbatsavollari
