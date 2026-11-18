@@ -1,0 +1,12 @@
+SQL quiz: BETWEEN 50 AND 80 — nechta qator? 1 mi yoki 3? 🤔
+Javob videoda — oxirigacha ko'ring!
+📝 Qisqa konspekt:
+✅ BETWEEN a AND b = >= a AND <= b — ikkala chegara ham KIRADI
+✅ Kichik son oldin yoziladi: BETWEEN 80 AND 50 → 0 qator
+✅ Vaqt ustunida BETWEEN o'rniga: vaqt >= '2026-11-01' AND vaqt < '2026-12-01'
+📌 Saqlab qo'ying — hisobot yozishda shu xato ko'p uchraydi.
+💬 Siz nechta deb o'yladingiz? Izohga 1 yoki 3 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: SQL tuzoqlari #3
+
+#sql #sqlquiz #between #mysql #postgresql #database #malumotlarbazasi #dasturlash #dasturchi #backend #uzbekistan #suhbatsavollari
