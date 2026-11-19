@@ -1,0 +1,155 @@
+{
+ "topic": "sql-null-arithmetic-sum-trap",
+ "lang": "sql",
+ "accent": "#facc15",
+ "caption": "SQL quiz: SUM(narx + yetkazish) — 380 mi yoki 180? 🤔\nJavob videoda — 200 so'mlik buyurtma qayerga yo'qoldi?\n📝 Qisqa konspekt:\n✅ 200 + NULL = NULL — NULL bilan har qanday hisob NULL bo'ladi\n✅ SUM esa NULL qatorlarni jimgina tashlab ketadi → jami kam chiqadi\n✅ To'g'ri: SUM(narx + COALESCE(yetkazish, 0))\n📌 Saqlab qo'ying — hisobotdagi \"yo'qolgan pul\" ko'pincha shu xatodan.\n💬 Siz nima deb o'yladingiz? Izohga 380 yoki 180 deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: SQL va NULL #3\n\n#sql #sqlquiz #postgresql #mysql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL quiz",
+   "lines": [
+    "Jami summa:",
+    "380 mi yoki 180?"
+   ],
+   "sub": "SUM(narx + yetkazish)",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "table",
+   "dur": 4,
+   "title": "Jadval",
+   "tables": [
+    {
+     "name": "buyurtmalar",
+     "cols": [
+      "id",
+      "narx",
+      "yetkazish"
+     ],
+     "rows": [
+      [
+       "1",
+       "100",
+       "20"
+      ],
+      [
+       "2",
+       "200",
+       "NULL"
+      ],
+      [
+       "3",
+       "50",
+       "10"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "2-buyurtmada yetkazish bepul — NULL"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Savol",
+   "desc": [
+    "Narx + yetkazish — umumiy jami qancha?"
+   ],
+   "code": [
+    "SELECT SUM(narx + yetkazish)",
+    "       AS jami",
+    "FROM buyurtmalar;"
+   ],
+   "out_title": "Nima chiqadi?",
+   "out": [
+    "~380  yoki  180 ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Javob: 180!",
+   "desc": [
+    "Har qatorni alohida ko'ramiz:",
+    "200 + NULL = NULL"
+   ],
+   "code": [
+    "SELECT id,",
+    "       narx + yetkazish AS jami",
+    "FROM buyurtmalar;"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "id",
+     "jami"
+    ],
+    "rows": [
+     [
+      "1",
+      "120"
+     ],
+     [
+      "2",
+      "NULL"
+     ],
+     [
+      "3",
+      "60"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "text",
+   "dur": 5.5,
+   "title": "Nega?",
+   "lines": [
+    "NULL — \"noma'lum\" degani.",
+    "200 + noma'lum = noma'lum",
+    "SUM NULL'ni tashlab ketadi:",
+    "120 + 60 = 180"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 6.5,
+   "title": "To'g'ri usul",
+   "bad_label": "Xato: 200 so'm yo'qoladi → 180",
+   "bad": [
+    "SUM(narx + yetkazish)"
+   ],
+   "good_label": "To'g'ri: NULL o'rniga 0 → 380",
+   "good": [
+    "SUM(narx + COALESCE(yetkazish, 0))"
+   ],
+   "note": "COALESCE(x, 0) — NULL bo'lsa 0 oladi"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "NULL bilan har qanday hisob = NULL",
+    "SUM, AVG NULL qatorni tashlab ketadi",
+    "Hisobdan oldin: COALESCE(ustun, 0)"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL va NULL #3"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "380 yoki 180?"
+   ]
+  }
+ ]
+}

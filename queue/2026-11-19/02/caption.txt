@@ -1,0 +1,12 @@
+SQL quiz: SUM(narx + yetkazish) — 380 mi yoki 180? 🤔
+Javob videoda — 200 so'mlik buyurtma qayerga yo'qoldi?
+📝 Qisqa konspekt:
+✅ 200 + NULL = NULL — NULL bilan har qanday hisob NULL bo'ladi
+✅ SUM esa NULL qatorlarni jimgina tashlab ketadi → jami kam chiqadi
+✅ To'g'ri: SUM(narx + COALESCE(yetkazish, 0))
+📌 Saqlab qo'ying — hisobotdagi "yo'qolgan pul" ko'pincha shu xatodan.
+💬 Siz nima deb o'yladingiz? Izohga 380 yoki 180 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: SQL va NULL #3
+
+#sql #sqlquiz #postgresql #mysql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari
