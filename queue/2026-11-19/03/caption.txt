@@ -1,0 +1,11 @@
+Dart ro'yxatining 3 ta siri — Flutter'da har kuni kerak 🧩
+Seriya: Dart asoslari #6
+✅ ...a — spread: ro'yxatni boshqa ro'yxat ichiga yoyadi → [...a, ...b]
+✅ if (admin) 'Sozlamalar' — collection if: shart bajarilsa element qo'shiladi
+✅ [for (var s in sonlar) s * s] — collection for: sikl bilan element yasaydi → [1, 4, 9]
+⚠️ Flutter'da: admin ? Text('A') : null — XATO, null Widget emas. To'g'risi: if (admin) Text('A')
+📌 Saqlab qo'ying — Column/ListView children'ni chiroyli yozish uchun.
+💬 Savol: [0, ...?royxat] — royxat null bo'lsa natija nima? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #it #uzbekistan
