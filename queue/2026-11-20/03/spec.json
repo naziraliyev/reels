@@ -1,0 +1,154 @@
+{
+ "topic": "dart-named-optional-params",
+ "lang": "dart",
+ "accent": "#a78bfa",
+ "caption": "yarat('Ali', 20, true) — bu true nima degani? 🤔 Dart'da parametrning 3 turi\nSeriya: Dart asoslari #7\n✅ (String ism) — oddiy: tartib bo'yicha, majburiy\n✅ {required String ism, int yosh = 18} — nomli: chaqirishda nomi yoziladi → yarat(ism: 'Ali', admin: true)\n✅ [String? fam] — ixtiyoriy: oxirida turadi, berilmasa null\n⚠️ Xato: {int yosh} — null bo'lishi mumkin emas. Yechim: required, = 18 yoki int?\n💡 Flutter'dagi Text(style: ...), Padding(padding: ...) — hammasi nomli parametr!\n📌 Saqlab qo'ying — o'z widget'ingizni yozganda kerak bo'ladi.\n💬 Savol: bitta funksiyada {} va [] birga yozsa bo'ladimi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #flutterdev #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart dars",
+   "lines": [
+    "20 va true —",
+    "nima degani?"
+   ],
+   "sub": "yarat('Ali', 20, true)",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "1. Oddiy: ( )",
+   "desc": [
+    "Tartib bo'yicha beriladi —",
+    "chaqirishda ma'nosi ko'rinmaydi"
+   ],
+   "code": [
+    "void yarat(String ism, int yosh, bool admin) {",
+    "  print('$ism, $yosh, admin: $admin');",
+    "}",
+    "",
+    "yarat('Ali', 20, true); // true nima?"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Ali, 20, admin: true",
+    "!Kod o'qiganda 20 va true tushunarsiz"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "2. Nomli: { }",
+   "desc": [
+    "Nomi bilan beriladi, tartib muhim emas",
+    "required — majburiy,  = 18 — standart"
+   ],
+   "code": [
+    "void yarat({",
+    "  required String ism,",
+    "  int yosh = 18,",
+    "  bool admin = false,",
+    "}) {",
+    "  print('$ism, $yosh, admin: $admin');",
+    "}",
+    "",
+    "yarat(ism: 'Ali', admin: true);"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Ali, 18, admin: true"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "3. Ixtiyoriy: [ ]",
+   "desc": [
+    "Oxirida turadi, berilmasa — null"
+   ],
+   "code": [
+    "String salom(String ism, [String? fam]) {",
+    "  if (fam == null) return 'Salom, $ism';",
+    "  return 'Salom, $ism $fam';",
+    "}",
+    "",
+    "print(salom('Ali'));",
+    "print(salom('Ali', 'Valiyev'));"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Salom, Ali",
+    "~Salom, Ali Valiyev"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Amaliy: Flutter widget",
+   "desc": [
+    "O'z tugmangiz — xuddi Text() kabi"
+   ],
+   "code": [
+    "class Tugma extends StatelessWidget {",
+    "  final String matn;",
+    "  final Color rang;",
+    "  const Tugma({",
+    "    super.key,",
+    "    required this.matn,",
+    "    this.rang = Colors.blue,",
+    "  });",
+    "  // build(...) { ... }",
+    "}",
+    "",
+    "Tugma(matn: 'Saqlash')"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~matn — majburiy, rang — standart ko'k",
+    "~Flutter widgetlari ham shunday yozilgan"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "void f({int yosh}) { }",
+    "!yosh null bo'lishi mumkin emas"
+   ],
+   "good_label": "To'g'ri (bittasini tanlang)",
+   "good": [
+    "{required int yosh}",
+    "{int yosh = 18}",
+    "{int? yosh}"
+   ],
+   "note": "{ } ichida: required yoki = qiymat"
+  },
+  {
+   "type": "bullets",
+   "dur": 4,
+   "title": "Esda tuting",
+   "items": [
+    "( ) — tartib bo'yicha, majburiy",
+    "{ } — nomi bilan: required yoki = qiymat",
+    "[ ] — oxirida, berilmasa null"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Dart asoslari #7"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "{ } va [ ] birga bo'ladimi?"
+   ]
+  }
+ ]
+}

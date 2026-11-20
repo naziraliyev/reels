@@ -1,0 +1,12 @@
+yarat('Ali', 20, true) — bu true nima degani? 🤔 Dart'da parametrning 3 turi
+Seriya: Dart asoslari #7
+✅ (String ism) — oddiy: tartib bo'yicha, majburiy
+✅ {required String ism, int yosh = 18} — nomli: chaqirishda nomi yoziladi → yarat(ism: 'Ali', admin: true)
+✅ [String? fam] — ixtiyoriy: oxirida turadi, berilmasa null
+⚠️ Xato: {int yosh} — null bo'lishi mumkin emas. Yechim: required, = 18 yoki int?
+💡 Flutter'dagi Text(style: ...), Padding(padding: ...) — hammasi nomli parametr!
+📌 Saqlab qo'ying — o'z widget'ingizni yozganda kerak bo'ladi.
+💬 Savol: bitta funksiyada {} va [] birga yozsa bo'ladimi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #it #uzbekistan
