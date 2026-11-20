@@ -1,0 +1,158 @@
+{
+ "topic": "sql-concat-null-trap",
+ "lang": "sql",
+ "accent": "#38bdf8",
+ "caption": "SQL quiz: 'Vali' || ' ' || NULL — \"Vali\" mi yoki NULL? 🤔\nJavob videoda — talabaning ismi ro'yxatdan nega g'oyib bo'ldi?\n📝 Qisqa konspekt:\n✅ Matnni NULL bilan ulasangiz — natija butunlay NULL (PostgreSQL, SQLite; MySQL'da CONCAT() ham shunday)\n✅ Tuzatish: ism || ' ' || COALESCE(familiya, '')\n✅ Yoki: CONCAT_WS(' ', ism, familiya) — NULL'ni o'zi tashlab ketadi\n📌 Saqlab qo'ying — F.I.O., manzil, to'liq nom yasashda juda ko'p uchraydi.\n💬 Siz nima deb o'yladingiz? Izohga \"Vali\" yoki NULL deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: SQL va NULL #4\n\n#sql #sqlquiz #postgresql #sqlite #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL quiz",
+   "lines": [
+    "Natija:",
+    "\"Vali\" mi yoki NULL?"
+   ],
+   "sub": "ism || ' ' || familiya",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "table",
+   "dur": 4,
+   "title": "Jadval",
+   "tables": [
+    {
+     "name": "talabalar",
+     "cols": [
+      "id",
+      "ism",
+      "familiya"
+     ],
+     "rows": [
+      [
+       "1",
+       "Ali",
+       "Valiyev"
+      ],
+      [
+       "2",
+       "Vali",
+       "NULL"
+      ],
+      [
+       "3",
+       "Olim",
+       "Karimov"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "2-talabaning familiyasi kiritilmagan — NULL"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Savol",
+   "desc": [
+    "Ism va familiyani ulab, F.I.O. yasaymiz"
+   ],
+   "code": [
+    "SELECT id,",
+    "       ism || ' ' || familiya",
+    "       AS fio",
+    "FROM talabalar;"
+   ],
+   "out_title": "2-qatorda nima chiqadi?",
+   "out": [
+    "~\"Vali\"  yoki  NULL ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Javob: NULL!",
+   "desc": [
+    "Vali'ning ismi ham yo'qoldi:",
+    "'Vali ' || NULL = NULL"
+   ],
+   "code": [
+    "SELECT id,",
+    "       ism || ' ' || familiya",
+    "       AS fio",
+    "FROM talabalar;"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "id",
+     "fio"
+    ],
+    "rows": [
+     [
+      "1",
+      "Ali Valiyev"
+     ],
+     [
+      "2",
+      "NULL"
+     ],
+     [
+      "3",
+      "Olim Karimov"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "text",
+   "dur": 5.5,
+   "title": "Nega?",
+   "lines": [
+    "NULL — \"noma'lum\" degani.",
+    "Vali + noma'lum familiya",
+    "= noma'lum F.I.O.",
+    "1 ta NULL → hammasi NULL"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7,
+   "title": "To'g'ri usul",
+   "bad_label": "Xato: familiya NULL → fio NULL",
+   "bad": [
+    "ism || ' ' || familiya"
+   ],
+   "good_label": "To'g'ri: NULL o'rniga '' → \"Vali \"",
+   "good": [
+    "ism || ' ' ||",
+    "  COALESCE(familiya, '')"
+   ],
+   "note": "Eng toza: CONCAT_WS(' ', ism, familiya) → \"Vali\""
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "Matn || NULL = NULL",
+    "COALESCE(ustun, '') — NULL'ni bo'sh matnga",
+    "CONCAT_WS NULL'ni o'zi tashlab ketadi"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL va NULL #4"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "\"Vali\" yoki NULL?"
+   ]
+  }
+ ]
+}

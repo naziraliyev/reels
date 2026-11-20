@@ -1,0 +1,12 @@
+SQL quiz: 'Vali' || ' ' || NULL — "Vali" mi yoki NULL? 🤔
+Javob videoda — talabaning ismi ro'yxatdan nega g'oyib bo'ldi?
+📝 Qisqa konspekt:
+✅ Matnni NULL bilan ulasangiz — natija butunlay NULL (PostgreSQL, SQLite; MySQL'da CONCAT() ham shunday)
+✅ Tuzatish: ism || ' ' || COALESCE(familiya, '')
+✅ Yoki: CONCAT_WS(' ', ism, familiya) — NULL'ni o'zi tashlab ketadi
+📌 Saqlab qo'ying — F.I.O., manzil, to'liq nom yasashda juda ko'p uchraydi.
+💬 Siz nima deb o'yladingiz? Izohga "Vali" yoki NULL deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: SQL va NULL #4
+
+#sql #sqlquiz #postgresql #sqlite #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari
