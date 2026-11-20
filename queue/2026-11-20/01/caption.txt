@@ -1,0 +1,11 @@
+Python ro'yxatining 3 ta eng kerakli metodi 🐍
+Seriya: Python asoslari #11
+✅ append(x) — oxiriga BITTA element qo'shadi
+✅ extend([...]) — ro'yxatdagi HAR BIR elementni qo'shadi
+✅ pop() — oxirgisini olib tashlaydi va QAYTARADI, pop(0) — birinchisini
+⚠️ Xato: a.append([4, 5]) → [1, 2, 3, [4, 5]] (ichma-ich ro'yxat). Ko'p element uchun — extend
+📌 Saqlab qo'ying — savat, navbat, ro'yxatlar bilan ishlaganda kerak bo'ladi.
+💬 Savol: a = [1]; a.extend('ab') — natija nima? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythonlearning #boshlovchilar #it #uzbekistan
