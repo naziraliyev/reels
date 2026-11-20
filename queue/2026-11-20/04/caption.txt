@@ -1,0 +1,12 @@
+Python quiz: bool("False") — False mi yoki True? 🤔
+Javob videoda — oxirigacha ko'ring!
+📝 Qisqa konspekt:
+✅ Bo'sh bo'lmagan har qanday matn — True, hatto "False" va "0" ham
+✅ Falsy (yolg'on) qiymatlar: "", 0, 0.0, [], {}, None, False
+✅ input() doim matn qaytaradi — javobni solishtiring: javob.lower() == "ha"
+📌 Saqlab qo'ying — bu xato kodda jim turadi, xato bermaydi.
+💬 Siz nima deb o'yladingiz? Izohga yozing: False yoki True?
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: Python asoslari #12
+
+#python #pythonquiz #dasturlash #dasturchi #pythonuz #programmalash #coding #backend #it #uzbekistan #suhbatsavollari

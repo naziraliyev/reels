@@ -1,0 +1,109 @@
+{
+ "topic": "python-bool-false-string-truthiness",
+ "lang": "python",
+ "accent": "#fb923c",
+ "caption": "Python quiz: bool(\"False\") — False mi yoki True? 🤔\nJavob videoda — oxirigacha ko'ring!\n📝 Qisqa konspekt:\n✅ Bo'sh bo'lmagan har qanday matn — True, hatto \"False\" va \"0\" ham\n✅ Falsy (yolg'on) qiymatlar: \"\", 0, 0.0, [], {}, None, False\n✅ input() doim matn qaytaradi — javobni solishtiring: javob.lower() == \"ha\"\n📌 Saqlab qo'ying — bu xato kodda jim turadi, xato bermaydi.\n💬 Siz nima deb o'yladingiz? Izohga yozing: False yoki True?\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: Python asoslari #12\n\n#python #pythonquiz #dasturlash #dasturchi #pythonuz #programmalash #coding #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python quiz",
+   "lines": [
+    "bool(\"False\")",
+    "nima qaytaradi?"
+   ],
+   "sub": "False mi yoki True?",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Savol",
+   "desc": [
+    "Matnni bool() ga beramiz"
+   ],
+   "code": [
+    "javob = \"False\"",
+    "print(bool(javob))"
+   ],
+   "out_title": "Nima chiqadi?",
+   "out": [
+    "~False  yoki  True ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Javob: True!",
+   "desc": [
+    "bool() matn ichini o'qimaydi —",
+    "faqat bo'sh yoki bo'sh emasligini ko'radi"
+   ],
+   "code": [
+    "print(bool(\"False\"))",
+    "print(bool(\"0\"))",
+    "print(bool(\"\"))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~True",
+    "~True",
+    "~False"
+   ]
+  },
+  {
+   "type": "bullets",
+   "dur": 8,
+   "title": "Falsy qiymatlar",
+   "items": [
+    "Bo'sh matn: \"\"",
+    "Nol: 0 va 0.0",
+    "Bo'sh to'plamlar: [], {}, ()",
+    "None va False",
+    "Qolgan HAMMASI — True"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7.5,
+   "title": "Real xato: input()",
+   "bad_label": "Xato: \"yo'q\" desa ham o'chiradi",
+   "bad": [
+    "javob = input(\"O'chiraymi? \")",
+    "if javob:",
+    "    ochir()"
+   ],
+   "good_label": "To'g'ri: matnni solishtiring",
+   "good": [
+    "javob = input(\"O'chiraymi? \")",
+    "if javob.strip().lower() == \"ha\":",
+    "    ochir()"
+   ],
+   "note": "input() doim matn qaytaradi"
+  },
+  {
+   "type": "bullets",
+   "dur": 5.5,
+   "title": "Esda tuting",
+   "items": [
+    "Bo'sh bo'lmagan matn — doim True",
+    "\"False\" va \"0\" ham True!",
+    "Matnni == bilan solishtiring"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "False yoki True?"
+   ]
+  }
+ ]
+}
