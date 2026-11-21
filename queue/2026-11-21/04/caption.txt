@@ -1,0 +1,12 @@
+Python quiz: -7 // 2 — -3 mi yoki -4? 🤔
+Javob videoda — oxirigacha ko'ring!
+📝 Qisqa konspekt:
+✅ // har doim PASTGA yaxlitlaydi: 7 // 2 = 3, lekin -7 // 2 = -4
+✅ int(-7 / 2) esa kasrni kesadi: -3 — natijalar farq qiladi!
+✅ Yuqoriga yaxlitlash kerak bo'lsa: math.ceil(23 / 10) = 3 (sahifalar soni)
+📌 Saqlab qo'ying — manfiy sonlarda bu xato jim turadi.
+💬 Siz nima deb o'yladingiz? Izohga yozing: -3 yoki -4?
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: Python asoslari #14
+
+#python #pythonquiz #dasturlash #dasturchi #pythonuz #programmalash #coding #backend #it #uzbekistan #suhbatsavollari
