@@ -1,0 +1,143 @@
+{
+ "topic": "python-slicing-start-stop-step",
+ "lang": "python",
+ "accent": "#a78bfa",
+ "caption": "\"Python\"[::-1] — bu nima qiladi? 🐍\nSeriya: Python asoslari #13 — Slicing (kesib olish)\n✅ s[boshi:oxiri:qadam] — oxiri KIRMAYDI: \"Python\"[0:3] → 'Pyt'\n✅ Manfiy indeks oxiridan sanaydi: s[-3:] → 'hon' (oxirgi 3 ta)\n✅ s[::-1] — teskari: 'nohtyP' (palindrom tekshirish: soz == soz[::-1])\n📌 Saqlab qo'ying — matn va ro'yxatlar bilan ishlaganda har kuni kerak bo'ladi.\n💬 Savol: \"dasturlash\"[::2] nima chiqaradi? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #slicing",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python dars",
+   "lines": [
+    "\"Python\"[::-1]",
+    "natija nima?"
+   ],
+   "sub": "Slicing: [boshi : oxiri : qadam]",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Avval: indekslar",
+   "desc": [
+    "Har bir harfning raqami bor.",
+    "Manfiy indeks — oxiridan sanaydi"
+   ],
+   "code": [
+    "s = \"Python\"",
+    "#   P  y  t  h  o  n",
+    "#   0  1  2  3  4  5",
+    "#  -6 -5 -4 -3 -2 -1",
+    "",
+    "print(s[0], s[-1])"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~P n"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "s[boshi : oxiri]",
+   "desc": [
+    "Bo'lakni kesib oladi. Oxiri KIRMAYDI,",
+    "son yozilmasa — chetigacha"
+   ],
+   "code": [
+    "s = \"Python\"",
+    "print(s[0:3])",
+    "print(s[2:])",
+    "print(s[-3:])"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Pyt",
+    "~thon",
+    "~hon"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Uchinchi son: qadam",
+   "desc": [
+    "[::2] — har ikkinchi harf (0, 2, 4)",
+    "[::-1] — teskari tartibda"
+   ],
+   "code": [
+    "s = \"Python\"",
+    "print(s[::2])",
+    "print(s[::-1])"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Pto",
+    "~nohtyP"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Amaliy misol",
+   "desc": [
+    "Raqamni yashirish va palindrom tekshirish"
+   ],
+   "code": [
+    "tel = \"+998901234567\"",
+    "print(\"***\" + tel[-4:])",
+    "",
+    "for soz in [\"kiyik\", \"olma\"]:",
+    "    print(soz, soz == soz[::-1])"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~***4567",
+    "~kiyik True",
+    "~olma False"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Xato tushuncha",
+   "bad": [
+    "s = \"Python\"",
+    "s[1:3]  # 'yth' deb o'ylash",
+    "!→ aslida 'yt'"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "s[1:4]",
+    "~→ 'yth'"
+   ],
+   "note": "Oxirgi indeks kirmaydi: [1:4] = 1, 2, 3"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "[boshi:oxiri] — oxiri kirmaydi",
+    "s[-3:] — oxirgi 3 ta belgi",
+    "s[::-1] — teskari tartib"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari #13",
+    "Ro'yxatlarda ham ishlaydi!"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "\"dasturlash\"[::2] = ?"
+   ]
+  }
+ ]
+}

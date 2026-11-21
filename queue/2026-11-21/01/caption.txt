@@ -1,0 +1,10 @@
+"Python"[::-1] — bu nima qiladi? 🐍
+Seriya: Python asoslari #13 — Slicing (kesib olish)
+✅ s[boshi:oxiri:qadam] — oxiri KIRMAYDI: "Python"[0:3] → 'Pyt'
+✅ Manfiy indeks oxiridan sanaydi: s[-3:] → 'hon' (oxirgi 3 ta)
+✅ s[::-1] — teskari: 'nohtyP' (palindrom tekshirish: soz == soz[::-1])
+📌 Saqlab qo'ying — matn va ro'yxatlar bilan ishlaganda har kuni kerak bo'ladi.
+💬 Savol: "dasturlash"[::2] nima chiqaradi? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #slicing
