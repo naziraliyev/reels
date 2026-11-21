@@ -1,0 +1,12 @@
+SQL quiz: WHERE shahar <> 'Toshkent' — 4 qator mi yoki 2? 🤔
+Javob videoda — shahri kiritilmagan talabalar qayerga yo'qoldi?
+📝 Qisqa konspekt:
+✅ NULL <> 'Toshkent' natijasi TRUE emas, NULL (noma'lum) — WHERE faqat TRUE qatorlarni oladi
+✅ Tuzatish: WHERE shahar <> 'Toshkent' OR shahar IS NULL
+✅ PostgreSQL'da qisqasi: WHERE shahar IS DISTINCT FROM 'Toshkent'
+📌 Saqlab qo'ying — filtrlar, hisobotlar va "boshqalar" ro'yxatida juda ko'p uchraydi.
+💬 Siz nima deb o'yladingiz? Izohga 4 yoki 2 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: SQL va NULL #5
+
+#sql #sqlquiz #postgresql #mysql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari

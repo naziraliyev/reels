@@ -1,0 +1,159 @@
+{
+ "topic": "sql-not-equal-null-trap",
+ "lang": "sql",
+ "accent": "#fb923c",
+ "caption": "SQL quiz: WHERE shahar <> 'Toshkent' — 4 qator mi yoki 2? 🤔\nJavob videoda — shahri kiritilmagan talabalar qayerga yo'qoldi?\n📝 Qisqa konspekt:\n✅ NULL <> 'Toshkent' natijasi TRUE emas, NULL (noma'lum) — WHERE faqat TRUE qatorlarni oladi\n✅ Tuzatish: WHERE shahar <> 'Toshkent' OR shahar IS NULL\n✅ PostgreSQL'da qisqasi: WHERE shahar IS DISTINCT FROM 'Toshkent'\n📌 Saqlab qo'ying — filtrlar, hisobotlar va \"boshqalar\" ro'yxatida juda ko'p uchraydi.\n💬 Siz nima deb o'yladingiz? Izohga 4 yoki 2 deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: SQL va NULL #5\n\n#sql #sqlquiz #postgresql #mysql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL quiz",
+   "lines": [
+    "Nechta qator chiqadi:",
+    "4 mi yoki 2?"
+   ],
+   "sub": "WHERE shahar <> 'Toshkent'",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "table",
+   "dur": 4,
+   "title": "Jadval",
+   "tables": [
+    {
+     "name": "talabalar",
+     "cols": [
+      "id",
+      "ism",
+      "shahar"
+     ],
+     "rows": [
+      [
+       "1",
+       "Ali",
+       "Toshkent"
+      ],
+      [
+       "2",
+       "Vali",
+       "Samarqand"
+      ],
+      [
+       "3",
+       "Olim",
+       "NULL"
+      ],
+      [
+       "4",
+       "Laylo",
+       "Buxoro"
+      ],
+      [
+       "5",
+       "Sardor",
+       "NULL"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "3 va 5-talabaning shahri — NULL"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "Savol",
+   "desc": [
+    "Toshkentdan BOSHQA talabalarni olamiz"
+   ],
+   "code": [
+    "SELECT ism",
+    "FROM talabalar",
+    "WHERE shahar <> 'Toshkent';"
+   ],
+   "out_title": "Nechta qator chiqadi?",
+   "out": [
+    "~4 qator  yoki  2 qator ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Javob: 2 qator!",
+   "desc": [
+    "Olim va Sardor ro'yxatda yo'q —",
+    "ular ham Toshkentdan emas-ku!"
+   ],
+   "code": [
+    "SELECT ism",
+    "FROM talabalar",
+    "WHERE shahar <> 'Toshkent';"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "ism"
+    ],
+    "rows": [
+     [
+      "Vali"
+     ],
+     [
+      "Laylo"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "text",
+   "dur": 5.5,
+   "title": "Nega?",
+   "lines": [
+    "NULL — \"noma'lum\" degani.",
+    "NULL <> 'Toshkent' = NULL",
+    "ya'ni: na TRUE, na FALSE",
+    "WHERE faqat TRUE'ni oladi"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7,
+   "title": "To'g'ri usul",
+   "bad_label": "Xato: NULL qatorlar tushib qoladi",
+   "bad": [
+    "WHERE shahar <> 'Toshkent'"
+   ],
+   "good_label": "To'g'ri: 4 qator (NULL ham kiradi)",
+   "good": [
+    "WHERE shahar <> 'Toshkent'",
+    "   OR shahar IS NULL"
+   ],
+   "note": "PostgreSQL: WHERE shahar IS DISTINCT FROM 'Toshkent'"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "NULL bilan =, <>, <, > → doim NULL",
+    "WHERE NULL qatorni tashlab yuboradi",
+    "NULL ham kerak bo'lsa → OR ustun IS NULL"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL va NULL #5"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "4 yoki 2?"
+   ]
+  }
+ ]
+}
