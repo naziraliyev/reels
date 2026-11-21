@@ -1,0 +1,156 @@
+{
+ "topic": "dart-async-await-future",
+ "lang": "dart",
+ "accent": "#38bdf8",
+ "caption": "print(yukla()) — \"Ali\" chiqadimi yoki Future? 🤔 Dart'da async / await 40 soniyada\nSeriya: Dart asoslari #8\n✅ Future — keyin keladigan qiymat (internet, fayl, baza — hammasi vaqt oladi)\n✅ await — natija tayyor bo'lguncha kutadi: String ism = await yukla();\n✅ try / catch — Future xato tashlasa, ilova yiqilmaydi\n⚠️ Xato: await'ni async'siz funksiyada yozish. Yechim: Future<void> main() async { ... }\n💡 Flutter'da: FutureBuilder — yuklanayotganda aylana, keyin natija\n📌 Saqlab qo'ying — API bilan ishlashda har kuni kerak bo'ladi.\n💬 Savol: await'siz print(yukla()) nima chiqaradi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #flutterdev #asyncawait #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart dars",
+   "lines": [
+    "print(yukla())",
+    "nima chiqaradi?"
+   ],
+   "sub": "\"Ali\" mi yoki Future?",
+   "footer": "async / await 40 soniyada"
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Muammo: kutmasdan olish",
+   "desc": [
+    "Future — keyin keladigan qiymat.",
+    "Internet, fayl, baza — vaqt oladi"
+   ],
+   "code": [
+    "Future<String> yukla() async {",
+    "  await Future.delayed(Duration(seconds: 2));",
+    "  return 'Ali';",
+    "}",
+    "",
+    "void main() {",
+    "  print(yukla());",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Instance of '_Future<String>'",
+    "!Qiymat hali tayyor emas — Ali yo'q"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "async + await",
+   "desc": [
+    "await — natija tayyor bo'lguncha kutadi",
+    "faqat async funksiya ichida ishlaydi"
+   ],
+   "code": [
+    "Future<void> main() async {",
+    "  print('Yuklanmoqda...');",
+    "  String ism = await yukla();",
+    "  print('Salom, $ism');",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Yuklanmoqda...",
+    "~Salom, Ali   (2 soniyadan keyin)"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "try / catch",
+   "desc": [
+    "yukla() xato tashlasa —",
+    "ilova yiqilmasin"
+   ],
+   "code": [
+    "Future<void> main() async {",
+    "  try {",
+    "    String ism = await yukla();",
+    "    print('Salom, $ism');",
+    "  } catch (e) {",
+    "    print('Xato: $e');",
+    "  }",
+    "}"
+   ],
+   "out_title": "Internet yo'q bo'lsa:",
+   "out": [
+    "~Xato: Exception: Internet yo'q"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Amaliy: Flutter",
+   "desc": [
+    "FutureBuilder — kutish va natija"
+   ],
+   "code": [
+    "FutureBuilder<String>(",
+    "  future: _ism, // initState ichida yukla()",
+    "  builder: (context, snap) {",
+    "    if (snap.hasError) {",
+    "      return Text('Xato: ${snap.error}');",
+    "    }",
+    "    if (!snap.hasData) {",
+    "      return CircularProgressIndicator();",
+    "    }",
+    "    return Text('Salom, ${snap.data}');",
+    "  },",
+    ")"
+   ],
+   "out_title": "Ekranda:",
+   "out": [
+    "~Avval aylana  →  keyin: Salom, Ali"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "void main() {",
+    "  var ism = await yukla();",
+    "}",
+    "!await faqat async ichida"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "Future<void> main() async {",
+    "  var ism = await yukla();",
+    "}"
+   ],
+   "note": "await yozdingizmi — funksiyaga async qo'shing"
+  },
+  {
+   "type": "bullets",
+   "dur": 4,
+   "title": "Esda tuting",
+   "items": [
+    "Future — keyin keladigan qiymat",
+    "await — kutadi, faqat async ichida",
+    "Xatoni try / catch bilan ushlang"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Dart asoslari #8"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "await'siz nima chiqadi?"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+print(yukla()) — "Ali" chiqadimi yoki Future? 🤔 Dart'da async / await 40 soniyada
+Seriya: Dart asoslari #8
+✅ Future — keyin keladigan qiymat (internet, fayl, baza — hammasi vaqt oladi)
+✅ await — natija tayyor bo'lguncha kutadi: String ism = await yukla();
+✅ try / catch — Future xato tashlasa, ilova yiqilmaydi
+⚠️ Xato: await'ni async'siz funksiyada yozish. Yechim: Future<void> main() async { ... }
+💡 Flutter'da: FutureBuilder — yuklanayotganda aylana, keyin natija
+📌 Saqlab qo'ying — API bilan ishlashda har kuni kerak bo'ladi.
+💬 Savol: await'siz print(yukla()) nima chiqaradi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #asyncawait #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #uzbekistan
