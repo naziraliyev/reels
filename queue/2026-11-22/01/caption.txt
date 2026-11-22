@@ -1,0 +1,10 @@
+int("12a") — dastur yiqiladimi? 🐍
+Seriya: Python asoslari #15 — try / except (xatolarni ushlash)
+✅ try — xavfli kod, except ValueError — xato bo'lsa ishlaydi, dastur to'xtamaydi
+✅ else — xato bo'lmasa, finally — har doim ishlaydi
+✅ Bo'sh except: pass yozmang — aniq xato turini yozing (ValueError, ZeroDivisionError)
+📌 Saqlab qo'ying — foydalanuvchidan ma'lumot olganda doim kerak bo'ladi.
+💬 Savol: int("3.5") nima qaytaradi? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #tryexcept

@@ -1,0 +1,152 @@
+{
+ "topic": "python-try-except-else-finally",
+ "lang": "python",
+ "accent": "#facc15",
+ "caption": "int(\"12a\") — dastur yiqiladimi? 🐍\nSeriya: Python asoslari #15 — try / except (xatolarni ushlash)\n✅ try — xavfli kod, except ValueError — xato bo'lsa ishlaydi, dastur to'xtamaydi\n✅ else — xato bo'lmasa, finally — har doim ishlaydi\n✅ Bo'sh except: pass yozmang — aniq xato turini yozing (ValueError, ZeroDivisionError)\n📌 Saqlab qo'ying — foydalanuvchidan ma'lumot olganda doim kerak bo'ladi.\n💬 Savol: int(\"3.5\") nima qaytaradi? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #boshlovchilar #it #uzbekistan #tryexcept",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python dars",
+   "lines": [
+    "int(\"12a\")",
+    "natija nima?"
+   ],
+   "sub": "Dastur yiqilmasin: try / except",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "Muammo: xato = to'xtash",
+   "desc": [
+    "Xato chiqsa, dastur shu joyda to'xtaydi.",
+    "Keyingi qatorlar ishlamaydi"
+   ],
+   "code": [
+    "yosh = int(\"12a\")",
+    "print(\"Davom etadi\")"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "!ValueError: invalid literal",
+    "!for int() with base 10: '12a'",
+    "!→ \"Davom etadi\" chiqmadi"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Yechim: try / except",
+   "desc": [
+    "Xavfli kod — try ichida.",
+    "Xato bo'lsa — except ishlaydi"
+   ],
+   "code": [
+    "try:",
+    "    yosh = int(\"12a\")",
+    "except ValueError:",
+    "    print(\"Son kiriting!\")",
+    "",
+    "print(\"Davom etadi\")"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Son kiriting!",
+    "~Davom etadi"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "else va finally",
+   "desc": [
+    "else — xato BO'LMASA ishlaydi,",
+    "finally — HAR DOIM ishlaydi"
+   ],
+   "code": [
+    "try:",
+    "    son = int(\"25\")",
+    "except ValueError:",
+    "    print(\"Xato\")",
+    "else:",
+    "    print(\"OK:\", son * 2)",
+    "finally:",
+    "    print(\"Tekshiruv tugadi\")"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~OK: 50",
+    "~Tekshiruv tugadi"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Amaliy misol",
+   "desc": [
+    "Hisobni do'stlar orasida teng bo'lish:",
+    "0 ga bo'lish xatosini ushlaymiz"
+   ],
+   "code": [
+    "def ulush(summa, odam):",
+    "    try:",
+    "        return summa / odam",
+    "    except ZeroDivisionError:",
+    "        return 0",
+    "",
+    "print(ulush(90000, 3))",
+    "print(ulush(90000, 0))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~30000.0",
+    "~0"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Xato yashiriladi",
+   "bad": [
+    "try:",
+    "    yosh = int(matn)",
+    "except:",
+    "    pass",
+    "!→ yosh yo'q, sabab noma'lum"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "except ValueError:",
+    "    print(\"Son kiriting!\")"
+   ],
+   "note": "Aniq xato turini yozing va xabar bering"
+  },
+  {
+   "type": "bullets",
+   "dur": 4,
+   "title": "Esda tuting",
+   "items": [
+    "try — xavfli kod",
+    "except — xato bo'lsa",
+    "finally — har doim ishlaydi"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari #15",
+    "Xato — dastur oxiri emas!"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "int(\"3.5\") = ?"
+   ]
+  }
+ ]
+}
