@@ -1,0 +1,12 @@
+SQL quiz: Sardor hech narsa buyurtma qilmagan — COUNT(*) 0 deydimi yoki 1? 🤔
+Javob videoda — hisobotlarda eng ko'p uchraydigan jim xato!
+📝 Qisqa konspekt:
+✅ LEFT JOIN buyurtmasi yo'q mijozga ham 1 qator beradi (o'ng tomoni NULL)
+✅ COUNT(*) qatorlarni sanaydi → Sardor = 1 (xato)
+✅ COUNT(b.id) NULL'ni sanamaydi → Sardor = 0 (to'g'ri)
+📌 Saqlab qo'ying — "har mijozda nechta buyurtma" hisobotida aynan shu kerak.
+💬 Siz nima deb o'yladingiz? Izohga 0 yoki 1 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: SQL tuzoqlari #4
+
+#sql #sqlquiz #postgresql #mysql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari

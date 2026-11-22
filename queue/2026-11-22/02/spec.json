@@ -1,0 +1,206 @@
+{
+ "topic": "sql-left-join-count-star-trap",
+ "lang": "sql",
+ "accent": "#a78bfa",
+ "caption": "SQL quiz: Sardor hech narsa buyurtma qilmagan — COUNT(*) 0 deydimi yoki 1? 🤔\nJavob videoda — hisobotlarda eng ko'p uchraydigan jim xato!\n📝 Qisqa konspekt:\n✅ LEFT JOIN buyurtmasi yo'q mijozga ham 1 qator beradi (o'ng tomoni NULL)\n✅ COUNT(*) qatorlarni sanaydi → Sardor = 1 (xato)\n✅ COUNT(b.id) NULL'ni sanamaydi → Sardor = 0 (to'g'ri)\n📌 Saqlab qo'ying — \"har mijozda nechta buyurtma\" hisobotida aynan shu kerak.\n💬 Siz nima deb o'yladingiz? Izohga 0 yoki 1 deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: SQL tuzoqlari #4\n\n#sql #sqlquiz #postgresql #mysql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL quiz",
+   "lines": [
+    "Sardor nechta",
+    "buyurtma bergan:",
+    "0 mi yoki 1?"
+   ],
+   "sub": "LEFT JOIN + COUNT(*)",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "table",
+   "dur": 4,
+   "title": "Jadvallar",
+   "tables": [
+    {
+     "name": "mijozlar",
+     "cols": [
+      "id",
+      "ism"
+     ],
+     "rows": [
+      [
+       "1",
+       "Ali"
+      ],
+      [
+       "2",
+       "Vali"
+      ],
+      [
+       "3",
+       "Sardor"
+      ]
+     ]
+    },
+    {
+     "name": "buyurtmalar",
+     "cols": [
+      "id",
+      "mijoz_id"
+     ],
+     "rows": [
+      [
+       "1",
+       "1"
+      ],
+      [
+       "2",
+       "1"
+      ],
+      [
+       "3",
+       "2"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "Sardor (id = 3) hech narsa buyurtma qilmagan"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Savol",
+   "desc": [
+    "Har mijoz nechta buyurtma bergan?"
+   ],
+   "code": [
+    "SELECT m.ism, COUNT(*) AS soni",
+    "FROM mijozlar m",
+    "LEFT JOIN buyurtmalar b",
+    "  ON b.mijoz_id = m.id",
+    "GROUP BY m.ism;"
+   ],
+   "out_title": "Sardor uchun nima chiqadi?",
+   "out": [
+    "~Sardor:  0  yoki  1 ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Javob: 1!",
+   "desc": [
+    "Sardor hech narsa olmagan,",
+    "lekin COUNT(*) unga 1 dedi"
+   ],
+   "code": [
+    "SELECT m.ism, COUNT(*) AS soni",
+    "FROM mijozlar m",
+    "LEFT JOIN buyurtmalar b",
+    "  ON b.mijoz_id = m.id",
+    "GROUP BY m.ism;"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "ism",
+     "soni"
+    ],
+    "rows": [
+     [
+      "Ali",
+      "2"
+     ],
+     [
+      "Vali",
+      "1"
+     ],
+     [
+      "Sardor",
+      "1 (xato)"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Nega 1?",
+   "desc": [
+    "LEFT JOIN Sardorni tashlab ketmaydi:",
+    "unga 1 qator beradi, b tomoni NULL"
+   ],
+   "code": [
+    "SELECT m.ism, b.id",
+    "FROM mijozlar m",
+    "LEFT JOIN buyurtmalar b",
+    "  ON b.mijoz_id = m.id;"
+   ],
+   "out_title": "GROUP BY'dan oldingi qatorlar:",
+   "table": {
+    "cols": [
+     "ism",
+     "b.id"
+    ],
+    "rows": [
+     [
+      "Ali",
+      "1"
+     ],
+     [
+      "Ali",
+      "2"
+     ],
+     [
+      "Vali",
+      "3"
+     ],
+     [
+      "Sardor",
+      "NULL"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "compare",
+   "dur": 7,
+   "title": "To'g'ri usul",
+   "bad_label": "COUNT(*) qatorni sanaydi → 1",
+   "bad": [
+    "SELECT m.ism, COUNT(*)"
+   ],
+   "good_label": "COUNT(b.id) NULL'ni sanamaydi → 0",
+   "good": [
+    "SELECT m.ism, COUNT(b.id)"
+   ],
+   "note": "LEFT JOIN'da o'ng jadval ustunini sanang"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "LEFT JOIN bo'sh mijozga ham 1 qator beradi",
+    "COUNT(*) bu qatorni ham sanaydi",
+    "LEFT JOIN'da → COUNT(o'ng_jadval.id)"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL tuzoqlari #4"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "0 yoki 1?"
+   ]
+  }
+ ]
+}
