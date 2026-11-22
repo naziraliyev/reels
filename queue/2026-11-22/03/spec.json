@@ -1,0 +1,145 @@
+{
+ "topic": "dart-class-constructor-tostring",
+ "lang": "dart",
+ "accent": "#a78bfa",
+ "caption": "print(Talaba('Ali', 20)) — \"Ali, 20\" chiqadimi? 🤔 Dart'da class va konstruktor 40 soniyada\nSeriya: Dart asoslari #9\n✅ Talaba(this.ism, this.yosh) — parametrni to'g'ridan-to'g'ri maydonga yozadi\n✅ toString() — obyekt print'da qanday ko'rinishini siz belgilaysiz: Talaba(Ali, 20)\n✅ Talaba.fromJson(...) — nomli konstruktor: API'dan kelgan Map → obyekt\n⚠️ Xato: Talaba(String ism); — final maydon to'ldirilmaydi. Yechim: Talaba(this.ism);\n📌 Saqlab qo'ying — Flutter'da har bir model shunday yoziladi.\n💬 Mashq: Mahsulot(nomi, narx) class'ini toString bilan yozing — izohda tekshiramiz!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #flutterdev #oop #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart dars",
+   "lines": [
+    "print(t)",
+    "nima chiqaradi?"
+   ],
+   "sub": "t = Talaba('Ali', 20) — \"Ali, 20\" mi?",
+   "footer": "class va konstruktor 40 soniyada"
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Class + konstruktor",
+   "desc": [
+    "class — obyekt shabloni.",
+    "this.ism — parametrni maydonga yozadi"
+   ],
+   "code": [
+    "class Talaba {",
+    "  final String ism;",
+    "  final int yosh;",
+    "  Talaba(this.ism, this.yosh);",
+    "}",
+    "",
+    "void main() {",
+    "  var t = Talaba('Ali', 20);",
+    "  print(t.ism);",
+    "  print(t);",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Ali",
+    "~Instance of 'Talaba'",
+    "!print(t) ma'lumotni ko'rsatmadi"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "toString() qo'shamiz",
+   "desc": [
+    "Obyekt matnga qanday aylanishini",
+    "o'zingiz belgilaysiz"
+   ],
+   "code": [
+    "class Talaba {",
+    "  final String ism;",
+    "  final int yosh;",
+    "  Talaba(this.ism, this.yosh);",
+    "",
+    "  @override",
+    "  String toString() => 'Talaba($ism, $yosh)';",
+    "}",
+    "",
+    "print(Talaba('Ali', 20));"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Talaba(Ali, 20)"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Amaliy: API'dan obyekt",
+   "desc": [
+    "Nomli konstruktor: Talaba.fromJson",
+    "Map → obyekt (Flutter modellari)"
+   ],
+   "code": [
+    "class Talaba {",
+    "  final String ism;",
+    "  final int yosh;",
+    "  Talaba(this.ism, this.yosh);",
+    "",
+    "  Talaba.fromJson(Map<String, dynamic> j)",
+    "      : ism = j['ism'],",
+    "        yosh = j['yosh'];",
+    "}",
+    "",
+    "var j = {'ism': 'Vali', 'yosh': 19};",
+    "var t = Talaba.fromJson(j);",
+    "print('${t.ism}, ${t.yosh} yosh');"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Vali, 19 yosh"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "class Talaba {",
+    "  final String ism;",
+    "  Talaba(String ism);",
+    "}",
+    "!ism to'ldirilmadi — xato"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "class Talaba {",
+    "  final String ism;",
+    "  Talaba(this.ism);",
+    "}"
+   ],
+   "note": "final maydonni this.ism bilan to'ldiring"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "this.ism — qisqa konstruktor",
+    "toString() — print'da chiroyli ko'rinish",
+    "Nomli konstruktor: Talaba.fromJson(...)"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Dart asoslari #9"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "Mahsulot class'ini yozing!"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+print(Talaba('Ali', 20)) — "Ali, 20" chiqadimi? 🤔 Dart'da class va konstruktor 40 soniyada
+Seriya: Dart asoslari #9
+✅ Talaba(this.ism, this.yosh) — parametrni to'g'ridan-to'g'ri maydonga yozadi
+✅ toString() — obyekt print'da qanday ko'rinishini siz belgilaysiz: Talaba(Ali, 20)
+✅ Talaba.fromJson(...) — nomli konstruktor: API'dan kelgan Map → obyekt
+⚠️ Xato: Talaba(String ism); — final maydon to'ldirilmaydi. Yechim: Talaba(this.ism);
+📌 Saqlab qo'ying — Flutter'da har bir model shunday yoziladi.
+💬 Mashq: Mahsulot(nomi, narx) class'ini toString bilan yozing — izohda tekshiramiz!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #oop #dasturlash #dasturchi #programming #coding #mobiledev #boshlovchilar #uzbekistan
