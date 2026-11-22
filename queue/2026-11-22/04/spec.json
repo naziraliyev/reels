@@ -1,0 +1,127 @@
+{
+ "topic": "python-global-unboundlocalerror",
+ "lang": "python",
+ "accent": "#fb923c",
+ "caption": "Python quiz: funksiya ichida son += 1 — 1 chiqadimi yoki xato? 🤔\nJavob videoda — oxirigacha ko'ring!\n📝 Qisqa konspekt:\n✅ Funksiya ichida o'zgaruvchiga = (yoki +=) berilsa, Python uni LOKAL deb hisoblaydi → UnboundLocalError\n✅ To'g'ri usul: qiymatni parametr bilan bering, natijani return bilan oling: son = oshir(son)\n✅ savat.append() ishlaydi — u = bermaydi, faqat ro'yxatni o'zgartiradi\n📌 Saqlab qo'ying — bu xato yangi boshlovchilarda juda ko'p uchraydi.\n💬 Siz nima deb o'yladingiz? Izohga yozing: 1 yoki xato?\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: Python asoslari #16\n\n#python #pythonquiz #dasturlash #dasturchi #pythonuz #programmalash #coding #funksiya #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python quiz",
+   "lines": [
+    "son += 1",
+    "funksiya ichida"
+   ],
+   "sub": "1 chiqadimi yoki xato?",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Savol",
+   "desc": [
+    "son tashqarida, oshir() ichida +1"
+   ],
+   "code": [
+    "son = 0",
+    "",
+    "def oshir():",
+    "    son += 1",
+    "",
+    "oshir()",
+    "print(son)"
+   ],
+   "out_title": "Nima chiqadi?",
+   "out": [
+    "~1  yoki  xato ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Javob: xato!",
+   "desc": [
+    "son += 1 — bu son = son + 1 degani.",
+    "Ichkarida = bor → son endi LOKAL,",
+    "lekin hali qiymati yo'q"
+   ],
+   "code": [
+    "def oshir():",
+    "    son += 1   # lokal son?",
+    "",
+    "oshir()"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "!UnboundLocalError:",
+    "!cannot access local",
+    "!variable 'son'"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7.5,
+   "title": "Amaliy: hisoblagich",
+   "bad_label": "Ishlaydi, lekin yomon odat",
+   "bad": [
+    "def oshir():",
+    "    global son",
+    "    son += 1"
+   ],
+   "good_label": "To'g'ri: parametr + return",
+   "good": [
+    "def oshir(son):",
+    "    return son + 1",
+    "",
+    "son = oshir(son)  # 1"
+   ],
+   "note": "Parametr bilan bering, return bilan oling"
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Ro'yxat bilan-chi?",
+   "desc": [
+    "append() = bermaydi — faqat ro'yxatni",
+    "o'zgartiradi, shuning uchun xato yo'q"
+   ],
+   "code": [
+    "savat = []",
+    "",
+    "def qosh(m):",
+    "    savat.append(m)",
+    "",
+    "qosh('olma')",
+    "print(savat)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~['olma']"
+   ]
+  },
+  {
+   "type": "bullets",
+   "dur": 5.5,
+   "title": "Esda tuting",
+   "items": [
+    "Funksiyada = bo'lsa — o'zgaruvchi lokal",
+    "Tashqi qiymatni parametr bilan bering",
+    "Natijani return bilan qaytaring"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "1 yoki xato?"
+   ]
+  }
+ ]
+}

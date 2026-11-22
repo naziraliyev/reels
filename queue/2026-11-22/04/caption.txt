@@ -1,0 +1,12 @@
+Python quiz: funksiya ichida son += 1 — 1 chiqadimi yoki xato? 🤔
+Javob videoda — oxirigacha ko'ring!
+📝 Qisqa konspekt:
+✅ Funksiya ichida o'zgaruvchiga = (yoki +=) berilsa, Python uni LOKAL deb hisoblaydi → UnboundLocalError
+✅ To'g'ri usul: qiymatni parametr bilan bering, natijani return bilan oling: son = oshir(son)
+✅ savat.append() ishlaydi — u = bermaydi, faqat ro'yxatni o'zgartiradi
+📌 Saqlab qo'ying — bu xato yangi boshlovchilarda juda ko'p uchraydi.
+💬 Siz nima deb o'yladingiz? Izohga yozing: 1 yoki xato?
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: Python asoslari #16
+
+#python #pythonquiz #dasturlash #dasturchi #pythonuz #programmalash #coding #funksiya #it #uzbekistan #suhbatsavollari
