@@ -1,0 +1,12 @@
+Python quiz: t = (5) — bu tuple mi yoki int? 🤔
+Javob videoda — oxirigacha ko'ring!
+📝 Qisqa konspekt:
+✅ Tuple'ni qavs emas, VERGUL yasaydi: (5) → int, (5,) → tuple
+✅ return a, b — funksiya tuple qaytaradi: past, yuqori = min_max(ballar)
+✅ ('qizil') — bu matn, for unda harflarni aylanadi → ('qizil',) yozing
+📌 Saqlab qo'ying — suhbatlarda ham so'raladi.
+💬 Siz nima deb o'yladingiz? Izohga yozing: tuple yoki int?
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: Python asoslari #18
+
+#python #pythonquiz #dasturlash #dasturchi #pythonuz #programmalash #coding #tuple #it #uzbekistan #suhbatsavollari
