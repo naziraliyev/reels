@@ -1,0 +1,139 @@
+{
+ "topic": "python-key-lambda-sorted-max",
+ "lang": "python",
+ "accent": "#a78bfa",
+ "caption": "max([\"nok\", \"olma\", \"anor\"], key=len) — natija nima? 🐍\nSeriya: Python asoslari #17 — key= va lambda\n✅ key= — elementlarni NIMA bo'yicha solishtirishni aytadi (sorted, max, min)\n✅ lambda x: x * x — bir qatorli nomsiz funksiya\n✅ Talabalarni ball bo'yicha: sorted(talabalar, key=lambda t: t[1], reverse=True)\n⚠️ key=len() emas, key=len — qavssiz!\n📌 Saqlab qo'ying — saralashda doim kerak bo'ladi.\n💬 Savol: min([\"nok\", \"olma\", \"anor\"], key=len) nima qaytaradi? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #lambda #boshlovchilar #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python dars",
+   "lines": [
+    "Eng uzun so'z",
+    "qaysi biri?"
+   ],
+   "sub": "max([\"nok\", \"olma\", \"anor\"], key=len)",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "text",
+   "dur": 4.5,
+   "title": "Tushuncha",
+   "lines": [
+    "key= — elementlarni NIMA bo'yicha solishtirishni aytadi.",
+    "lambda — bir qatorli nomsiz funksiya."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Oddiy misol: key=len",
+   "desc": [
+    "Odatda alifbo bo'yicha,",
+    "key=len bilan — uzunlik bo'yicha"
+   ],
+   "code": [
+    "sozlar = [\"nok\", \"olma\", \"anor\"]",
+    "",
+    "print(sorted(sozlar))",
+    "print(sorted(sozlar, key=len))",
+    "print(max(sozlar, key=len))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~['anor', 'nok', 'olma']",
+    "~['nok', 'olma', 'anor']",
+    "~olma  ← teng bo'lsa, birinchisi"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "lambda nima?",
+   "desc": [
+    "Ikkalasi bir xil ishlaydi:",
+    "lambda — qisqa yozuv"
+   ],
+   "code": [
+    "kv = lambda x: x * x",
+    "print(kv(5))",
+    "",
+    "# xuddi shu:",
+    "def kv(x):",
+    "    return x * x"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~25"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Amaliy misol: reyting",
+   "desc": [
+    "Talabalarni ball bo'yicha saralaymiz:",
+    "t[1] — tuple'dagi ball"
+   ],
+   "code": [
+    "talabalar = [(\"Ali\", 85), (\"Vali\", 92),",
+    "             (\"Sardor\", 78)]",
+    "top = sorted(talabalar,",
+    "             key=lambda t: t[1],",
+    "             reverse=True)",
+    "for ism, ball in top:",
+    "    print(ism, ball)",
+    "print(max(talabalar, key=lambda t: t[1]))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Vali 92",
+    "~Ali 85",
+    "~Sardor 78",
+    "~('Vali', 92)"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Qavs bilan",
+   "bad": [
+    "sorted(sozlar, key=len())",
+    "!TypeError: len() takes",
+    "!exactly one argument"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "sorted(sozlar, key=len)",
+    "sorted(sozlar, key=lambda s: len(s))"
+   ],
+   "note": "key= ga funksiyaning O'ZINI bering, natijasini emas"
+  },
+  {
+   "type": "bullets",
+   "dur": 4,
+   "title": "Esda tuting",
+   "items": [
+    "key= — nima bo'yicha solishtirish",
+    "lambda x: ... — qisqa funksiya",
+    "key=len — qavssiz yoziladi"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari #17",
+    "key= — saralash kaliti!"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "min(..., key=len) = ?"
+   ]
+  }
+ ]
+}

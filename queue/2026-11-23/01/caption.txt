@@ -1,0 +1,11 @@
+max(["nok", "olma", "anor"], key=len) — natija nima? 🐍
+Seriya: Python asoslari #17 — key= va lambda
+✅ key= — elementlarni NIMA bo'yicha solishtirishni aytadi (sorted, max, min)
+✅ lambda x: x * x — bir qatorli nomsiz funksiya
+✅ Talabalarni ball bo'yicha: sorted(talabalar, key=lambda t: t[1], reverse=True)
+⚠️ key=len() emas, key=len — qavssiz!
+📌 Saqlab qo'ying — saralashda doim kerak bo'ladi.
+💬 Savol: min(["nok", "olma", "anor"], key=len) nima qaytaradi? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #lambda #boshlovchilar #it #uzbekistan
