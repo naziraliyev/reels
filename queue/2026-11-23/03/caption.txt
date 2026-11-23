@@ -1,0 +1,11 @@
+print(m.ovoz()) — "Miyov" chiqadimi? 🤔 Dart'da meros (extends) 40 soniyada
+Seriya: Dart asoslari #10
+✅ extends — yangi class ota class'ning maydon va metodlarini oladi
+✅ @override — ota metodni o'z versiyangiz bilan almashtirasiz: ovoz() => 'Miyov'
+✅ super — ota konstruktor (Mushuk(super.ism)) va ota metodni (super.info()) chaqiradi
+⚠️ Xato: Mushuk(String ism); — ota konstruktor chaqirilmaydi. Yechim: Mushuk(super.ism);
+📌 Saqlab qo'ying — Flutter'da har bir widget extends bilan yoziladi.
+💬 Mashq: Hayvon'dan It class'ini yarating, ovoz() 'Vov' qaytarsin — izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #oop #meros #dasturlash #dasturchi #programming #coding #boshlovchilar #uzbekistan

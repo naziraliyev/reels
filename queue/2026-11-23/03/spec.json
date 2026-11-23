@@ -1,0 +1,148 @@
+{
+ "topic": "dart-inheritance-extends-override-super",
+ "lang": "dart",
+ "accent": "#4ade80",
+ "caption": "print(m.ovoz()) — \"Miyov\" chiqadimi? 🤔 Dart'da meros (extends) 40 soniyada\nSeriya: Dart asoslari #10\n✅ extends — yangi class ota class'ning maydon va metodlarini oladi\n✅ @override — ota metodni o'z versiyangiz bilan almashtirasiz: ovoz() => 'Miyov'\n✅ super — ota konstruktor (Mushuk(super.ism)) va ota metodni (super.info()) chaqiradi\n⚠️ Xato: Mushuk(String ism); — ota konstruktor chaqirilmaydi. Yechim: Mushuk(super.ism);\n📌 Saqlab qo'ying — Flutter'da har bir widget extends bilan yoziladi.\n💬 Mashq: Hayvon'dan It class'ini yarating, ovoz() 'Vov' qaytarsin — izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #flutterdev #oop #meros #dasturlash #dasturchi #programming #coding #boshlovchilar #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart dars",
+   "lines": [
+    "print(m.ovoz())",
+    "nima chiqaradi?"
+   ],
+   "sub": "Mushuk extends Hayvon — \"Miyov\" mi?",
+   "footer": "meros (extends) 40 soniyada"
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "extends = meros",
+   "desc": [
+    "Mushuk Hayvon'dan hammasini oladi"
+   ],
+   "code": [
+    "class Hayvon {",
+    "  final String ism;",
+    "  Hayvon(this.ism);",
+    "  String ovoz() => '...';",
+    "}",
+    "class Mushuk extends Hayvon {",
+    "  Mushuk(super.ism);",
+    "}",
+    "void main() {",
+    "  var m = Mushuk('Momiq');",
+    "  print(m.ism);",
+    "  print(m.ovoz());",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Momiq",
+    "~...",
+    "!\"Miyov\" emas — ota metod ishladi"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "@override",
+   "desc": [
+    "Ota metodni o'z versiyangiz bilan",
+    "almashtirasiz"
+   ],
+   "code": [
+    "class Mushuk extends Hayvon {",
+    "  Mushuk(super.ism);",
+    "",
+    "  @override",
+    "  String ovoz() => 'Miyov';",
+    "}",
+    "",
+    "void main() {",
+    "  print(Mushuk('Momiq').ovoz());",
+    "  print(Hayvon('Qush').ovoz());",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Miyov",
+    "~..."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Amaliy: xodimlar",
+   "desc": [
+    "super.info() — ota metodni chaqirib,",
+    "ustiga qo'shamiz"
+   ],
+   "code": [
+    "class Xodim {",
+    "  final String ism;",
+    "  Xodim(this.ism);",
+    "  String info() => 'Xodim: $ism';",
+    "}",
+    "class Menejer extends Xodim {",
+    "  Menejer(super.ism);",
+    "  @override",
+    "  String info() => '${super.info()} (boss)';",
+    "}",
+    "void main() {",
+    "  var x = [Xodim('Ali'), Menejer('Vali')];",
+    "  for (var e in x) print(e.info());",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Xodim: Ali",
+    "~Xodim: Vali (boss)"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "class Mushuk extends Hayvon {",
+    "  Mushuk(String ism);",
+    "}",
+    "!Hayvon(ism) chaqirilmadi — xato"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "class Mushuk extends Hayvon {",
+    "  Mushuk(super.ism);",
+    "}"
+   ],
+   "note": "Ota konstruktorni super bilan chaqiring"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "extends — ota class'dan meros oladi",
+    "@override — metodni qayta yozadi",
+    "super — ota konstruktor va metodni chaqiradi"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Dart asoslari #10"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "It class'i 'Vov' desin!"
+   ]
+  }
+ ]
+}
