@@ -1,0 +1,12 @@
+SQL quiz: DISTINCT 4 ta shahar ko'rsatdi — COUNT(DISTINCT) esa 4 deydimi yoki 3? 🤔
+Javob videoda — hisobotda bitta qiymat jimgina yo'qoladi!
+📝 Qisqa konspekt:
+✅ SELECT DISTINCT shahar → NULL ham alohida qator (4 ta)
+✅ COUNT(DISTINCT shahar) NULL'ni sanamaydi → 3
+✅ NULL'ni ham sanash kerak bo'lsa: COUNT(DISTINCT COALESCE(shahar, 'Noma''lum')) → 4
+📌 Saqlab qo'ying — "nechta turli ..." hisobotlarida aynan shu kerak.
+💬 Siz nima deb o'yladingiz? Izohga 4 yoki 3 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: SQL va NULL #6
+
+#sql #sqlquiz #postgresql #mysql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari

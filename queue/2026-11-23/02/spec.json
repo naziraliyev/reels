@@ -1,0 +1,181 @@
+{
+ "topic": "sql-count-distinct-null",
+ "lang": "sql",
+ "accent": "#38bdf8",
+ "caption": "SQL quiz: DISTINCT 4 ta shahar ko'rsatdi — COUNT(DISTINCT) esa 4 deydimi yoki 3? 🤔\nJavob videoda — hisobotda bitta qiymat jimgina yo'qoladi!\n📝 Qisqa konspekt:\n✅ SELECT DISTINCT shahar → NULL ham alohida qator (4 ta)\n✅ COUNT(DISTINCT shahar) NULL'ni sanamaydi → 3\n✅ NULL'ni ham sanash kerak bo'lsa: COUNT(DISTINCT COALESCE(shahar, 'Noma''lum')) → 4\n📌 Saqlab qo'ying — \"nechta turli ...\" hisobotlarida aynan shu kerak.\n💬 Siz nima deb o'yladingiz? Izohga 4 yoki 3 deb yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: SQL va NULL #6\n\n#sql #sqlquiz #postgresql #mysql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL quiz",
+   "lines": [
+    "Nechta turli",
+    "shahar bor:",
+    "4 mi yoki 3?"
+   ],
+   "sub": "COUNT(DISTINCT shahar)",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "table",
+   "dur": 4,
+   "title": "Jadval",
+   "tables": [
+    {
+     "name": "talabalar",
+     "cols": [
+      "id",
+      "ism",
+      "shahar"
+     ],
+     "rows": [
+      [
+       "1",
+       "Ali",
+       "Toshkent"
+      ],
+      [
+       "2",
+       "Vali",
+       "Samarqand"
+      ],
+      [
+       "3",
+       "Olim",
+       "Toshkent"
+      ],
+      [
+       "4",
+       "Sardor",
+       "NULL"
+      ],
+      [
+       "5",
+       "Jasur",
+       "Buxoro"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "Sardorning shahri kiritilmagan (NULL)"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "1-qadam: DISTINCT",
+   "desc": [
+    "DISTINCT takrorlarni olib tashlaydi"
+   ],
+   "code": [
+    "SELECT DISTINCT shahar",
+    "FROM talabalar;"
+   ],
+   "out_title": "Natija: 4 qator",
+   "table": {
+    "cols": [
+     "shahar"
+    ],
+    "rows": [
+     [
+      "Toshkent"
+     ],
+     [
+      "Samarqand"
+     ],
+     [
+      "NULL"
+     ],
+     [
+      "Buxoro"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "code",
+   "dur": 4,
+   "title": "Savol",
+   "desc": [
+    "Endi shularni sanaymiz"
+   ],
+   "code": [
+    "SELECT COUNT(DISTINCT shahar)",
+    "FROM talabalar;"
+   ],
+   "out_title": "Nima chiqadi?",
+   "out": [
+    "~4  yoki  3 ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 4.5,
+   "title": "Javob: 3!",
+   "desc": [
+    "DISTINCT 4 ta qator ko'rsatdi,",
+    "lekin COUNT 3 dedi"
+   ],
+   "code": [
+    "SELECT COUNT(DISTINCT shahar)",
+    "FROM talabalar;"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~3"
+   ]
+  },
+  {
+   "type": "text",
+   "dur": 5,
+   "title": "Nega 3?",
+   "lines": [
+    "NULL — \"qiymat yo'q\"",
+    "COUNT uni sanamaydi",
+    "(DISTINCT bilan ham)",
+    "Toshkent, Samarqand,",
+    "Buxoro → 3 ta"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 6,
+   "title": "NULL'ni ham sanash",
+   "bad_label": "NULL tashlab ketiladi → 3",
+   "bad": [
+    "COUNT(DISTINCT shahar)"
+   ],
+   "good_label": "NULL o'rniga matn qo'yamiz → 4",
+   "good": [
+    "COUNT(DISTINCT",
+    "  COALESCE(shahar, 'Noma''lum'))"
+   ],
+   "note": "Shaharlar soni uchun 3 — to'g'ri"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "SELECT DISTINCT NULL'ni ham ko'rsatadi",
+    "COUNT(DISTINCT x) NULL'ni sanamaydi",
+    "NULL kerak bo'lsa → COALESCE bilan"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL va NULL #6"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "4 yoki 3?"
+   ]
+  }
+ ]
+}
