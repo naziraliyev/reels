@@ -1,0 +1,12 @@
+SQL quiz: narxlar 900, 1200 va 85. MAX(narx) — 1200 chiqadimi yoki 900? 🤔
+Javob videoda — narx ustuni matn (VARCHAR) bo'lsa, hisobot jimgina xato chiqadi!
+📝 Qisqa konspekt:
+✅ Matn harfma-harf solishtiriladi: '9' > '8' > '1' → '900' > '85' > '1200'
+✅ Shuning uchun MAX(narx) = '900', ORDER BY narx esa 1200, 85, 900 tartibida
+✅ Tuzatish: MAX(CAST(narx AS INTEGER)) → 1200, eng yaxshisi — ustun turini INT / NUMERIC qilish
+📌 Saqlab qo'ying — Excel'dan import qilingan jadvallarda bu juda ko'p uchraydi.
+💬 Siz nima deb o'yladingiz? Izohga 1200 yoki 900 deb yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: SQL tuzoqlari #5
+
+#sql #sqlquiz #postgresql #mysql #database #malumotlarbazasi #dasturlash #dasturchi #backend #it #uzbekistan #suhbatsavollari
