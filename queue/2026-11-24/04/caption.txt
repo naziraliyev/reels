@@ -1,0 +1,13 @@
+Python quiz: print(3 > 2 > 1) — True mi yoki False? 🤔
+Javob videoda — oxirigacha ko'ring!
+📝 Qisqa konspekt:
+✅ Python zanjirni bo'lib o'qiydi: 3 > 2 > 1 → 3 > 2 and 2 > 1 → True
+✅ Qavs qo'yilsa boshqacha: (3 > 2) > 1 → True > 1 → 1 > 1 → False (True = 1)
+✅ Oraliq tekshiruv: if 18 <= yosh <= 60:
+⚠️ Xato: if rang == "qizil" or "yashil": — doim True! To'g'ri: if rang in ("qizil", "yashil"):
+📌 Saqlab qo'ying — suhbatlarda ham so'raladi.
+💬 Siz nima deb o'yladingiz? Izohga yozing: True yoki False?
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+Seriya: Python asoslari #20
+
+#python #pythonquiz #dasturlash #dasturchi #pythonuz #programmalash #coding #boshlovchilar #it #uzbekistan #suhbatsavollari

@@ -1,0 +1,124 @@
+{
+ "topic": "python-chained-comparison",
+ "lang": "python",
+ "accent": "#38bdf8",
+ "caption": "Python quiz: print(3 > 2 > 1) — True mi yoki False? 🤔\nJavob videoda — oxirigacha ko'ring!\n📝 Qisqa konspekt:\n✅ Python zanjirni bo'lib o'qiydi: 3 > 2 > 1 → 3 > 2 and 2 > 1 → True\n✅ Qavs qo'yilsa boshqacha: (3 > 2) > 1 → True > 1 → 1 > 1 → False (True = 1)\n✅ Oraliq tekshiruv: if 18 <= yosh <= 60:\n⚠️ Xato: if rang == \"qizil\" or \"yashil\": — doim True! To'g'ri: if rang in (\"qizil\", \"yashil\"):\n📌 Saqlab qo'ying — suhbatlarda ham so'raladi.\n💬 Siz nima deb o'yladingiz? Izohga yozing: True yoki False?\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\nSeriya: Python asoslari #20\n\n#python #pythonquiz #dasturlash #dasturchi #pythonuz #programmalash #coding #boshlovchilar #it #uzbekistan #suhbatsavollari",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python quiz",
+   "lines": [
+    "print(3 > 2 > 1)"
+   ],
+   "sub": "True mi yoki False?",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 5,
+   "title": "Savol",
+   "desc": [
+    "3 > 2 ham, 2 > 1 ham to'g'ri..."
+   ],
+   "code": [
+    "print(3 > 2 > 1)",
+    "",
+    "print((3 > 2) > 1)"
+   ],
+   "out_title": "Nima chiqadi?",
+   "out": [
+    "~True  yoki  False ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "Javob: True va False!",
+   "desc": [
+    "Python zanjirni bo'lib o'qiydi:",
+    "3 > 2 and 2 > 1",
+    "Qavsda esa: True > 1 → 1 > 1"
+   ],
+   "code": [
+    "print(3 > 2 > 1)",
+    "print(3 > 2 and 2 > 1)",
+    "",
+    "print((3 > 2) > 1)",
+    "print(True == 1)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~True",
+    "~True",
+    "~False",
+    "~True"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Amaliy: oraliq tekshiruv",
+   "desc": [
+    "and yozish shart emas —",
+    "matematikadagidek yozing"
+   ],
+   "code": [
+    "def ishlay_oladi(yosh):",
+    "    return 18 <= yosh <= 60",
+    "",
+    "print(ishlay_oladi(25))",
+    "print(ishlay_oladi(70))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~True",
+    "~False"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Xato: doim True",
+   "bad": [
+    "rang = \"qora\"",
+    "if rang == \"qizil\" or \"yashil\":",
+    "    print(\"Ruxsat!\")",
+    "!\"yashil\" — bo'sh emas → True"
+   ],
+   "good_label": "To'g'ri: in bilan",
+   "good": [
+    "rang = \"qora\"",
+    "if rang in (\"qizil\", \"yashil\"):",
+    "    print(\"Ruxsat!\")",
+    "# hech narsa chiqmaydi"
+   ],
+   "note": "or har bir tomonni alohida tekshiradi"
+  },
+  {
+   "type": "bullets",
+   "dur": 5.5,
+   "title": "Esda tuting",
+   "items": [
+    "a < b < c → a < b and b < c",
+    "Oraliq: 18 <= yosh <= 60",
+    "Bir nechta: x in (a, b)"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari #20"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "True yoki False?"
+   ]
+  }
+ ]
+}
