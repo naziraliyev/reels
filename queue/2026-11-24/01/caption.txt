@@ -1,0 +1,11 @@
+jami(1, 2) ham, jami(1, 2, 3, 4) ham ishlaydi — qanday? 🐍
+Seriya: Python asoslari #19 — *args va **kwargs
+✅ *args — ortiqcha oddiy argumentlarni TUPLE'ga yig'adi: jami(1, 2, 3) → sonlar = (1, 2, 3)
+✅ **kwargs — nomli argumentlarni DICT'ga yig'adi: profil(ism="Ali") → {'ism': 'Ali'}
+✅ Tartib: def f(a, *args, **kwargs)
+⚠️ jami([1, 2, 3]) → TypeError. Ro'yxatni * bilan oching: jami(*[1, 2, 3]) → 6
+📌 Saqlab qo'ying — kutubxonalar kodida har qadamda uchraydi.
+💬 Savol: def f(*a): print(a) — f() nima chiqaradi? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #args #kwargs #boshlovchilar #it #uzbekistan

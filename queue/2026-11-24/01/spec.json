@@ -1,0 +1,140 @@
+{
+ "topic": "python-args-kwargs",
+ "lang": "python",
+ "accent": "#4ade80",
+ "caption": "jami(1, 2) ham, jami(1, 2, 3, 4) ham ishlaydi — qanday? 🐍\nSeriya: Python asoslari #19 — *args va **kwargs\n✅ *args — ortiqcha oddiy argumentlarni TUPLE'ga yig'adi: jami(1, 2, 3) → sonlar = (1, 2, 3)\n✅ **kwargs — nomli argumentlarni DICT'ga yig'adi: profil(ism=\"Ali\") → {'ism': 'Ali'}\n✅ Tartib: def f(a, *args, **kwargs)\n⚠️ jami([1, 2, 3]) → TypeError. Ro'yxatni * bilan oching: jami(*[1, 2, 3]) → 6\n📌 Saqlab qo'ying — kutubxonalar kodida har qadamda uchraydi.\n💬 Savol: def f(*a): print(a) — f() nima chiqaradi? Javobni izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #args #kwargs #boshlovchilar #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python dars",
+   "lines": [
+    "Istalgancha son",
+    "oladigan funksiya?"
+   ],
+   "sub": "jami(1, 2)  va  jami(1, 2, 3, 4)",
+   "footer": "40 soniyada o'rganing"
+  },
+  {
+   "type": "text",
+   "dur": 4,
+   "title": "Tushuncha",
+   "lines": [
+    "*args — ortiqcha oddiy argumentlarni TUPLE'ga yig'adi.",
+    "**kwargs — nomli argumentlarni DICT'ga yig'adi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Oddiy misol: *args",
+   "desc": [
+    "Nechta son bersangiz ham,",
+    "hammasi sonlar tuple'iga tushadi"
+   ],
+   "code": [
+    "def jami(*sonlar):",
+    "    print(sonlar)",
+    "    return sum(sonlar)",
+    "",
+    "print(jami(1, 2))",
+    "print(jami(1, 2, 3, 4))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~(1, 2)",
+    "~3",
+    "~(1, 2, 3, 4)",
+    "~10"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Misol: **kwargs",
+   "desc": [
+    "kalit=qiymat ko'rinishidagi",
+    "argumentlar dict bo'ladi"
+   ],
+   "code": [
+    "def profil(**malumot):",
+    "    print(malumot)",
+    "    for k, v in malumot.items():",
+    "        print(f\"{k}: {v}\")",
+    "",
+    "profil(ism=\"Ali\", yosh=20)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~{'ism': 'Ali', 'yosh': 20}",
+    "~ism: Ali",
+    "~yosh: 20"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Amaliy misol: buyurtma",
+   "desc": [
+    "Tartib: oddiy → *args → **kwargs"
+   ],
+   "code": [
+    "def buyurtma(mijoz, *mahsulot, **qosh):",
+    "    print(mijoz, \"→\", \", \".join(mahsulot))",
+    "    for k, v in qosh.items():",
+    "        print(f\"{k}: {v}\")",
+    "",
+    "buyurtma(\"Ali\", \"non\", \"sut\", \"olma\",",
+    "         yetkazish=\"bepul\", tolov=\"karta\")"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Ali → non, sut, olma",
+    "~yetkazish: bepul",
+    "~tolov: karta"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Ro'yxat berish",
+   "bad": [
+    "jami([1, 2, 3])",
+    "!sonlar = ([1, 2, 3],)",
+    "!TypeError: int + list"
+   ],
+   "good_label": "To'g'ri: * bilan oching",
+   "good": [
+    "jami(*[1, 2, 3])",
+    "~sonlar = (1, 2, 3) → 6"
+   ],
+   "note": "def ichida * yig'adi, chaqirishda * ochadi"
+  },
+  {
+   "type": "bullets",
+   "dur": 4,
+   "title": "Esda tuting",
+   "items": [
+    "*args → tuple (oddiy argumentlar)",
+    "**kwargs → dict (nomli argumentlar)",
+    "Tartib: a, *args, **kwargs"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python asoslari #19",
+    "*args → tuple, **kwargs → dict!"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "def f(*a): print(a) → f() = ?"
+   ]
+  }
+ ]
+}
