@@ -1,0 +1,11 @@
+t.yosh = -5; print(t.yosh) — -5 chiqadimi? 🤔 Dart'da get, set va _private 40 soniyada
+Seriya: Dart asoslari #11
+✅ get — hisoblanadigan xususiyat, maydon kabi qavssiz o'qiladi: s.jami
+✅ set — qiymatni saqlashdan oldin tekshiradi: if (v > 0) _yosh = v;
+✅ _yosh — pastki chiziq = private, boshqa fayldan ko'rinmaydi
+⚠️ Xato: set yosh(int v) { yosh = v; } — setter o'zini chaqiradi → Stack Overflow. Yechim: _yosh = v;
+📌 Saqlab qo'ying — Flutter model class'larida har kuni kerak bo'ladi.
+💬 Mashq: Talaba'ga get fio yozing (ism + familiya) — izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #oop #getter #setter #dasturlash #dasturchi #programming #coding #boshlovchilar #uzbekistan

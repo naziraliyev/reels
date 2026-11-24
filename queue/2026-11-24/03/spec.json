@@ -1,0 +1,121 @@
+{
+ "topic": "dart-getter-setter-private",
+ "lang": "dart",
+ "accent": "#a78bfa",
+ "caption": "t.yosh = -5; print(t.yosh) — -5 chiqadimi? 🤔 Dart'da get, set va _private 40 soniyada\nSeriya: Dart asoslari #11\n✅ get — hisoblanadigan xususiyat, maydon kabi qavssiz o'qiladi: s.jami\n✅ set — qiymatni saqlashdan oldin tekshiradi: if (v > 0) _yosh = v;\n✅ _yosh — pastki chiziq = private, boshqa fayldan ko'rinmaydi\n⚠️ Xato: set yosh(int v) { yosh = v; } — setter o'zini chaqiradi → Stack Overflow. Yechim: _yosh = v;\n📌 Saqlab qo'ying — Flutter model class'larida har kuni kerak bo'ladi.\n💬 Mashq: Talaba'ga get fio yozing (ism + familiya) — izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!\n\n#dart #flutter #flutterdev #oop #getter #setter #dasturlash #dasturchi #programming #coding #boshlovchilar #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart dars",
+   "lines": ["t.yosh = -5;", "print(t.yosh)"],
+   "sub": "-5 chiqadimi? Setter bilan — yo'q!",
+   "footer": "get, set va _private 40 soniyada"
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Muammo: ochiq maydon",
+   "desc": ["Har kim istalgan qiymat yoza oladi"],
+   "code": [
+    "class Talaba {",
+    "  int yosh = 18;",
+    "}",
+    "",
+    "void main() {",
+    "  var t = Talaba();",
+    "  t.yosh = -5;",
+    "  print(t.yosh);",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": ["~-5", "!Noto'g'ri yosh saqlandi"]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "get + set",
+   "desc": ["set — saqlashdan oldin tekshiradi", "_yosh — boshqa fayldan ko'rinmaydi"],
+   "code": [
+    "class Talaba {",
+    "  int _yosh = 18;",
+    "  int get yosh => _yosh;",
+    "  set yosh(int v) {",
+    "    if (v > 0) _yosh = v;",
+    "  }",
+    "}",
+    "void main() {",
+    "  var t = Talaba();",
+    "  t.yosh = -5;",
+    "  print(t.yosh);",
+    "  t.yosh = 20;",
+    "  print(t.yosh);",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": ["~18", "~20", "~-5 rad etildi, 20 qabul qilindi"]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Amaliy: savat",
+   "desc": ["get — har safar hisoblanadi,", "qavssiz o'qiladi: s.jami"],
+   "code": [
+    "class Savat {",
+    "  final _narx = <int>[];",
+    "  void qosh(int n) => _narx.add(n);",
+    "  int get jami =>",
+    "      _narx.fold(0, (a, b) => a + b);",
+    "  bool get boshmi => _narx.isEmpty;",
+    "}",
+    "void main() {",
+    "  var s = Savat();",
+    "  print(s.boshmi);",
+    "  s.qosh(12000);",
+    "  s.qosh(8000);",
+    "  print(s.jami);",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": ["~true", "~20000"]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Noto'g'ri",
+   "bad": [
+    "set yosh(int v) {",
+    "  yosh = v;",
+    "}",
+    "!O'zini chaqiradi → Stack Overflow"
+   ],
+   "good_label": "To'g'ri",
+   "good": [
+    "set yosh(int v) {",
+    "  _yosh = v;",
+    "}"
+   ],
+   "note": "Setter ichida _private maydonga yozing"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "get — maydon kabi o'qiladi (qavssiz)",
+    "set — saqlashdan oldin tekshiradi",
+    "_ — boshqa fayldan yashirin (private)"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3.5,
+   "title": "Saqlab qo'ying",
+   "lines": ["Seriya: Dart asoslari #11"],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": ["Mashq — izohga:", "get fio (ism + familiya) yozing!"]
+  }
+ ]
+}
