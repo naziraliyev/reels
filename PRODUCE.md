@@ -27,8 +27,20 @@ Video faqat "qiziq quiz" bo'lib qolmasin — tomoshabin undan aniq bilim olib ke
   "Esda tuting" xulosa sahnasi (`bullets`, 2–3 band) → cta.
 - Quiz videolarida ham "Nega?" tushuntirishi + to'g'ri yozish usuli + qachon ishlatish sahnasi bo'lishi shart.
 - Har bir video oxirida tomoshabin bitta qoidani yodlab qolsin (xulosa sahnasi yoki cta matnida).
-- Darajasi: boshlovchi va o'rta daraja; atamalarni o'zbekcha izohlang (masalan, "closure — funksiya o'zi yaratilgan
-  joydagi o'zgaruvchilarni eslab qoladi").
+- Darajasi (foydalanuvchi talabi, 2026-11-25: "darslar saviyasi tushib boryapti — yuqoriroq saviyali videolar"):
+  **o'rta va yuqori daraja** (junior→middle dasturchi, intervyuga tayyorlanayotganlar). Boshlovchi mavzularini
+  (sort/sorted, tuple vergul, append/extend, f-string, oddiy metodlar ro'yxati) ENDI BERMANG.
+  Har bir video real ishda yoki texnik intervyuda kerak bo'ladigan narsani o'rgatsin. Mavzu misollari:
+  - SQL: window funksiyalar (LAG/LEAD, SUM() OVER — running total, NTILE), CTE va rekursiv CTE, indekslar va EXPLAIN,
+    tranzaksiyalar va izolyatsiya darajalari, deadlock, N+1 muammo, normalizatsiya, UPSERT (ON CONFLICT), EXISTS vs IN, self-join.
+  - Python: generatorlar va yield, dekoratorlar, context manager (with / __enter__), iterator protokoli, dataclass,
+    GIL va threading vs multiprocessing, asyncio, mutable/immutable va xotira (is vs ==, id), __slots__, typing.
+  - Flutter/Dart: state management (Provider/Riverpod/BLoC farqi), widget lifecycle, keys (ValueKey/GlobalKey),
+    const widget va rebuild optimizatsiyasi, isolates/compute, Stream va StreamBuilder, mixin, extension, sealed class + pattern matching.
+  - Umumiy: Big-O amaliy misolda, SOLID, REST vs GraphQL, caching, git rebase vs merge.
+  Har bir videoda kamida bitta "nega" (ichki mexanizm) tushuntirilsin, faqat sintaksis emas.
+  Atamalarni o'zbekcha izohlang, lekin soddalashtirib mazmunni yo'qotmang.
+  Hook'da daraja yorlig'i: "SQL intervyu", "Python o'rta daraja", "Flutter middle" kabi.
 - Mavzularni ketma-ket seriya qilib qurish mumkin (masalan, SQL asoslari: SELECT → WHERE → GROUP BY → JOIN),
   caption'da "Seriya: SQL asoslari #3" deb belgilang. topics.md da seriyaning keyingi qismini kuzatib boring.
 - Caption'da ham 2–3 qatorlik qisqa konspekt bo'lsin (asosiy qoida + misol), saqlashga undaydigan.

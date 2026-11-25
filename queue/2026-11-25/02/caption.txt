@@ -1,0 +1,11 @@
+Har bo'limda eng yuqori maosh KIMDA? GROUP BY bu savolga javob bera olmaydi 🧠
+Seriya: SQL o'rta daraja #1 — Window funksiyalar (suhbatlarda eng ko'p so'raladigan mavzu)
+✅ OVER (PARTITION BY bolim ORDER BY maosh DESC) — qatorlar guruhlanmaydi, har qator yoniga o'z guruhidagi o'rni yoziladi
+✅ Teng maoshlar (1200, 1200, 900): ROW_NUMBER → 1, 2, 3 · RANK → 1, 1, 3 · DENSE_RANK → 1, 1, 2
+✅ Top-1 har guruhda: WITH r AS (... RANK() OVER (...) AS o ...) SELECT ... FROM r WHERE o = 1
+⚠️ WHERE ROW_NUMBER() OVER (...) = 1 → xato: window funksiya WHERE'dan KEYIN hisoblanadi. CTE yoki subquery'ga o'rang.
+📌 Saqlab qo'ying — "har guruhdan top-N" masalasi real loyihada ham, intervyuda ham doim chiqadi.
+💬 Savol: har bo'limdan eng yuqori 2 ta maoshni olish uchun so'rovning qaysi joyi o'zgaradi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#sql #postgresql #windowfunctions #sqlintervyu #dasturlash #dasturchi #database #dataanalyst #backend #programming #it #uzbekistan

@@ -1,0 +1,213 @@
+{
+ "topic": "sql-window-row-number-rank-partition",
+ "lang": "sql",
+ "accent": "#a78bfa",
+ "caption": "Har bo'limda eng yuqori maosh KIMDA? GROUP BY bu savolga javob bera olmaydi 🧠\nSeriya: SQL o'rta daraja #1 — Window funksiyalar (suhbatlarda eng ko'p so'raladigan mavzu)\n✅ OVER (PARTITION BY bolim ORDER BY maosh DESC) — qatorlar guruhlanmaydi, har qator yoniga o'z guruhidagi o'rni yoziladi\n✅ Teng maoshlar (1200, 1200, 900): ROW_NUMBER → 1, 2, 3 · RANK → 1, 1, 3 · DENSE_RANK → 1, 1, 2\n✅ Top-1 har guruhda: WITH r AS (... RANK() OVER (...) AS o ...) SELECT ... FROM r WHERE o = 1\n⚠️ WHERE ROW_NUMBER() OVER (...) = 1 → xato: window funksiya WHERE'dan KEYIN hisoblanadi. CTE yoki subquery'ga o'rang.\n📌 Saqlab qo'ying — \"har guruhdan top-N\" masalasi real loyihada ham, intervyuda ham doim chiqadi.\n💬 Savol: har bo'limdan eng yuqori 2 ta maoshni olish uchun so'rovning qaysi joyi o'zgaradi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#sql #postgresql #windowfunctions #sqlintervyu #dasturlash #dasturchi #database #dataanalyst #backend #programming #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL intervyu",
+   "lines": [
+    "Har bo'limda eng",
+    "katta maosh kimda?"
+   ],
+   "sub": "GROUP BY buni qila olmaydi",
+   "footer": "Intervyuda eng ko'p so'raladi"
+  },
+  {
+   "type": "text",
+   "dur": 4,
+   "title": "Window funksiya",
+   "lines": [
+    "Qatorlarni guruhlamaydi — har qator yoniga guruh bo'yicha hisob qo'shadi.",
+    "OVER (PARTITION BY ... ORDER BY ...)"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "ROW_NUMBER + PARTITION BY",
+   "desc": [
+    "Har bo'lim ichida 1 dan boshlab raqamlaydi"
+   ],
+   "code": [
+    "SELECT ism, bolim, maosh,",
+    "  ROW_NUMBER() OVER (",
+    "    PARTITION BY bolim",
+    "    ORDER BY maosh DESC) AS o",
+    "FROM xodimlar;"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "ism",
+     "bolim",
+     "maosh",
+     "o"
+    ],
+    "rows": [
+     [
+      "Vali",
+      "IT",
+      "1200",
+      "1"
+     ],
+     [
+      "Olim",
+      "IT",
+      "1200",
+      "2"
+     ],
+     [
+      "Ali",
+      "IT",
+      "900",
+      "3"
+     ],
+     [
+      "Kamola",
+      "Sotuv",
+      "850",
+      "1"
+     ],
+     [
+      "Zarina",
+      "Sotuv",
+      "700",
+      "2"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "table",
+   "dur": 6,
+   "title": "Teng qiymatlar: 3 xil raqam",
+   "tables": [
+    {
+     "name": "IT bo'limi, ORDER BY maosh DESC",
+     "cols": [
+      "maosh",
+      "ROW_NUM",
+      "RANK",
+      "DENSE"
+     ],
+     "rows": [
+      [
+       "1200",
+       "1",
+       "1",
+       "1"
+      ],
+      [
+       "1200",
+       "2",
+       "1",
+       "1"
+      ],
+      [
+       "900",
+       "3",
+       "3",
+       "2"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "ROW_NUMBER — tenglarni ham ajratadi",
+    "RANK — o'rin tashlab ketadi (1, 1, 3)",
+    "DENSE_RANK — tashlamaydi (1, 1, 2)"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Amaliy: har bo'limdan top-1",
+   "desc": [
+    "RANK — teng maoshlilar ikkalasi chiqadi"
+   ],
+   "code": [
+    "WITH r AS (",
+    "  SELECT *, RANK() OVER (",
+    "    PARTITION BY bolim",
+    "    ORDER BY maosh DESC) AS o",
+    "  FROM xodimlar",
+    ")",
+    "SELECT ism, bolim, maosh",
+    "FROM r WHERE o = 1;"
+   ],
+   "out_title": "Natija:",
+   "table": {
+    "cols": [
+     "ism",
+     "bolim",
+     "maosh"
+    ],
+    "rows": [
+     [
+      "Vali",
+      "IT",
+      "1200"
+     ],
+     [
+      "Olim",
+      "IT",
+      "1200"
+     ],
+     [
+      "Kamola",
+      "Sotuv",
+      "850"
+     ]
+    ]
+   }
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "WHERE ichida window",
+   "bad": [
+    "SELECT ism FROM xodimlar",
+    "WHERE ROW_NUMBER()",
+    "  OVER (ORDER BY maosh) = 1;",
+    "!ERROR: window functions are",
+    "!not allowed in WHERE"
+   ],
+   "good_label": "To'g'ri: CTE ichida hisobla",
+   "good": [
+    "WITH r AS (SELECT ..., ROW_NUMBER()",
+    "  OVER (...) AS o FROM xodimlar)",
+    "SELECT * FROM r WHERE o = 1;"
+   ],
+   "note": "Window funksiya WHERE'dan KEYIN hisoblanadi"
+  },
+  {
+   "type": "bullets",
+   "dur": 4,
+   "title": "Esda tuting",
+   "items": [
+    "PARTITION BY — guruh, qatorlar yo'qolmaydi",
+    "ROW_NUMBER 1,2,3 · RANK 1,1,3 · DENSE 1,1,2",
+    "Filtr: CTE + WHERE o = 1"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: SQL o'rta daraja #1",
+    "Top-N = PARTITION BY + CTE"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: top-2 uchun",
+    "qaysi joy o'zgaradi?"
+   ]
+  }
+ ]
+}
