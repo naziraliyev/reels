@@ -1,0 +1,153 @@
+{
+ "topic": "flutter-keys-state-shift-valuekey",
+ "lang": "dart",
+ "accent": "#38bdf8",
+ "caption": "Ali'ni belgiladim, keyin uni ro'yxatdan o'chirdim — belgi Vali'ga o'tib qoldi?! 😳 Flutter intervyu savoli\nSeriya: Flutter middle #1 — Keys\n✅ Flutter eski State'ni yangi widget'ga faqat TUR + KEY bo'yicha bog'laydi (Widget.canUpdate)\n✅ Key yo'q → State o'rni bo'yicha qoladi: 1-o'rindagi belgi = true endi Vali'niki, oxirgi State o'chiriladi\n✅ Yechim: Qator(key: ValueKey(user.id), ...) — State o'z egasi bilan birga ko'chadi\n⚠️ ValueKey(index) — key yo'q bilan bir xil xato beradi. Key unikal va barqaror bo'lsin (id).\n💡 Qachon kerak: Stateful element ro'yxatdan o'chirilsa, qo'shilsa yoki joyi almashsa. Dismissible va ReorderableListView'da key majburiy.\n📌 Saqlab qo'ying — bu xato real ilovalarda eng qiyin topiladigan buglardan biri.\n💬 Savol: TextField'li ro'yxatda key bo'lmasa, element o'chirilganda nima bo'ladi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#flutter #dart #flutterdev #flutterintervyu #mobiledev #dasturlash #dasturchi #programming #android #ios #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Flutter middle",
+   "lines": [
+    "Ali'ni o'chirdim —",
+    "belgi kimda qoladi?"
+   ],
+   "sub": "Ali [x] · Vali [ ] · Gul [ ]  →  removeAt(0)",
+   "footer": "Intervyu savoli: Keys"
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Holat State ichida",
+   "desc": [
+    "Ali belgilandi, keyin ro'yxatdan o'chirildi"
+   ],
+   "code": [
+    "class _QatorState extends State<Qator> {",
+    "  bool belgi = false; // holat shu yerda",
+    "  @override",
+    "  Widget build(BuildContext context) =>",
+    "    CheckboxListTile(",
+    "      title: Text(widget.ism),",
+    "      value: belgi,",
+    "      onChanged: (v) =>",
+    "          setState(() => belgi = v!));",
+    "}",
+    "// ro'yxat — key YO'Q:",
+    "for (final i in ismlar) Qator(ism: i),",
+    "// ...",
+    "setState(() => ismlar.removeAt(0));"
+   ],
+   "out_title": "Ekranda nima chiqadi?",
+   "out": [
+    "~A) Vali [ ]  Gul [ ]",
+    "~B) Vali [x]  Gul [ ]"
+   ]
+  },
+  {
+   "type": "table",
+   "dur": 6.5,
+   "title": "Javob: B — Vali belgilangan!",
+   "tables": [
+    {
+     "name": "Key yo'q: State o'rni bo'yicha qoladi",
+     "cols": [
+      "o'rin",
+      "belgi",
+      "oldin",
+      "keyin"
+     ],
+     "rows": [
+      [
+       "1",
+       "true",
+       "Ali",
+       "Vali"
+      ],
+      [
+       "2",
+       "false",
+       "Vali",
+       "Gul"
+      ],
+      [
+       "3",
+       "false",
+       "Gul",
+       "o'chdi"
+      ]
+     ]
+    }
+   ],
+   "note": [
+    "Ali'ning State'i joyida qoldi,",
+    "unga endi Vali widget'i tegdi"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "Nega? Flutter ichida",
+   "desc": [
+    "Eski State yangi widget'ga shu shartda beriladi"
+   ],
+   "code": [
+    "// flutter/widgets/framework.dart",
+    "static bool canUpdate(",
+    "    Widget oldWidget, Widget newWidget) {",
+    "  return oldWidget.runtimeType ==",
+    "          newWidget.runtimeType &&",
+    "      oldWidget.key == newWidget.key;",
+    "}"
+   ],
+   "out_title": "Key yo'q bo'lsa:",
+   "out": [
+    "~Qator == Qator, null == null → true",
+    "~State faqat O'RNI bo'yicha qayta ishlatiladi"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 6,
+   "title": "To'g'ri usul",
+   "bad_label": "Key yo'q yoki ValueKey(index)",
+   "bad": [
+    "Qator(ism: u.ism)",
+    "Qator(key: ValueKey(index), ...)"
+   ],
+   "good_label": "Unikal id bilan ValueKey",
+   "good": [
+    "Qator(",
+    "  key: ValueKey(u.id),",
+    "  ism: u.ism,",
+    ")"
+   ],
+   "note": "Endi State o'z egasi bilan birga ko'chadi"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "State widget'ga tur + key bo'yicha bog'lanadi",
+    "Ro'yxatda Stateful element → ValueKey(id)",
+    "index key = key yo'q bilan bir xil"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Flutter middle #1",
+    "Ro'yxat + State = ValueKey(id)"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: TextField'li",
+    "ro'yxatda nima bo'ladi?"
+   ]
+  }
+ ]
+}

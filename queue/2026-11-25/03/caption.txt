@@ -1,0 +1,12 @@
+Ali'ni belgiladim, keyin uni ro'yxatdan o'chirdim — belgi Vali'ga o'tib qoldi?! 😳 Flutter intervyu savoli
+Seriya: Flutter middle #1 — Keys
+✅ Flutter eski State'ni yangi widget'ga faqat TUR + KEY bo'yicha bog'laydi (Widget.canUpdate)
+✅ Key yo'q → State o'rni bo'yicha qoladi: 1-o'rindagi belgi = true endi Vali'niki, oxirgi State o'chiriladi
+✅ Yechim: Qator(key: ValueKey(user.id), ...) — State o'z egasi bilan birga ko'chadi
+⚠️ ValueKey(index) — key yo'q bilan bir xil xato beradi. Key unikal va barqaror bo'lsin (id).
+💡 Qachon kerak: Stateful element ro'yxatdan o'chirilsa, qo'shilsa yoki joyi almashsa. Dismissible va ReorderableListView'da key majburiy.
+📌 Saqlab qo'ying — bu xato real ilovalarda eng qiyin topiladigan buglardan biri.
+💬 Savol: TextField'li ro'yxatda key bo'lmasa, element o'chirilganda nima bo'ladi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#flutter #dart #flutterdev #flutterintervyu #mobiledev #dasturlash #dasturchi #programming #android #ios #it #uzbekistan
