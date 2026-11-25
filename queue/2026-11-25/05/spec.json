@@ -1,0 +1,105 @@
+{
+ "topic": "sql-running-total-range-vs-rows",
+ "lang": "sql",
+ "accent": "#a78bfa",
+ "caption": "SUM() OVER (ORDER BY sana) — 2-qatorda 150 mi yoki 180? 🤯 SQL intervyu savoli\nSeriya: SQL o'rta daraja #2 — running total (yig'indi jami)\n✅ OVER ichida ORDER BY bo'lsa, standart oyna: RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW\n✅ RANGE bir xil sanali (teng) qatorlarni BIRGA qo'shadi → ikkala 02-11 qatorda 180\n✅ Yechim: ORDER BY sana, id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW → 100, 150, 180, 200\n⚠️ ROWS'da teng qiymatlar tartibi tasodifiy — id kabi unikal ustun bilan tartiblang\n💡 Kunlik jami kerak bo'lsa RANGE to'g'ri, qatorma-qator balans kerak bo'lsa ROWS.\n📌 Saqlab qo'ying — hisobot va bank balanslarida bu xato juda ko'p uchraydi.\n💬 Savol: AVG(summa) OVER (ORDER BY sana) da ham shu muammo bo'ladimi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#sql #sqlintervyu #windowfunctions #postgresql #mysql #database #dataanalyst #dasturlash #dasturchi #programming #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "SQL intervyu",
+   "lines": ["Running total:", "150 mi yoki 180?"],
+   "sub": "SUM() OVER (ORDER BY sana)",
+   "footer": "Window funksiya tuzog'i"
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "Yig'indi jami",
+   "desc": ["Ikki sotuv bir xil sanada (02-11)"],
+   "code": [
+    "-- sotuv: id, sana, summa",
+    "-- 1  01-11  100",
+    "-- 2  02-11   50",
+    "-- 3  02-11   30",
+    "-- 4  03-11   20",
+    "SELECT id, sana, summa,",
+    "  SUM(summa) OVER (ORDER BY sana)",
+    "    AS jami",
+    "FROM sotuv;"
+   ],
+   "out_title": "2-qatorda (id = 2) jami nechchi?",
+   "out": ["~A) 150      B) 180"]
+  },
+  {
+   "type": "table",
+   "dur": 6.5,
+   "title": "Javob: B — 180!",
+   "tables": [
+    {
+     "name": "Natija (standart oyna)",
+     "cols": ["id", "sana", "summa", "jami"],
+     "rows": [
+      ["1", "01-11", "100", "100"],
+      ["2", "02-11", "50", "180"],
+      ["3", "02-11", "30", "180"],
+      ["4", "03-11", "20", "200"]
+     ]
+    }
+   ],
+   "note": ["150 hech qayerda yo'q —", "teng sanalar birga qo'shildi"]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Nega? Yashirin RANGE",
+   "desc": ["OVER ichida ORDER BY bo'lsa, standart oyna:"],
+   "code": [
+    "SUM(summa) OVER (",
+    "  ORDER BY sana",
+    "  RANGE BETWEEN UNBOUNDED PRECEDING",
+    "            AND CURRENT ROW",
+    ")"
+   ],
+   "out_title": "RANGE = qiymat bo'yicha oyna:",
+   "out": [
+    "~sana <= joriy sana bo'lgan HAMMA qatorlar",
+    "~02-11 dagi ikkala qator bir-birini ko'radi"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7,
+   "title": "To'g'ri usul: ROWS",
+   "bad_label": "RANGE (standart): 100, 180, 180, 200",
+   "bad": ["OVER (ORDER BY sana)"],
+   "good_label": "ROWS: 100, 150, 180, 200",
+   "good": [
+    "OVER (ORDER BY sana, id",
+    "  ROWS BETWEEN UNBOUNDED",
+    "  PRECEDING AND CURRENT ROW)"
+   ],
+   "note": "id qo'shing: teng sanalar tartibi aniq bo'ladi"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "OVER + ORDER BY = yashirin RANGE oyna",
+    "RANGE teng qiymatlarni birga qo'shadi",
+    "Qatorma-qator jami: ROWS + unikal id",
+    "Kunlik jami kerak bo'lsa RANGE to'g'ri"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": ["Seriya: SQL o'rta daraja #2", "Running total = ROWS + id"],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": ["Izohga yozing: AVG() OVER da", "ham shu muammo bormi?"]
+  }
+ ]
+}

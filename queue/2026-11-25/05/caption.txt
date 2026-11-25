@@ -1,0 +1,12 @@
+SUM() OVER (ORDER BY sana) — 2-qatorda 150 mi yoki 180? 🤯 SQL intervyu savoli
+Seriya: SQL o'rta daraja #2 — running total (yig'indi jami)
+✅ OVER ichida ORDER BY bo'lsa, standart oyna: RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+✅ RANGE bir xil sanali (teng) qatorlarni BIRGA qo'shadi → ikkala 02-11 qatorda 180
+✅ Yechim: ORDER BY sana, id ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW → 100, 150, 180, 200
+⚠️ ROWS'da teng qiymatlar tartibi tasodifiy — id kabi unikal ustun bilan tartiblang
+💡 Kunlik jami kerak bo'lsa RANGE to'g'ri, qatorma-qator balans kerak bo'lsa ROWS.
+📌 Saqlab qo'ying — hisobot va bank balanslarida bu xato juda ko'p uchraydi.
+💬 Savol: AVG(summa) OVER (ORDER BY sana) da ham shu muammo bo'ladimi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#sql #sqlintervyu #windowfunctions #postgresql #mysql #database #dataanalyst #dasturlash #dasturchi #programming #it #uzbekistan
