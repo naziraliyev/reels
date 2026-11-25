@@ -1,0 +1,11 @@
+Counter("banan") — natija nima? 🐍
+Seriya: Python asoslari #21 — sanash: dict.get() va Counter
+✅ Counter(x) — har bir element necha marta uchraganini sanaydi: Counter("banan") → {'a': 2, 'n': 2, 'b': 1}
+✅ .most_common(2) — eng ko'p uchragan 2 tasi: [('non', 3), ('sut', 2)]
+✅ Qo'lda: son[s] = son.get(s, 0) + 1
+⚠️ son = {}; son[s] += 1 → KeyError. Bo'sh dict'da kalit yo'q — get(s, 0) yoki Counter ishlating.
+📌 Saqlab qo'ying — so'zlarni, sotuvlarni, ovozlarni sanashda har kuni kerak bo'ladi.
+💬 Savol: Counter("kitob")["k"] nechaga teng? Javobni izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha qisqa darslar — obuna bo'ling!
+
+#python #pythondasturlash #dasturlash #dasturchi #programming #coding #pythondars #counter #collections #boshlovchilar #it #uzbekistan
