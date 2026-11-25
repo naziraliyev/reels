@@ -1,0 +1,11 @@
+10 GB log faylni RAM to'lmasdan qanday o'qiysiz? Javob — generator va yield 🧠
+Seriya: Python o'rta daraja #1 — intervyuda eng ko'p so'raladigan mavzulardan
+✅ [x*x for ...] — 1 mln qiymat birdaniga xotirada (~8.4 MB), (x*x for ...) — generator, atigi 200 bayt (Python 3.13)
+✅ yield funksiyani to'xtatadi va lokal holatni saqlaydi, next() shu joydan davom ettiradi; qiymat tugasa — StopIteration (for uni o'zi ushlaydi)
+✅ Amaliy: qatorlar() → xatolar() zanjiri — fayl qanchalik katta bo'lmasin, xotirada faqat 1 qator
+⚠️ Generator bir martalik: sum(g) → 12, yana sum(g) → 0. Qayta kerak bo'lsa — list(g) yoki generatorni qayta yarating.
+📌 Saqlab qo'ying — katta fayl, API sahifalari, ma'lumotlar oqimi bilan ishlaganda kerak bo'ladi.
+💬 Savol: len(g) generatorda ishlaydimi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#python #pythonintervyu #generator #yield #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan

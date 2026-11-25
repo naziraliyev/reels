@@ -1,0 +1,147 @@
+{
+ "topic": "python-generator-yield",
+ "lang": "python",
+ "accent": "#4ade80",
+ "caption": "10 GB log faylni RAM to'lmasdan qanday o'qiysiz? Javob — generator va yield 🧠\nSeriya: Python o'rta daraja #1 — intervyuda eng ko'p so'raladigan mavzulardan\n✅ [x*x for ...] — 1 mln qiymat birdaniga xotirada (~8.4 MB), (x*x for ...) — generator, atigi 200 bayt (Python 3.13)\n✅ yield funksiyani to'xtatadi va lokal holatni saqlaydi, next() shu joydan davom ettiradi; qiymat tugasa — StopIteration (for uni o'zi ushlaydi)\n✅ Amaliy: qatorlar() → xatolar() zanjiri — fayl qanchalik katta bo'lmasin, xotirada faqat 1 qator\n⚠️ Generator bir martalik: sum(g) → 12, yana sum(g) → 0. Qayta kerak bo'lsa — list(g) yoki generatorni qayta yarating.\n📌 Saqlab qo'ying — katta fayl, API sahifalari, ma'lumotlar oqimi bilan ishlaganda kerak bo'ladi.\n💬 Savol: len(g) generatorda ishlaydimi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #pythonintervyu #generator #yield #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python o'rta daraja",
+   "lines": [
+    "10 GB faylni",
+    "RAM to'lmasdan?"
+   ],
+   "sub": "Generator va yield",
+   "footer": "Intervyuda ko'p so'raladi"
+  },
+  {
+   "type": "text",
+   "dur": 4,
+   "title": "Generator nima?",
+   "lines": [
+    "Qiymatlarni birdaniga emas — so'ralganda bittadan beradi.",
+    "Xotirada faqat joriy qiymat turadi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "[ ] ro'yxat vs ( ) generator",
+   "desc": [
+    "Bir xil 1 mln son — xotira farqi"
+   ],
+   "code": [
+    "import sys",
+    "a = [x * x for x in range(1_000_000)]",
+    "b = (x * x for x in range(1_000_000))",
+    "print(sys.getsizeof(a))",
+    "print(sys.getsizeof(b))"
+   ],
+   "out_title": "Natija (Python 3.13):",
+   "out": [
+    "~8448728   # ~8.4 MB",
+    "~200       # 200 bayt!"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "yield ichida nima bo'ladi?",
+   "desc": [
+    "yield — to'xtaydi va holatni saqlaydi",
+    "next() — shu joydan davom etadi"
+   ],
+   "code": [
+    "def sana():",
+    "    print(\"boshlandi\")",
+    "    yield 1",
+    "    print(\"davom\")",
+    "    yield 2",
+    "",
+    "g = sana()   # hali hech narsa ishlamaydi",
+    "print(next(g))",
+    "print(next(g))",
+    "print(next(g))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~boshlandi",
+    "~1",
+    "~davom",
+    "~2",
+    "!StopIteration  (for buni o'zi ushlaydi)"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Amaliy: katta log fayl",
+   "desc": [
+    "10 GB bo'lsa ham — xotirada 1 qator"
+   ],
+   "code": [
+    "def qatorlar(yol):",
+    "    with open(yol) as f:",
+    "        for q in f:",
+    "            yield q.rstrip()",
+    "",
+    "def xatolar(qatorlar):",
+    "    for q in qatorlar:",
+    "        if \"ERROR\" in q:",
+    "            yield q",
+    "",
+    "for x in xatolar(qatorlar(\"app.log\")):",
+    "    print(x)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~ERROR db timeout",
+    "~ERROR 500 /api/pay"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Generatorni 2 marta aylanish",
+   "bad": [
+    "g = (x * 2 for x in [1, 2, 3])",
+    "print(sum(g))   # 12",
+    "print(sum(g))   # 0 ?!"
+   ],
+   "good_label": "Qayta kerak bo'lsa — list()",
+   "good": [
+    "s = [x * 2 for x in [1, 2, 3]]",
+    "print(sum(s))   # 12",
+    "print(sum(s))   # 12"
+   ],
+   "note": "Generator bir martalik — tugasa, bo'sh"
+  },
+  {
+   "type": "bullets",
+   "dur": 4,
+   "title": "Esda tuting",
+   "items": [
+    "yield — to'xtaydi, holatni saqlaydi",
+    "( ) generator tejaydi, [ ] hammasi birdan",
+    "Generator bir martalik — qayta kerak bo'lsa list()"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #1",
+    "Katta ma'lumot = generator"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: len(g)",
+    "generatorda ishlaydimi?"
+   ]
+  }
+ ]
+}
