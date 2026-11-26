@@ -1,0 +1,136 @@
+{
+ "topic": "dart-factory-constructor-singleton",
+ "lang": "dart",
+ "accent": "#a78bfa",
+ "caption": "Logger() == Logger() — true mi yoki false? Javob konstruktor turiga bog'liq 🏭\nSeriya: Dart middle #1 — Flutter intervyusida ko'p so'raladi\n✅ Oddiy konstruktor HAR DOIM yangi obyekt yaratadi → false\n✅ factory konstruktor obyektni o'zi tanlaydi: tayyorini (singleton, kesh), voris klassni yoki tekshirib keyin yaratadi → true\n✅ Amaliy: Tolov.fromJson({'tur': 'naqd'}) API javobiga qarab Karta yoki Naqd qaytaradi\n⚠️ factory ichida this yo'q: factory Nuqta(this.x) — xato. To'g'ri: private Nuqta._(this.x) + factory'da tekshirib return.\n📌 Saqlab qo'ying — SharedPreferences, Firebase singleton'lari va fromJson shu usulda yozilgan.\n💬 Savol: factory konstruktorni const qilsa bo'ladimi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#dart #flutter #flutterdev #flutteruz #factory #singleton #dasturlash #dasturchi #mobiledev #programming #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart middle",
+   "lines": [
+    "Logger() == Logger()",
+    "true mi yoki false?"
+   ],
+   "sub": "factory konstruktor siri",
+   "footer": "Flutter intervyusida ko'p so'raladi"
+  },
+  {
+   "type": "text",
+   "dur": 6,
+   "title": "factory nima?",
+   "lines": [
+    "Oddiy konstruktor HAR DOIM yangi obyekt yaratadi.",
+    "factory — obyektni o'zi tanlab qaytaradi:",
+    "1) tayyorini (singleton, kesh)",
+    "2) voris klassni",
+    "3) tekshirib, keyin yaratadi",
+    "Ichida this yo'q — return majburiy."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Singleton: bitta obyekt",
+   "desc": [
+    "Logger() har safar o'sha obyektni beradi"
+   ],
+   "code": [
+    "class Logger {",
+    "  static final Logger _yagona = Logger._();",
+    "  Logger._(); // private konstruktor",
+    "  factory Logger() => _yagona;",
+    "}",
+    "",
+    "void main() {",
+    "  final a = Logger();",
+    "  final b = Logger();",
+    "  print(identical(a, b));",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "true",
+    "~factory'siz Logger() → false (2 ta obyekt)"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "Amaliy: API → to'g'ri klass",
+   "desc": [
+    "API javobiga qarab kerakli klass qaytadi"
+   ],
+   "code": [
+    "abstract class Tolov {",
+    "  factory Tolov.fromJson(Map j) =>",
+    "      switch (j['tur']) {",
+    "        'karta' => Karta(j['raqam']),",
+    "        'naqd' => Naqd(),",
+    "        _ => throw FormatException('tur?'),",
+    "      };",
+    "}",
+    "class Naqd implements Tolov {}",
+    "class Karta implements Tolov {",
+    "  Karta(String raqam);",
+    "}",
+    "void main() =>",
+    "    print(Tolov.fromJson({'tur': 'naqd'}));"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "Instance of 'Naqd'",
+    "~Tolov emas — aynan Naqd obyekti"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "factory'da this — kompilyatsiya xatosi",
+   "bad": [
+    "class Nuqta {",
+    "  final int x;",
+    "  factory Nuqta(this.x);",
+    "}"
+   ],
+   "good_label": "private konstruktor + tekshiruv",
+   "good": [
+    "class Nuqta {",
+    "  final int x;",
+    "  Nuqta._(this.x);",
+    "  factory Nuqta(int x) {",
+    "    if (x < 0) throw ArgumentError();",
+    "    return Nuqta._(x);",
+    "  }",
+    "}"
+   ],
+   "note": "factory obyekt yaratmaydi — uni return qiladi"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "Oddiy konstruktor — har doim YANGI obyekt",
+    "factory — tayyorini, vorisni yoki tekshirib qaytaradi",
+    "factory ichida this yo'q → return majburiy"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Dart middle #1",
+    "factory = obyektni tanlaydi"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: factory'ni",
+    "const qilsa bo'ladimi?"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+Logger() == Logger() — true mi yoki false? Javob konstruktor turiga bog'liq 🏭
+Seriya: Dart middle #1 — Flutter intervyusida ko'p so'raladi
+✅ Oddiy konstruktor HAR DOIM yangi obyekt yaratadi → false
+✅ factory konstruktor obyektni o'zi tanlaydi: tayyorini (singleton, kesh), voris klassni yoki tekshirib keyin yaratadi → true
+✅ Amaliy: Tolov.fromJson({'tur': 'naqd'}) API javobiga qarab Karta yoki Naqd qaytaradi
+⚠️ factory ichida this yo'q: factory Nuqta(this.x) — xato. To'g'ri: private Nuqta._(this.x) + factory'da tekshirib return.
+📌 Saqlab qo'ying — SharedPreferences, Firebase singleton'lari va fromJson shu usulda yozilgan.
+💬 Savol: factory konstruktorni const qilsa bo'ladimi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #flutteruz #factory #singleton #dasturlash #dasturchi #mobiledev #programming #uzbekistan

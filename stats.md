@@ -1,32 +1,32 @@
 # Instagram Reels statistikasi (oxirgi 30 kun, Windsor.ai)
-Yangilangan: 2026-11-26 13:18 UTC. Avtomatik: `tools/analyze.py`. Ball = ko'rish + 10×like + 15×saqlash + 15×ulashish + 5×izoh. Faol % = (like+saqlash+ulashish)/ko'rish.
+Yangilangan: 2026-11-26 18:19 UTC. Avtomatik: `tools/analyze.py`. Ball = ko'rish + 10×like + 15×saqlash + 15×ulashish + 5×izoh. Faol % = (like+saqlash+ulashish)/ko'rish.
 
 ## Yo'nalish × format reytingi (≥ 24 soatlik videolar)
 | cat_fmt | soni | o'rt. ko'rish | o'rt. like | o'rt. saqlash | o'rt. ball | faol % | o'rt. tomosha (s) |
 |---|---|---|---|---|---|---|---|
-| Python dars | 12 | 497 | 9.3 | 4.2 | 742 | 2.9 | 3.4 |
+| Python dars | 13 | 469 | 8.5 | 4.2 | 702 | 3.1 | 3.3 |
 | Python quiz | 10 | 296 | 4.2 | 2.2 | 387 | 2.5 | 3.9 |
-| Flutter/Dart dars | 11 | 274 | 3.0 | 2.4 | 349 | 1.7 | 3.1 |
+| Flutter/Dart dars | 11 | 274 | 3.0 | 2.4 | 349 | 1.7 | 3.2 |
 | Python boshqa | 1 | 281 | 4.0 | 1.0 | 336 | 1.8 | 3.1 |
 | JS quiz | 4 | 286 | 1.5 | 1.5 | 332 | 1.3 | 3.4 |
 | Flutter/Dart quiz | 3 | 262 | 4.0 | 1.7 | 332 | 2.1 | 2.8 |
 | SQL quiz | 13 | 268 | 3.2 | 1.8 | 330 | 1.7 | 4.1 |
 | SQL boshqa | 1 | 226 | 3.0 | 2.0 | 286 | 2.2 | 2.8 |
 | Flutter/Dart boshqa | 2 | 148 | 1.0 | 0.0 | 158 | 0.7 | 2.0 |
-| SQL dars | 3 | 84 | 1.0 | 0.3 | 99 | 0.6 | 3.4 |
+| SQL dars | 3 | 85 | 1.0 | 0.3 | 100 | 0.6 | 3.4 |
 
 ## Yo'nalish bo'yicha
 | cat | soni | o'rt. ko'rish | o'rt. like | o'rt. saqlash | o'rt. ball | faol % | o'rt. tomosha (s) |
 |---|---|---|---|---|---|---|---|
-| Python | 23 | 400 | 6.9 | 3.2 | 570 | 2.7 | 3.6 |
+| Python | 24 | 389 | 6.5 | 3.2 | 556 | 2.8 | 3.6 |
 | JS | 4 | 286 | 1.5 | 1.5 | 332 | 1.3 | 3.4 |
 | Flutter/Dart | 16 | 256 | 2.9 | 1.9 | 322 | 1.7 | 2.9 |
-| SQL | 17 | 233 | 2.8 | 1.6 | 287 | 1.5 | 3.9 |
+| SQL | 17 | 234 | 2.8 | 1.6 | 287 | 1.5 | 3.9 |
 
 ## Format bo'yicha
 | fmt | soni | o'rt. ko'rish | o'rt. like | o'rt. saqlash | o'rt. ball | faol % | o'rt. tomosha (s) |
 |---|---|---|---|---|---|---|---|
-| dars | 26 | 355 | 5.7 | 3.0 | 501 | 2.1 | 3.3 |
+| dars | 27 | 347 | 5.4 | 3.0 | 492 | 2.3 | 3.3 |
 | quiz | 30 | 279 | 3.4 | 1.9 | 350 | 1.9 | 3.8 |
 | boshqa | 4 | 200 | 2.2 | 0.8 | 234 | 1.4 | 2.5 |
 
@@ -34,13 +34,13 @@ Yangilangan: 2026-11-26 13:18 UTC. Avtomatik: `tools/analyze.py`. Ball = ko'rish
 | level | soni | o'rt. ko'rish | o'rt. like | o'rt. saqlash | o'rt. ball | faol % | o'rt. tomosha (s) |
 |---|---|---|---|---|---|---|---|
 | boshlang'ich | 57 | 309 | 4.3 | 2.3 | 411 | 2.0 | 3.5 |
-| middle | 3 | 260 | 4.7 | 1.7 | 337 | 2.5 | 3.2 |
+| middle | 4 | 229 | 3.5 | 2.0 | 313 | 3.2 | 3.0 |
 
 ## Top-10 video (ball bo'yicha)
 | # | Sana/NN | Mavzu | Format | Ko'rish | Like | Saqlash | Ulashish | Ball | Faol % |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | 2026-11-22/01 | python-try-except-else-finally | dars | 1384 | 30 | 18 | 12 | 2134 | 4.3 |
-| 2 | 2026-11-16/01 | python-str-strip-split-join | dars | 875 | 19 | 8 | 40 | 1785 | 7.7 |
+| 1 | 2026-11-22/01 | python-try-except-else-finally | dars | 1385 | 30 | 18 | 12 | 2135 | 4.3 |
+| 2 | 2026-11-16/01 | python-str-strip-split-join | dars | 875 | 18 | 8 | 40 | 1775 | 7.5 |
 | 3 | 2026-11-23/01 | python-key-lambda-sorted-max | dars | 1089 | 19 | 9 | 4 | 1474 | 2.9 |
 | 4 | 2026-11-13/03 | python-dict-get-items-update | dars | 781 | 19 | 7 | 6 | 1166 | 4.1 |
 | 5 | 2026-11-22/03 | dart-class-constructor-tostring | dars | 755 | 10 | 8 | 4 | 1035 | 2.9 |
@@ -48,76 +48,78 @@ Yangilangan: 2026-11-26 13:18 UTC. Avtomatik: `tools/analyze.py`. Ball = ko'rish
 | 7 | 2026-11-14/04 | js-string-plus-minus-coercion | quiz | 636 | 5 | 2 | 0 | 721 | 1.1 |
 | 8 | 2026-11-21/01 | python-slicing-start-stop-step | dars | 413 | 10 | 3 | 3 | 603 | 3.9 |
 | 9 | 2026-11-14/02 | sql-sum-empty-null-vs-count-zero | quiz | 423 | 7 | 4 | 1 | 568 | 2.8 |
-| 10 | 2026-11-24/03 | dart-getter-setter-private | dars | 424 | 6 | 4 | 1 | 559 | 2.6 |
+| 10 | 2026-11-24/03 | dart-getter-setter-private | dars | 428 | 6 | 4 | 1 | 563 | 2.6 |
 
 ## Barcha videolar
 | Sana/NN | Mavzu | Format | Yosh (soat) | Ko'rish | Qamrov | Like | Izoh | Saqlash | Ulashish | O'rt. tomosha (s) | 3s skip | Ball |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 2026-11-26/01 | python-decorators-wraps | dars | 10 | 140 | 129 | 3 | 0 | 0 | 0 | 1.9 | 92% | 170 |
-| 2026-11-25/05 | sql-running-total-range-vs-rows | quiz | 19 | 154 | 129 | 1 | 0 | 1 | 1 | 2.7 | 87% | 194 |
-| 2026-11-25/04 | python-generator-yield | dars | 24 | 131 | 112 | 0 | 0 | 3 | 4 | 2.7 | 73% | 236 |
-| 2026-11-25/03 | flutter-keys-state-shift-valuekey | quiz | 29 | 308 | 273 | 7 | 0 | 3 | 0 | 3.0 | 82% | 423 |
-| 2026-11-25/02 | sql-window-row-number-rank-partition | dars | 29 | 220 | 178 | 3 | 0 | 1 | 0 | 3.0 | 82% | 265 |
-| 2026-11-25/01 | python-counter-most-common | dars | 34 | 253 | 221 | 4 | 0 | 1 | 1 | 3.6 | 70% | 323 |
-| 2026-11-24/04 | python-chained-comparison | quiz | 43 | 231 | 205 | 4 | 0 | 1 | 0 | 2.8 | 84% | 286 |
-| 2026-11-24/03 | dart-getter-setter-private | dars | 48 | 424 | 363 | 6 | 0 | 4 | 1 | 3.2 | 77% | 559 |
-| 2026-11-24/02 | sql-text-number-max-sort-trap | quiz | 53 | 389 | 344 | 4 | 0 | 3 | 0 | 4.1 | 72% | 474 |
-| 2026-11-24/01 | python-args-kwargs | dars | 58 | 173 | 143 | 0 | 0 | 1 | 0 | 2.5 | 82% | 188 |
-| 2026-11-23/04 | python-tuple-comma-trap | quiz | 67 | 218 | 194 | 6 | 0 | 3 | 1 | 3.2 | 80% | 338 |
-| 2026-11-23/03 | dart-inheritance-extends-override-super | dars | 72 | 318 | 262 | 5 | 0 | 4 | 0 | 5.7 | 74% | 428 |
-| 2026-11-23/02 | sql-count-distinct-null | quiz | 77 | 255 | 206 | 7 | 1 | 1 | 0 | 3.5 | 77% | 345 |
-| 2026-11-23/01 | python-key-lambda-sorted-max | dars | 82 | 1089 | 967 | 19 | 0 | 9 | 4 | 3.5 | 74% | 1474 |
-| 2026-11-22/04 | python-global-unboundlocalerror | quiz | 91 | 308 | 264 | 5 | 0 | 2 | 0 | 3.7 | 73% | 388 |
-| 2026-11-22/03 | dart-class-constructor-tostring | dars | 96 | 755 | 639 | 10 | 0 | 8 | 4 | 3.7 | 68% | 1035 |
-| 2026-11-22/02 | sql-left-join-count-star-trap | quiz | 101 | 323 | 264 | 2 | 0 | 4 | 1 | 3.3 | 76% | 418 |
-| 2026-11-22/01 | python-try-except-else-finally | dars | 106 | 1384 | 1209 | 30 | 0 | 18 | 12 | 5.5 | 71% | 2134 |
-| 2026-11-21/04 | python-floor-division-negative | quiz | 115 | 506 | 443 | 9 | 0 | 6 | 3 | 4.5 | 75% | 731 |
-| 2026-11-21/03 | dart-async-await-future | dars | 120 | 230 | 196 | 5 | 0 | 2 | 0 | 3.2 | 68% | 310 |
-| 2026-11-21/02 | sql-not-equal-null-trap | quiz | 125 | 246 | 209 | 3 | 0 | 2 | 0 | 3.8 | 72% | 306 |
-| 2026-11-21/01 | python-slicing-start-stop-step | dars | 130 | 413 | 348 | 10 | 0 | 3 | 3 | 4.5 | 73% | 603 |
-| 2026-11-20/04 | python-bool-false-string-truthiness | quiz | 139 | 245 | 225 | 3 | 0 | 1 | 1 | 3.2 | 76% | 305 |
-| 2026-11-20/03 | dart-named-optional-params | dars | 144 | 149 | 132 | 1 | 0 | 0 | 0 | 2.3 | 83% | 159 |
-| 2026-11-20/02 | sql-concat-null-trap | quiz | 149 | 132 | 107 | 0 | 0 | 1 | 0 | 2.4 | 88% | 147 |
-| 2026-11-20/01 | python-list-append-extend-pop | dars | 154 | 149 | 128 | 1 | 0 | 0 | 0 | 2.2 | 86% | 159 |
-| 2026-11-19/04 | python-remove-while-iterating | quiz | 163 | 310 | 267 | 3 | 0 | 1 | 2 | 5.2 | 77% | 385 |
-| 2026-11-19/03 | dart-spread-collection-if-for | dars | 168 | 146 | 124 | 0 | 0 | 0 | 0 | 2.5 | 78% | 146 |
-| 2026-11-19/02 | sql-null-arithmetic-sum-trap | quiz | 173 | 243 | 197 | 2 | 0 | 0 | 0 | 3.7 | 75% | 263 |
-| 2026-11-19/01 | python-fstring-format | dars | 178 | 138 | 128 | 2 | 0 | 0 | 1 | 2.4 | 86% | 173 |
-| 2026-11-18/04 | python-sort-vs-sorted | quiz | 187 | 297 | 259 | 1 | 0 | 2 | 2 | 3.5 | 75% | 367 |
-| 2026-11-18/03 | dart-string-trim-split-contains | dars | 192 | 212 | 173 | 0 | 0 | 1 | 0 | 2.9 | 73% | 227 |
-| 2026-11-18/02 | sql-between-inclusive | quiz | 197 | 131 | 110 | 0 | 0 | 0 | 0 | 2.3 | 89% | 131 |
-| 2026-11-18/01 | python-set-3-uses | dars | 202 | 218 | 180 | 3 | 0 | 1 | 2 | 3.3 | 80% | 293 |
-| 2026-11-17/04 | js-loose-vs-strict-equality | quiz | 211 | 180 | 160 | 1 | 0 | 0 | 2 | 3.0 | 79% | 220 |
-| 2026-11-17/03 | dart-map-3-methods | dars | 216 | 267 | 234 | 3 | 0 | 5 | 1 | 3.0 | 76% | 387 |
-| 2026-11-17/02 | sql-union-vs-union-all | quiz | 221 | 203 | 162 | 1 | 0 | 1 | 0 | 3.0 | 81% | 228 |
-| 2026-11-17/01 | python-enumerate-zip | dars | 226 | 215 | 183 | 2 | 0 | 2 | 0 | 2.8 | 83% | 265 |
-| 2026-11-16/04 | python-round-bankers | quiz | 235 | 225 | 194 | 3 | 0 | 1 | 0 | 4.5 | 75% | 270 |
-| 2026-11-16/03 | dart-division-operators | dars | 240 | 202 | 174 | 2 | 0 | 2 | 0 | 3.1 | 76% | 252 |
-| 2026-11-16/02 | sql-left-join-where-trap | quiz | 245 | 201 | 166 | 0 | 0 | 0 | 0 | 2.2 | 88% | 201 |
-| 2026-11-16/01 | python-str-strip-split-join | dars | 250 | 875 | 773 | 19 | 0 | 8 | 40 | 3.4 | 76% | 1785 |
-| 2026-11-15/04 | js-float-0.1-plus-0.2 | quiz | 259 | 162 | 147 | 0 | 0 | 1 | 0 | 2.9 | 82% | 177 |
-| 2026-11-15/03 | dart-list-where-map-fold | dars | 264 | 183 | 160 | 1 | 0 | 0 | 1 | 2.7 | 79% | 208 |
-| 2026-11-15/02 | python-list-alias-copy | quiz | 269 | 380 | 330 | 4 | 0 | 2 | 2 | 4.6 | 72% | 480 |
-| 2026-11-15/01 | sql-group-by-count-sum | dars | 274 | 11 | 11 | 0 | 0 | 0 | 0 | 3.9 | 80% | 11 |
-| 2026-11-14/04 | js-string-plus-minus-coercion | quiz | 283 | 636 | 546 | 5 | 1 | 2 | 0 | 4.3 | 74% | 721 |
-| 2026-11-14/03 | python-list-comprehension | dars | 288 | 278 | 234 | 3 | 0 | 1 | 1 | 3.6 | 73% | 338 |
-| 2026-11-14/02 | sql-sum-empty-null-vs-count-zero | quiz | 293 | 423 | 377 | 7 | 0 | 4 | 1 | 4.2 | 69% | 568 |
-| 2026-11-14/01 | dart-null-safety-operators | dars | 298 | 126 | 120 | 0 | 0 | 0 | 0 | 2.4 | 76% | 126 |
-| 2026-11-13/04 | sql-null-is-null-coalesce | dars | 307 | 21 | 16 | 0 | 0 | 0 | 0 | 3.3 | 73% | 21 |
-| 2026-11-13/03 | python-dict-get-items-update | dars | 310 | 781 | 667 | 19 | 0 | 7 | 6 | 3.5 | 74% | 1166 |
-| 2026-11-13/02 | dart-closure-for-loop | quiz | 317 | 280 | 254 | 3 | 0 | 2 | 1 | 3.5 | 71% | 355 |
-| 2026-11-13/01 | sql-avg-null-trap | quiz | 322 | 418 | 365 | 7 | 0 | 3 | 0 | 4.2 | 76% | 533 |
-| 2026-11-12/04 | js-var-let-settimeout-loop | quiz | 331 | 166 | 149 | 0 | 0 | 3 | 0 | 3.3 | 86% | 211 |
-| 2026-11-12/03 | dart-event-loop-print-order | boshqa | 336 | 137 | 121 | 2 | 0 | 0 | 0 | 2.6 | 79% | 157 |
-| 2026-11-12/02 | sql-not-in-null-trap | quiz | 341 | 247 | 221 | 2 | 0 | 2 | 0 | 4.8 | 70% | 297 |
-| 2026-11-12/01 | python-list-multiply-nested | quiz | 346 | 239 | 218 | 4 | 0 | 3 | 0 | 3.9 | 73% | 324 |
-| 2026-11-11/06 | sql-count-star-vs-count-column | quiz | 355 | 277 | 228 | 6 | 0 | 3 | 0 | 11.7 | 75% | 382 |
-| 2026-11-11/05 | dart-final-vs-const-list | quiz | 360 | 197 | 169 | 2 | 0 | 0 | 0 | 2.1 | 85% | 217 |
-| 2026-11-11/02 | sql-where-vs-having | boshqa | 370 | 226 | 207 | 3 | 0 | 2 | 0 | 2.8 | 87% | 286 |
-| 2026-11-11/01 | flutter-stateless-vs-stateful | boshqa | 379 | 158 | 143 | 0 | 0 | 0 | 0 | 1.3 | 95% | 158 |
-| 2026-11-10/01 | python-mutable-default-arg | boshqa | 379 | 281 | 249 | 4 | 0 | 1 | 0 | 3.1 | 78% | 336 |
+| 2026-11-26/03 | python-context-manager-with | dars | 5 | 143 | 124 | 0 | 0 | 0 | 1 | 2.2 | 78% | 158 |
+| 2026-11-26/02 | python-finally-return-override | quiz | 10 | 158 | 149 | 2 | 0 | 0 | 0 | 2.5 | 85% | 178 |
+| 2026-11-26/01 | python-decorators-wraps | dars | 15 | 143 | 133 | 3 | 0 | 0 | 0 | 1.9 | 92% | 173 |
+| 2026-11-25/05 | sql-running-total-range-vs-rows | quiz | 24 | 157 | 133 | 1 | 0 | 1 | 1 | 2.7 | 88% | 197 |
+| 2026-11-25/04 | python-generator-yield | dars | 29 | 132 | 113 | 0 | 0 | 3 | 4 | 2.7 | 73% | 237 |
+| 2026-11-25/03 | flutter-keys-state-shift-valuekey | quiz | 34 | 309 | 274 | 7 | 0 | 3 | 0 | 2.9 | 83% | 424 |
+| 2026-11-25/02 | sql-window-row-number-rank-partition | dars | 34 | 222 | 180 | 3 | 0 | 1 | 0 | 2.9 | 82% | 267 |
+| 2026-11-25/01 | python-counter-most-common | dars | 39 | 254 | 222 | 4 | 0 | 1 | 1 | 3.5 | 70% | 324 |
+| 2026-11-24/04 | python-chained-comparison | quiz | 48 | 231 | 205 | 4 | 0 | 1 | 0 | 2.8 | 84% | 286 |
+| 2026-11-24/03 | dart-getter-setter-private | dars | 53 | 428 | 367 | 6 | 0 | 4 | 1 | 3.2 | 77% | 563 |
+| 2026-11-24/02 | sql-text-number-max-sort-trap | quiz | 58 | 389 | 344 | 4 | 0 | 3 | 0 | 4.1 | 72% | 474 |
+| 2026-11-24/01 | python-args-kwargs | dars | 63 | 173 | 143 | 0 | 0 | 1 | 0 | 2.5 | 82% | 188 |
+| 2026-11-23/04 | python-tuple-comma-trap | quiz | 72 | 218 | 194 | 6 | 0 | 3 | 1 | 3.2 | 80% | 338 |
+| 2026-11-23/03 | dart-inheritance-extends-override-super | dars | 77 | 318 | 262 | 5 | 0 | 4 | 0 | 5.7 | 74% | 428 |
+| 2026-11-23/02 | sql-count-distinct-null | quiz | 82 | 257 | 206 | 7 | 1 | 1 | 0 | 3.5 | 77% | 347 |
+| 2026-11-23/01 | python-key-lambda-sorted-max | dars | 87 | 1089 | 967 | 19 | 0 | 9 | 4 | 3.5 | 74% | 1474 |
+| 2026-11-22/04 | python-global-unboundlocalerror | quiz | 96 | 308 | 264 | 5 | 0 | 2 | 0 | 3.7 | 73% | 388 |
+| 2026-11-22/03 | dart-class-constructor-tostring | dars | 101 | 755 | 639 | 10 | 0 | 8 | 4 | 3.7 | 68% | 1035 |
+| 2026-11-22/02 | sql-left-join-count-star-trap | quiz | 106 | 323 | 264 | 2 | 0 | 4 | 1 | 3.3 | 76% | 418 |
+| 2026-11-22/01 | python-try-except-else-finally | dars | 111 | 1385 | 1209 | 30 | 0 | 18 | 12 | 5.5 | 71% | 2135 |
+| 2026-11-21/04 | python-floor-division-negative | quiz | 120 | 506 | 443 | 9 | 0 | 6 | 3 | 4.5 | 75% | 731 |
+| 2026-11-21/03 | dart-async-await-future | dars | 125 | 230 | 196 | 5 | 0 | 2 | 0 | 3.2 | 68% | 310 |
+| 2026-11-21/02 | sql-not-equal-null-trap | quiz | 130 | 246 | 209 | 3 | 0 | 2 | 0 | 3.8 | 72% | 306 |
+| 2026-11-21/01 | python-slicing-start-stop-step | dars | 135 | 413 | 348 | 10 | 0 | 3 | 3 | 4.5 | 73% | 603 |
+| 2026-11-20/04 | python-bool-false-string-truthiness | quiz | 144 | 245 | 225 | 3 | 0 | 1 | 1 | 3.2 | 76% | 305 |
+| 2026-11-20/03 | dart-named-optional-params | dars | 149 | 150 | 133 | 1 | 0 | 0 | 0 | 2.3 | 83% | 160 |
+| 2026-11-20/02 | sql-concat-null-trap | quiz | 154 | 132 | 107 | 0 | 0 | 1 | 0 | 2.4 | 88% | 147 |
+| 2026-11-20/01 | python-list-append-extend-pop | dars | 159 | 149 | 128 | 1 | 0 | 0 | 0 | 2.2 | 86% | 159 |
+| 2026-11-19/04 | python-remove-while-iterating | quiz | 168 | 310 | 267 | 3 | 0 | 1 | 2 | 5.2 | 77% | 385 |
+| 2026-11-19/03 | dart-spread-collection-if-for | dars | 173 | 147 | 124 | 0 | 0 | 0 | 0 | 2.6 | 77% | 147 |
+| 2026-11-19/02 | sql-null-arithmetic-sum-trap | quiz | 178 | 243 | 197 | 2 | 0 | 0 | 0 | 3.7 | 75% | 263 |
+| 2026-11-19/01 | python-fstring-format | dars | 183 | 138 | 128 | 2 | 0 | 0 | 1 | 2.4 | 86% | 173 |
+| 2026-11-18/04 | python-sort-vs-sorted | quiz | 192 | 297 | 259 | 1 | 0 | 2 | 2 | 3.5 | 75% | 367 |
+| 2026-11-18/03 | dart-string-trim-split-contains | dars | 197 | 212 | 173 | 0 | 0 | 1 | 0 | 2.9 | 73% | 227 |
+| 2026-11-18/02 | sql-between-inclusive | quiz | 202 | 131 | 110 | 0 | 0 | 0 | 0 | 2.3 | 89% | 131 |
+| 2026-11-18/01 | python-set-3-uses | dars | 207 | 218 | 180 | 3 | 0 | 1 | 2 | 3.3 | 80% | 293 |
+| 2026-11-17/04 | js-loose-vs-strict-equality | quiz | 216 | 180 | 160 | 1 | 0 | 0 | 2 | 3.0 | 79% | 220 |
+| 2026-11-17/03 | dart-map-3-methods | dars | 221 | 267 | 234 | 3 | 0 | 5 | 1 | 3.0 | 76% | 387 |
+| 2026-11-17/02 | sql-union-vs-union-all | quiz | 226 | 203 | 162 | 1 | 0 | 1 | 0 | 3.0 | 81% | 228 |
+| 2026-11-17/01 | python-enumerate-zip | dars | 231 | 215 | 183 | 2 | 0 | 2 | 0 | 2.8 | 83% | 265 |
+| 2026-11-16/04 | python-round-bankers | quiz | 240 | 225 | 194 | 3 | 0 | 1 | 0 | 4.5 | 75% | 270 |
+| 2026-11-16/03 | dart-division-operators | dars | 245 | 202 | 174 | 2 | 0 | 2 | 0 | 3.1 | 76% | 252 |
+| 2026-11-16/02 | sql-left-join-where-trap | quiz | 250 | 201 | 166 | 0 | 0 | 0 | 0 | 2.2 | 88% | 201 |
+| 2026-11-16/01 | python-str-strip-split-join | dars | 255 | 875 | 773 | 18 | 0 | 8 | 40 | 3.4 | 76% | 1775 |
+| 2026-11-15/04 | js-float-0.1-plus-0.2 | quiz | 264 | 162 | 147 | 0 | 0 | 1 | 0 | 2.9 | 82% | 177 |
+| 2026-11-15/03 | dart-list-where-map-fold | dars | 269 | 183 | 160 | 1 | 0 | 0 | 1 | 2.7 | 79% | 208 |
+| 2026-11-15/02 | python-list-alias-copy | quiz | 274 | 380 | 330 | 4 | 0 | 2 | 2 | 4.6 | 72% | 480 |
+| 2026-11-15/01 | sql-group-by-count-sum | dars | 279 | 11 | 11 | 0 | 0 | 0 | 0 | 3.9 | 80% | 11 |
+| 2026-11-14/04 | js-string-plus-minus-coercion | quiz | 288 | 636 | 546 | 5 | 1 | 2 | 0 | 4.3 | 74% | 721 |
+| 2026-11-14/03 | python-list-comprehension | dars | 293 | 278 | 234 | 3 | 0 | 1 | 1 | 3.6 | 73% | 338 |
+| 2026-11-14/02 | sql-sum-empty-null-vs-count-zero | quiz | 298 | 423 | 377 | 7 | 0 | 4 | 1 | 4.2 | 69% | 568 |
+| 2026-11-14/01 | dart-null-safety-operators | dars | 303 | 126 | 120 | 0 | 0 | 0 | 0 | 2.4 | 76% | 126 |
+| 2026-11-13/04 | sql-null-is-null-coalesce | dars | 312 | 21 | 16 | 0 | 0 | 0 | 0 | 3.3 | 73% | 21 |
+| 2026-11-13/03 | python-dict-get-items-update | dars | 315 | 781 | 667 | 19 | 0 | 7 | 6 | 3.5 | 74% | 1166 |
+| 2026-11-13/02 | dart-closure-for-loop | quiz | 322 | 280 | 254 | 3 | 0 | 2 | 1 | 3.5 | 71% | 355 |
+| 2026-11-13/01 | sql-avg-null-trap | quiz | 327 | 418 | 365 | 7 | 0 | 3 | 0 | 4.2 | 76% | 533 |
+| 2026-11-12/04 | js-var-let-settimeout-loop | quiz | 336 | 166 | 149 | 0 | 0 | 3 | 0 | 3.3 | 86% | 211 |
+| 2026-11-12/03 | dart-event-loop-print-order | boshqa | 341 | 137 | 121 | 2 | 0 | 0 | 0 | 2.6 | 79% | 157 |
+| 2026-11-12/02 | sql-not-in-null-trap | quiz | 346 | 247 | 221 | 2 | 0 | 2 | 0 | 4.8 | 70% | 297 |
+| 2026-11-12/01 | python-list-multiply-nested | quiz | 351 | 239 | 218 | 4 | 0 | 3 | 0 | 3.9 | 73% | 324 |
+| 2026-11-11/06 | sql-count-star-vs-count-column | quiz | 360 | 277 | 228 | 6 | 0 | 3 | 0 | 11.7 | 75% | 382 |
+| 2026-11-11/05 | dart-final-vs-const-list | quiz | 365 | 197 | 169 | 2 | 0 | 0 | 0 | 2.1 | 85% | 217 |
+| 2026-11-11/02 | sql-where-vs-having | boshqa | 375 | 226 | 207 | 3 | 0 | 2 | 0 | 2.8 | 87% | 286 |
+| 2026-11-11/01 | flutter-stateless-vs-stateful | boshqa | 384 | 158 | 143 | 0 | 0 | 0 | 0 | 1.3 | 95% | 158 |
+| 2026-11-10/01 | python-mutable-default-arg | boshqa | 384 | 281 | 249 | 4 | 0 | 1 | 0 | 3.1 | 78% | 336 |
 
-Windsor javobida yo'q: 2026-11-11/04, 2026-11-26/02, 2026-11-11/03
+Windsor javobida yo'q: 2026-11-11/04, 2026-11-11/03
 
 ## Avtomatik tavsiya (keyingi mavzular uchun)
 - Eng kuchli yo'nalish×format: **Python dars**, keyin **Python quiz**.
@@ -125,6 +127,6 @@ Windsor javobida yo'q: 2026-11-11/04, 2026-11-26/02, 2026-11-11/03
 - Top-5 videolar mavzulari (shu uslub va chuqurlikka yaqin yangi mavzu tanlang): python-try-except-else-finally (dars), python-str-strip-split-join (dars), python-key-lambda-sorted-max (dars), python-dict-get-items-update (dars), dart-class-constructor-tostring (dars).
 
 ## Xulosa
-- Python dars yetakchi (o'rt. ball 742, faol 2.9%), 2-o'rinda Python quiz (387); top-3 — try/except, strip/split/join, key=lambda darslari. SQL dars (99) eng zaif. Windsor ma'lumoti hali 2026-11-26/02 ni o'z ichiga olmagan (kesh).
-- Bugun 01 = Python dars, 02 = Python quiz (finally/return); 03 (18:17, dars) = 1-o'rindagi Python dars ikkinchi sloti — top-1 try/except mavzusining chuqur davomi: context manager (with, __enter__/__exit__, @contextmanager tranzaksiya), hook "X — natija nima?" uslubida.
-- 04 (23:17) — sinov sloti: SQL yoki Flutter, quiz formatida kuchli hook bilan.
+- Python dars yetakchi (o'rt. ball 702, faol 3.1%), top-5 da 4 tasi Python dars; Flutter/Dart dars — Python'dan keyingi eng kuchli yo'nalish (349), top-5 da dart-class-constructor-tostring bor.
+- Bugun 01/03 Python dars, 02 Python quiz berildi → 04 (sinov slot) — Flutter/Dart dars: class/konstruktor mavzusining chuqur davomi (factory konstruktor, singleton, fromJson → voris klass), middle daraja, "X — natija nima?" hook bilan.
+- SQL dars hali eng zaif (100) — SQL'ni quiz/intervyu hook bilan sinash davom etadi.
