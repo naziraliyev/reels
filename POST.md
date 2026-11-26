@@ -9,7 +9,7 @@
    - Muvaffaqiyatli bo'lsa `posted.txt` ga media id va vaqtni yozing.
    - Postlar orasida ~1 daqiqa kuting.
 3. `posted.txt` fayllarini commit va push qiling.
-4. Statistika (kuniga bir marta, 13:17 dagi ishga tushirishda): Windsor `get_data` (instagram, oxirgi 30 kun) — har bir media uchun
+4. Statistika (HAR ishga tushirishda, PRODUCE.md 2-qadam; `tools/analyze.py` bilan): Windsor `get_data` (instagram, oxirgi 30 kun) — har bir media uchun
    media_views, media_reach, media_like_count, media_comments_count, media_saved, media_shares,
    media_reel_avg_watch_time, media_reel_skip_rate, media_caption. Natijani `stats.md` ga jadval qilib yozing
    va qisqa xulosa qo'shing: qaysi mavzu/format yaxshi ishladi — keyingi videolar shunga moslashadi.

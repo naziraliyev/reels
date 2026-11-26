@@ -12,7 +12,21 @@ Mavzular FAQAT: Dasturlash / SQL / Flutter (Dart). Til: o'zbek (lotin).
 ## 2. Mavzu tanlash
 - `topics.md` ni o'qing — u yerdagi mavzularni TAKRORLAMANG.
 - Shu sanadagi boshqa videolar bilan bir xil yo'nalish bo'lmasin (aralash: SQL, Flutter, umumiy dasturlash).
-- `stats.md` bo'lsa — yaxshi ishlagan mavzu/format turiga yaqinroq mavzu tanlang.
+- **Statistikaga asoslangan tanlov (MAJBURIY — foydalanuvchi talabi, 2026-11-26: "ko'rilishi va like bo'yicha doimiy tahlil qil,
+  shu mavzuda ko'proq sifatli videolar chiqar")**. HAR BIR ishga tushirishda, mavzu tanlashdan OLDIN:
+  1. Windsor `get_data` (connector instagram, account 17841447411509990, `date_preset: last_30dT`, maydonlar POST.md 4-banddagi
+     + `media_id`, `timestamp`) — natija faylini `media_caption` siz JSON qilib saqlang
+     (`jq '[.data[]|del(.media_caption)]' NATIJA > /tmp/w.json`).
+  2. `python3 tools/analyze.py /tmp/w.json > stats.md` — yo'nalish×format reytingi, top-10, avtomatik tavsiya.
+  3. stats.md oxiriga 2–3 qatorlik `## Xulosa` yozing (nima yaxshi ishladi, bugun nima beriladi).
+  Tanlov qoidasi (reytingdagi "o'rt. ball" bo'yicha, faqat ≥ 24 soatlik videolar):
+  - Kunlik 4 ta videodan **2 tasi — 1-o'rindagi yo'nalish×format** (hozir: Python dars), **1 tasi — 2-o'rindagi**,
+    **1 tasi — sinov** (boshqa yo'nalish: SQL / Flutter; yangi hook yoki format bilan), shunda statistika yangilanib turadi.
+  - Top-5 videolar mavzularining **chuqurroq davomi**ni bering (masalan try/except → o'z Exception klassi, raise from,
+    context manager; dict → defaultdict/OrderedDict; lambda/key → functools.partial, sorted barqarorligi) —
+    o'sha videolarning hook uslubi ("X — natija nima?") va tuzilishini takrorlang, mavzuni emas.
+  - Faol % (like+saqlash+ulashish) yuqori videolar — eng qimmatli signal; ko'rish ko'p, faol % past bo'lsa — hook yaxshi, kontent emas.
+  - Daraja qoidasi (o'rta/yuqori, quyida) baribir amal qiladi: ommabop yo'nalishdan middle darajadagi mavzu tanlang.
 - Yaxshi formatlar: "X ning 3 turi", "Ko'p uchraydigan xato", "Suhbat savoli", "A vs B", "1 qatorli trick",
   "Boshlovchi bilishi shart bo'lgan ...". Trend formatlardan ilhom oling, kontent esa doim original bo'lsin.
 
@@ -21,7 +35,8 @@ Video faqat "qiziq quiz" bo'lib qolmasin — tomoshabin undan aniq bilim olib ke
 - Har kuni kamida 2 ta video (4 tadan) **dars formatida** bo'lsin: bitta tushunchani bosqichma-bosqich o'rgatadi
   (masalan: "SQL GROUP BY 30 soniyada", "Flutter'da ListView.builder qanday ishlaydi", "Python dict metodlari",
   "SQL'da 3 qadamda JOIN yozish", "Dart'da null safety: ?, !, ??"). Qolganlari quiz bo'lishi mumkin.
-  Kunlik navbat: 08:17 dars, 13:17 quiz, 18:17 dars, 23:17 quiz (statistikaga qarab moslashtirish mumkin).
+  Kunlik navbat: 08:17 dars, 13:17 quiz, 18:17 dars, 23:17 quiz — lekin yo'nalish va dars/quiz nisbati yuqoridagi
+  statistik tanlov qoidasi bo'yicha moslashtiriladi (dars ko'proq ishlasa, quiz o'rniga ham dars bering).
 - Dars tuzilishi: hook (muammo/va'da) → tushuncha 1 jumlada → oddiy misol (kod + natija) → amaliy misol
   (real loyihadan: do'kon, talabalar, foydalanuvchilar jadvali; Flutter ekrani) → ko'p uchraydigan xato yoki maslahat →
   "Esda tuting" xulosa sahnasi (`bullets`, 2–3 band) → cta.
@@ -70,4 +85,4 @@ Video faqat "qiziq quiz" bo'lib qolmasin — tomoshabin undan aniq bilim olib ke
 
 ## 6. Joylash
 - Push'dan keyin POST.md bo'yicha shu videoni darhol Instagram'ga joylang (`posted.txt`, commit, push).
-- Kuniga bir marta (13:17 dagi ishga tushirishda) statistikani yig'ib `stats.md` ni yangilang.
+- `stats.md` har ishga tushirishda 2-qadamda yangilanadi va commit'ga qo'shiladi.
