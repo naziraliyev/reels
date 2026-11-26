@@ -1,0 +1,128 @@
+{
+ "topic": "python-decorators-wraps",
+ "lang": "python",
+ "accent": "#a78bfa",
+ "caption": "Har bir funksiya qancha vaqt ishlashini 1 qatorda o'lchash mumkinmi? Ha — dekorator bilan ✨\nSeriya: Python o'rta daraja #2 — intervyuda deyarli har doim so'raladi\n✅ Dekorator — funksiyani oladi va o'ralgan yangi funksiya qaytaradi. @log yozish = qosh = log(qosh)\n✅ wrapper asl funksiyani eslab qoladi (closure) va *args, **kwargs bilan istalgan argumentni uzatadi\n✅ Amaliy: @vaqt — har qanday funksiya vaqtini o'lchaydi, kodini o'zgartirmasdan (log, kesh, ruxsat tekshirish ham shunday ishlaydi)\n⚠️ @wraps(func) bo'lmasa qosh.__name__ → 'wrapper' bo'lib qoladi: log, debug va docstring buziladi.\n📌 Saqlab qo'ying — Flask, FastAPI, pytest'dagi @ belgilarining siri shu.\n💬 Savol: wrapper ichida return func(...) ni unutsak, qosh(2, 3) nima qaytaradi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #pythonintervyu #decorator #dekorator #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python o'rta daraja",
+   "lines": [
+    "Funksiya vaqtini",
+    "1 qatorda o'lchash?"
+   ],
+   "sub": "Dekoratorlar: @ belgisi siri",
+   "footer": "Intervyuda ko'p so'raladi"
+  },
+  {
+   "type": "text",
+   "dur": 5.5,
+   "title": "Dekorator nima?",
+   "lines": [
+    "Funksiyani oladi va uni o'rab, yangi funksiya qaytaradi.",
+    "@log yozish bu:",
+    "qosh = log(qosh)",
+    "wrapper asl funksiyani eslab qoladi (closure)."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Oddiy dekorator",
+   "desc": [
+    "*args, **kwargs — istalgan argument"
+   ],
+   "code": [
+    "def log(func):",
+    "    def wrapper(*args, **kwargs):",
+    "        print(\"chaqirildi:\", func.__name__)",
+    "        return func(*args, **kwargs)",
+    "    return wrapper",
+    "",
+    "@log",
+    "def qosh(a, b):",
+    "    return a + b",
+    "",
+    "print(qosh(2, 3))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~chaqirildi: qosh",
+    "~5"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "Amaliy: @vaqt",
+   "desc": [
+    "Funksiya kodiga tegmasdan"
+   ],
+   "code": [
+    "import time",
+    "from functools import wraps",
+    "def vaqt(func):",
+    "    @wraps(func)",
+    "    def wrapper(*args, **kwargs):",
+    "        t = time.perf_counter()",
+    "        natija = func(*args, **kwargs)",
+    "        s = time.perf_counter() - t",
+    "        print(f\"{func.__name__}: {s:.2f} s\")",
+    "        return natija",
+    "    return wrapper",
+    "@vaqt",
+    "def hisobot(): time.sleep(1.2)",
+    "hisobot()"
+   ],
+   "out_title": "Natija (taxminan):",
+   "out": [
+    "~hisobot: 1.20 s"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 6,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "@wraps'siz — nom yo'qoladi",
+   "bad": [
+    "def log(func):",
+    "    def wrapper(*a, **k): ...",
+    "print(qosh.__name__)  # wrapper"
+   ],
+   "good_label": "@wraps(func) bilan",
+   "good": [
+    "def log(func):",
+    "    @wraps(func)",
+    "    def wrapper(*a, **k): ...",
+    "print(qosh.__name__)  # qosh"
+   ],
+   "note": "wraps nom va docstring'ni saqlaydi"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "@dek yozish → f = dek(f)",
+    "wrapper: *args, **kwargs va return func(...)",
+    "Har doim @wraps(func) qo'shing"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #2",
+    "@ = funksiyani o'rash"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: return'ni",
+    "unutsak nima qaytadi?"
+   ]
+  }
+ ]
+}

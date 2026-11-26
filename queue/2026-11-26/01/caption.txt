@@ -1,0 +1,11 @@
+Har bir funksiya qancha vaqt ishlashini 1 qatorda o'lchash mumkinmi? Ha — dekorator bilan ✨
+Seriya: Python o'rta daraja #2 — intervyuda deyarli har doim so'raladi
+✅ Dekorator — funksiyani oladi va o'ralgan yangi funksiya qaytaradi. @log yozish = qosh = log(qosh)
+✅ wrapper asl funksiyani eslab qoladi (closure) va *args, **kwargs bilan istalgan argumentni uzatadi
+✅ Amaliy: @vaqt — har qanday funksiya vaqtini o'lchaydi, kodini o'zgartirmasdan (log, kesh, ruxsat tekshirish ham shunday ishlaydi)
+⚠️ @wraps(func) bo'lmasa qosh.__name__ → 'wrapper' bo'lib qoladi: log, debug va docstring buziladi.
+📌 Saqlab qo'ying — Flask, FastAPI, pytest'dagi @ belgilarining siri shu.
+💬 Savol: wrapper ichida return func(...) ni unutsak, qosh(2, 3) nima qaytaradi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#python #pythonintervyu #decorator #dekorator #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan
