@@ -1,0 +1,11 @@
+with ichida xato chiqsa — fayl, ulanish, qulf yopiladimi? Ha — context manager shuni kafolatlaydi 🔒
+Seriya: Python o'rta daraja #4 — intervyuda ko'p so'raladi
+✅ with X as y: → y = X.__enter__(), blok tugaganda X.__exit__() HAR DOIM ishlaydi (xato bo'lsa ham) — bu try/finally'ning qisqa yozilishi
+✅ __exit__(tur, xato, tb) xatoni ko'radi: False → xato davom etadi, True → xato yutiladi
+✅ Amaliy: @contextmanager bilan tranzaksiya — yield'gacha = kirish, keyin = commit, xato bo'lsa rollback (pul yo'qolmaydi)
+⚠️ yield'ni try/finally ichiga olmasangiz, xatoda tozalash ishlamaydi: qulf ochilmaydi → deadlock.
+📌 Saqlab qo'ying — open(), Lock, DB ulanishlari, pytest.raises shu protokolda ishlaydi.
+💬 Savol: with sqlite3.connect(...) as db: — blokdan keyin ulanish yopiladimi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#python #pythonintervyu #contextmanager #with #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan

@@ -1,0 +1,138 @@
+{
+ "topic": "python-context-manager-with",
+ "lang": "python",
+ "accent": "#38bdf8",
+ "caption": "with ichida xato chiqsa — fayl, ulanish, qulf yopiladimi? Ha — context manager shuni kafolatlaydi 🔒\nSeriya: Python o'rta daraja #4 — intervyuda ko'p so'raladi\n✅ with X as y: → y = X.__enter__(), blok tugaganda X.__exit__() HAR DOIM ishlaydi (xato bo'lsa ham) — bu try/finally'ning qisqa yozilishi\n✅ __exit__(tur, xato, tb) xatoni ko'radi: False → xato davom etadi, True → xato yutiladi\n✅ Amaliy: @contextmanager bilan tranzaksiya — yield'gacha = kirish, keyin = commit, xato bo'lsa rollback (pul yo'qolmaydi)\n⚠️ yield'ni try/finally ichiga olmasangiz, xatoda tozalash ishlamaydi: qulf ochilmaydi → deadlock.\n📌 Saqlab qo'ying — open(), Lock, DB ulanishlari, pytest.raises shu protokolda ishlaydi.\n💬 Savol: with sqlite3.connect(...) as db: — blokdan keyin ulanish yopiladimi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #pythonintervyu #contextmanager #with #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python o'rta daraja",
+   "lines": [
+    "with ichida xato chiqsa —",
+    "fayl yopiladimi?"
+   ],
+   "sub": "Context manager: with siri",
+   "footer": "Intervyuda ko'p so'raladi"
+  },
+  {
+   "type": "text",
+   "dur": 6,
+   "title": "Context manager nima?",
+   "lines": [
+    "Resursni oladi va HAR DOIM qaytaradi — xato bo'lsa ham.",
+    "with X as y:",
+    "1) y = X.__enter__()",
+    "2) blok ishlaydi",
+    "3) X.__exit__() — har doim",
+    "Bu try/finally'ning qisqa yozilishi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "__enter__ va __exit__",
+   "desc": [
+    "Xato chiqsa ham __exit__ ishlaydi"
+   ],
+   "code": [
+    "class Ulanish:",
+    "    def __enter__(self):",
+    "        print(\"ochildi\")",
+    "        return self",
+    "    def __exit__(self, tur, xato, tb):",
+    "        print(\"yopildi\")",
+    "        return False  # xatoni yutmaydi",
+    "",
+    "with Ulanish() as u:",
+    "    print(\"ishlayapti\")",
+    "    1 / 0"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~ochildi",
+    "~ishlayapti",
+    "~yopildi",
+    "!ZeroDivisionError: division by zero"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "Amaliy: tranzaksiya",
+   "desc": [
+    "yield'gacha = kirish, keyin = chiqish"
+   ],
+   "code": [
+    "from contextlib import contextmanager",
+    "",
+    "@contextmanager",
+    "def tranzaksiya(db):",
+    "    try:",
+    "        yield db        # blok shu yerda",
+    "        db.commit()",
+    "    except Exception:",
+    "        db.rollback()   # hammasi bekor",
+    "        raise",
+    "",
+    "with tranzaksiya(db):",
+    "    pul_ayir(db, 1, 100)",
+    "    pul_qosh(db, 2, 100)  # xato!"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~rollback → 1-hisobdan pul yechilmaydi",
+    "~hisob: [(1, 500), (2, 0)]"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "try/finally'siz — qulf qoladi",
+   "bad": [
+    "@contextmanager",
+    "def qulf(l):",
+    "    l.acquire()",
+    "    yield",
+    "    l.release()  # xatoda ishlamaydi"
+   ],
+   "good_label": "finally — har doim ochiladi",
+   "good": [
+    "@contextmanager",
+    "def qulf(l):",
+    "    l.acquire()",
+    "    try:",
+    "        yield",
+    "    finally:",
+    "        l.release()"
+   ],
+   "note": "Xato yield'da otiladi → finally'siz deadlock"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "with = try/finally: tozalash HAR DOIM ishlaydi",
+    "__exit__ True qaytarsa — xato yutiladi",
+    "@contextmanager: yield'ni try/finally'ga oling"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #4",
+    "with = resurs + kafolat"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: sqlite3 ulanishi",
+    "with'dan keyin yopiladimi?"
+   ]
+  }
+ ]
+}
