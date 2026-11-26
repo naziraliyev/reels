@@ -1,0 +1,144 @@
+{
+ "topic": "python-finally-return-override",
+ "lang": "python",
+ "accent": "#fb923c",
+ "caption": "Python intervyu: try'da return 1, finally'da return 2 — f() nima qaytaradi? 🤔\nSeriya: Python o'rta daraja #3 — try/except darsimizning chuqur davomi\n📝 Qisqa konspekt:\n✅ finally HAR DOIM oxirida ishlaydi — hatto return'dan keyin ham. Undagi return 2 try'dagi return 1 ni almashtiradi → 2\n✅ return x qiymatni OLDIN hisoblab qo'yadi: finally'da x = 99 qilsangiz ham 1 qaytadi. Lekin ro'yxatni o'zgartirsangiz ([1] → [1, 99]) o'zgarish ko'rinadi — bu o'sha obyekt\n⚠️ finally'dagi return xatoni ham yutib yuboradi: 5 / 0 → ZeroDivisionError o'rniga jim -1. Python 3.14 bunga SyntaxWarning beradi\n✅ To'g'ri: xatoni except'da ushlang, finally — faqat tozalash uchun (fayl, ulanish, lock yopish)\n📌 Saqlab qo'ying — intervyuda aynan shu savol beriladi.\n💬 Siz nima deb o'yladingiz: 1 yoki 2? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #pythonintervyu #pythonquiz #tryexcept #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python intervyu",
+   "lines": [
+    "try: return 1",
+    "finally: return 2"
+   ],
+   "sub": "f() nima qaytaradi?",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Savol",
+   "desc": [
+    "try ichida return bor — finally ishlaydimi?"
+   ],
+   "code": [
+    "def f():",
+    "    try:",
+    "        return 1",
+    "    finally:",
+    "        return 2",
+    "",
+    "print(f())"
+   ],
+   "out_title": "Nima chiqadi?",
+   "out": [
+    "~1  yoki  2 ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Javob: 2!",
+   "desc": [
+    "finally HAR DOIM oxirida ishlaydi.",
+    "return 1 kutib turadi — return 2 uni almashtiradi"
+   ],
+   "code": [
+    "def f():",
+    "    try:",
+    "        print(\"try\")",
+    "        return 1",
+    "    finally:",
+    "        print(\"finally\")",
+    "        return 2",
+    "",
+    "print(f())"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~try",
+    "~finally",
+    "~2"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "Nega? Qiymat oldin olinadi",
+   "desc": [
+    "return x qiymatni darhol saqlab qo'yadi,",
+    "list esa o'sha obyekt — o'zgarish ko'rinadi"
+   ],
+   "code": [
+    "def g():",
+    "    x = 1",
+    "    try:",
+    "        return x",
+    "    finally:",
+    "        x = 99",
+    "def h():",
+    "    s = [1]",
+    "    try:",
+    "        return s",
+    "    finally:",
+    "        s.append(99)",
+    "print(g(), h())"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~1 [1, 99]"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7.5,
+   "title": "Xavfli: xato yo'qoladi",
+   "bad_label": "finally'da return — xato yutiladi",
+   "bad": [
+    "def bol(a, b):",
+    "    try:",
+    "        return a / b",
+    "    finally:",
+    "        return -1",
+    "bol(5, 0)  # -1, xato jim"
+   ],
+   "good_label": "To'g'ri: except + tozalash",
+   "good": [
+    "def bol(a, b):",
+    "    try:",
+    "        return a / b",
+    "    except ZeroDivisionError:",
+    "        return -1",
+    "    finally:",
+    "        ulanish.close()"
+   ],
+   "note": "Python 3.14: bunga SyntaxWarning beradi"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "finally'dagi return try'dagini bosib ketadi",
+    "...va xatoni ham jim yutib yuboradi",
+    "finally — faqat tozalash: return yozmang"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #3",
+    "finally = faqat tozalash"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "1 yoki 2 deb o'yladingiz?"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+Python intervyu: try'da return 1, finally'da return 2 — f() nima qaytaradi? 🤔
+Seriya: Python o'rta daraja #3 — try/except darsimizning chuqur davomi
+📝 Qisqa konspekt:
+✅ finally HAR DOIM oxirida ishlaydi — hatto return'dan keyin ham. Undagi return 2 try'dagi return 1 ni almashtiradi → 2
+✅ return x qiymatni OLDIN hisoblab qo'yadi: finally'da x = 99 qilsangiz ham 1 qaytadi. Lekin ro'yxatni o'zgartirsangiz ([1] → [1, 99]) o'zgarish ko'rinadi — bu o'sha obyekt
+⚠️ finally'dagi return xatoni ham yutib yuboradi: 5 / 0 → ZeroDivisionError o'rniga jim -1. Python 3.14 bunga SyntaxWarning beradi
+✅ To'g'ri: xatoni except'da ushlang, finally — faqat tozalash uchun (fayl, ulanish, lock yopish)
+📌 Saqlab qo'ying — intervyuda aynan shu savol beriladi.
+💬 Siz nima deb o'yladingiz: 1 yoki 2? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#python #pythonintervyu #pythonquiz #tryexcept #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan
