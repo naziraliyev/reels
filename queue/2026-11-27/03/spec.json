@@ -1,0 +1,144 @@
+{
+ "topic": "python-dataclass-eq-repr-frozen-default-factory",
+ "lang": "python",
+ "accent": "#4ade80",
+ "caption": "Talaba(\"Ali\", 90) == Talaba(\"Ali\", 90) — True mi yoki False? 🤔\nSeriya: Python o'rta daraja #7 — @dataclass: 10 qatorlik class'ni 3 qatorda\n✅ Oddiy class: print(t) → <object at 0x...>, == esa id'ni solishtiradi → False\n✅ @dataclass annotatsiyalardan (ism: str) __init__, __repr__, __eq__ ni o'zi yozadi → Talaba(ism='Ali', ball=90), == True\n✅ order=True → sorted() maydonlar tartibida; frozen=True → o'zgarmaydi va dict kaliti bo'la oladi\n⚠️ items: list = [] → ValueError! Ro'yxat barcha obyektlarga umumiy bo'lib qolardi → field(default_factory=list)\n📌 Saqlab qo'ying — FastAPI, Pydantic va DTO'larda aynan shu g'oya.\n💬 Savol: frozen=True bo'lmasa, dataclass obyektini set'ga qo'shsa bo'ladimi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #dataclass #pythonintervyu #oop #dasturlash #dasturchi #backend #programming #pythondeveloper #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python o'rta daraja",
+   "lines": [
+    "a == b —",
+    "True mi yoki False?"
+   ],
+   "sub": "Ikkalasi: Talaba(\"Ali\", 90)",
+   "footer": "@dataclass — 30 soniyada"
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Oddiy class muammosi",
+   "desc": [
+    "== standartda id'ni solishtiradi (is kabi)"
+   ],
+   "code": [
+    "class Talaba:",
+    "    def __init__(self, ism, ball):",
+    "        self.ism, self.ball = ism, ball",
+    "",
+    "t = Talaba(\"Ali\", 90)",
+    "print(t)",
+    "print(t == Talaba(\"Ali\", 90))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~<__main__.Talaba object at 0x7f9d...>",
+    "!False"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "@dataclass yechimi",
+   "desc": [
+    "Annotatsiyalardan __init__, __repr__,",
+    "__eq__ ni class yaratilganda o'zi yozadi"
+   ],
+   "code": [
+    "from dataclasses import dataclass",
+    "",
+    "@dataclass",
+    "class Talaba:",
+    "    ism: str",
+    "    ball: int = 0",
+    "",
+    "t = Talaba(\"Ali\", 90)",
+    "print(t)",
+    "print(t == Talaba(\"Ali\", 90))",
+    "print(Talaba(\"Vali\"))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Talaba(ism='Ali', ball=90)",
+    "~True",
+    "~Talaba(ism='Vali', ball=0)"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Amaliy: order + frozen",
+   "desc": [
+    "order: maydon tartibida (narx, keyin nom)"
+   ],
+   "code": [
+    "@dataclass(order=True, frozen=True)",
+    "class Mahsulot:",
+    "    narx: int",
+    "    nom: str",
+    "",
+    "m = [Mahsulot(9000, \"sut\"),",
+    "     Mahsulot(3000, \"non\")]",
+    "print(sorted(m)[0])",
+    "",
+    "m[0].narx = 1"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Mahsulot(narx=3000, nom='non')",
+    "!FrozenInstanceError: cannot assign",
+    "!to field 'narx'"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 6.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Mutable default — ValueError",
+   "bad": [
+    "@dataclass",
+    "class Savat:",
+    "    items: list = []",
+    "",
+    "# ValueError: mutable default",
+    "# ... use default_factory"
+   ],
+   "good_label": "Har obyektga yangi ro'yxat",
+   "good": [
+    "from dataclasses import field",
+    "",
+    "@dataclass",
+    "class Savat:",
+    "    items: list = field(",
+    "        default_factory=list)"
+   ],
+   "note": "Nega? [] bitta — hamma Savat'ga umumiy bo'lardi"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "@dataclass = __init__ + __repr__ + __eq__",
+    "frozen=True → o'zgarmas, dict kaliti bo'ladi",
+    "list/dict default → field(default_factory=...)"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #7",
+    "3 qator = to'liq class"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: frozen'siz dataclass",
+    "set'ga qo'shiladimi?"
+   ]
+  }
+ ]
+}
