@@ -1,0 +1,157 @@
+{
+ "topic": "python-defaultdict-missing-read-adds-key",
+ "lang": "python",
+ "accent": "#a78bfa",
+ "caption": "Python intervyu: defaultdict'dan faqat O'QIDIK — len(d) 0 mi yoki 1? 🤔\nSeriya: Python o'rta daraja #6 — dict darsimizning chuqur davomi\n📝 Qisqa konspekt:\n✅ d[\"ali\"] yo'q kalitni o'qisa, defaultdict uni YARATADI: __missing__ → default_factory() → d[\"ali\"] = [] → len(d) = 1\n✅ Mexanizm: dict.__getitem__ kalit topilmasa __missing__(k) ni chaqiradi — o'z dict klassingizda ham yozish mumkin\n✅ Tekshirish uchun: \"ali\" in d yoki d.get(\"ali\") — ular __missing__ ni chaqirmaydi, kalit qo'shilmaydi\n⚠️ if d[k]: bilan tekshirish dict'ni bo'sh kalitlar bilan to'ldiradi (JSON/API javobida ortiqcha [] paydo bo'ladi)\n✅ defaultdict(list) — guruhlash uchun ideal: g[nom].append(son)\n📌 Saqlab qo'ying — intervyuda shu savol tushadi.\n💬 Siz nima deb o'yladingiz: 0 yoki 1? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #pythonintervyu #pythonquiz #defaultdict #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python intervyu",
+   "lines": [
+    "defaultdict(list)",
+    "if d[\"ali\"]: ..."
+   ],
+   "sub": "len(d) — 0 mi yoki 1?",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 4.5,
+   "title": "Savol",
+   "desc": [
+    "Faqat tekshirdik, hech narsa qo'shmadik"
+   ],
+   "code": [
+    "from collections import defaultdict",
+    "",
+    "d = defaultdict(list)",
+    "",
+    "if d[\"ali\"]:",
+    "    print(\"bor\")",
+    "",
+    "print(len(d))"
+   ],
+   "out_title": "Nima chiqadi?",
+   "out": [
+    "~0  yoki  1 ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Javob: 1!",
+   "desc": [
+    "Yo'q kalitni O'QISH ham uni yaratadi:",
+    "d[\"ali\"] → [] yasab, dict'ga saqlaydi"
+   ],
+   "code": [
+    "d = defaultdict(list)",
+    "",
+    "if d[\"ali\"]:",
+    "    print(\"bor\")",
+    "",
+    "print(len(d))",
+    "print(d)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~1",
+    "~defaultdict(<class 'list'>,",
+    "~            {'ali': []})"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Nega? __missing__",
+   "desc": [
+    "d[k] topilmasa → __missing__(k) ishlaydi.",
+    "get() va in uni chaqirmaydi"
+   ],
+   "code": [
+    "class MeningDict(dict):",
+    "    def __missing__(self, k):",
+    "        self[k] = []",
+    "        return self[k]",
+    "",
+    "m = MeningDict()",
+    "m[\"x\"].append(1)",
+    "print(m)",
+    "print(m.get(\"y\"), \"y\" in m)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~{'x': [1]}",
+    "~None False"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "To'g'ri tekshirish",
+   "bad_label": "Kalit qo'shiladi",
+   "bad": [
+    "if d[\"ali\"]:",
+    "    ...",
+    "# endi \"ali\" in d → True"
+   ],
+   "good_label": "Kalit qo'shilmaydi",
+   "good": [
+    "if \"ali\" in d:",
+    "    ...",
+    "if d.get(\"ali\"):",
+    "    ..."
+   ],
+   "note": "JSON/API javobida ortiqcha [] shundan chiqadi"
+  },
+  {
+   "type": "code",
+   "dur": 6,
+   "title": "Qachon ishlatish: guruhlash",
+   "desc": [
+    "Yozish uchun defaultdict juda qulay —",
+    "if k not in d: d[k] = [] kerak emas"
+   ],
+   "code": [
+    "sotuv = [(\"non\", 3), (\"sut\", 2),",
+    "         (\"non\", 5)]",
+    "",
+    "g = defaultdict(list)",
+    "for nom, son in sotuv:",
+    "    g[nom].append(son)",
+    "",
+    "print(dict(g))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~{'non': [3, 5], 'sut': [2]}"
+   ]
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "d[k] yo'q kalitni YARATADI (__missing__)",
+    "Tekshirish: k in d yoki d.get(k)",
+    "defaultdict — yozish va guruhlash uchun"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 2.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #6",
+    "O'qish ≠ tekshirish"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "0 yoki 1 deb o'yladingiz?"
+   ]
+  }
+ ]
+}

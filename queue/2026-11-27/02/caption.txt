@@ -1,0 +1,13 @@
+Python intervyu: defaultdict'dan faqat O'QIDIK — len(d) 0 mi yoki 1? 🤔
+Seriya: Python o'rta daraja #6 — dict darsimizning chuqur davomi
+📝 Qisqa konspekt:
+✅ d["ali"] yo'q kalitni o'qisa, defaultdict uni YARATADI: __missing__ → default_factory() → d["ali"] = [] → len(d) = 1
+✅ Mexanizm: dict.__getitem__ kalit topilmasa __missing__(k) ni chaqiradi — o'z dict klassingizda ham yozish mumkin
+✅ Tekshirish uchun: "ali" in d yoki d.get("ali") — ular __missing__ ni chaqirmaydi, kalit qo'shilmaydi
+⚠️ if d[k]: bilan tekshirish dict'ni bo'sh kalitlar bilan to'ldiradi (JSON/API javobida ortiqcha [] paydo bo'ladi)
+✅ defaultdict(list) — guruhlash uchun ideal: g[nom].append(son)
+📌 Saqlab qo'ying — intervyuda shu savol tushadi.
+💬 Siz nima deb o'yladingiz: 0 yoki 1? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#python #pythonintervyu #pythonquiz #defaultdict #dasturlash #dasturchi #backend #programming #pythondeveloper #it #uzbekistan
