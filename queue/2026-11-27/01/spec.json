@@ -1,0 +1,135 @@
+{
+ "topic": "python-custom-exception-raise-from",
+ "lang": "python",
+ "accent": "#a78bfa",
+ "caption": "ValueError hech narsa aytmaydi. O'z xatoingizni yarating — va asl sababni yo'qotmang 🧩\nSeriya: Python o'rta daraja #5 — try/except'ning davomi, intervyuda ko'p so'raladi\n✅ class BalansXato(Exception) — biznes xato: except bilan aniq ushlanadi, ma'lumotni atributda saqlaydi (e.kerak, e.bor)\n✅ raise ConfigXato(\"port xato\") from e — yangi xato + asl sabab: e.__cause__ = ValueError, traceback'da \"direct cause\"\n✅ from'siz raise → \"During handling ... another exception occurred\" — go'yo except ichida bug bordek ko'rinadi\n⚠️ Exception'dan meros oling, BaseException'dan emas — aks holda except Exception uni ushlamaydi.\n📌 Saqlab qo'ying — Django, requests, SQLAlchemy xatolari aynan shunday qurilgan.\n💬 Savol: raise ... from None nima qiladi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #pythonintervyu #exception #raise #tryexcept #dasturlash #dasturchi #backend #programming #pythondeveloper #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python o'rta daraja",
+   "lines": [
+    "raise X from e —",
+    "natija nima?"
+   ],
+   "sub": "O'z xato klassi + raise from",
+   "footer": "Intervyuda ko'p so'raladi"
+  },
+  {
+   "type": "text",
+   "dur": 6,
+   "title": "Nega o'z xato klassi?",
+   "lines": [
+    "ValueError juda umumiy — nima buzilganini aytmaydi.",
+    "class BalansXato(Exception):",
+    "1) except bilan aniq ushlaysiz",
+    "2) ma'lumotni atributda saqlaysiz",
+    "3) xato nomi — o'zi hujjat"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "O'z Exception klassi",
+   "desc": [
+    "Ma'lumot xato ichida keladi"
+   ],
+   "code": [
+    "class BalansXato(Exception):",
+    "    def __init__(self, kerak, bor):",
+    "        self.kerak, self.bor = kerak, bor",
+    "        super().__init__(f\"{kerak} > {bor}\")",
+    "",
+    "def yech(balans, summa):",
+    "    if summa > balans:",
+    "        raise BalansXato(summa, balans)",
+    "    return balans - summa",
+    "",
+    "try:",
+    "    yech(50, 80)",
+    "except BalansXato as e:",
+    "    print(e, \"| yetmaydi:\", e.kerak - e.bor)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~80 > 50 | yetmaydi: 30"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "raise ... from e",
+   "desc": [
+    "Yangi xato + asl sabab saqlanadi"
+   ],
+   "code": [
+    "class ConfigXato(Exception):",
+    "    pass",
+    "",
+    "def port_ol(cfg):",
+    "    try:",
+    "        return int(cfg[\"port\"])",
+    "    except (KeyError, ValueError) as e:",
+    "        raise ConfigXato(\"port xato\") from e",
+    "",
+    "port_ol({\"port\": \"80a\"})"
+   ],
+   "out_title": "Traceback:",
+   "out": [
+    "!ValueError: invalid literal ... '80a'",
+    "~The above exception was the direct",
+    "~cause of the following exception:",
+    "!ConfigXato: port xato",
+    "~e.__cause__ → asl ValueError"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "from'siz — sabab chalkash",
+   "bad": [
+    "except ValueError:",
+    "    raise ConfigXato(\"port xato\")",
+    "",
+    "# During handling of the above",
+    "# exception, another exception",
+    "# occurred → bug bordek"
+   ],
+   "good_label": "from e — aniq sabab zanjiri",
+   "good": [
+    "except ValueError as e:",
+    "    raise ConfigXato(\"port xato\") from e",
+    "",
+    "# The above exception was the",
+    "# direct cause of ..."
+   ],
+   "note": "from None — asl xatoni butunlay yashiradi"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "Meros: Exception'dan, BaseException'dan emas",
+    "Ma'lumotni atributda saqlang: e.kerak",
+    "Xatoni o'girsangiz: from e qo'shing"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #5",
+    "O'z xato + from e = toza traceback"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: raise ... from None",
+    "nima qiladi?"
+   ]
+  }
+ ]
+}

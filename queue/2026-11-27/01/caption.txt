@@ -1,0 +1,11 @@
+ValueError hech narsa aytmaydi. O'z xatoingizni yarating — va asl sababni yo'qotmang 🧩
+Seriya: Python o'rta daraja #5 — try/except'ning davomi, intervyuda ko'p so'raladi
+✅ class BalansXato(Exception) — biznes xato: except bilan aniq ushlanadi, ma'lumotni atributda saqlaydi (e.kerak, e.bor)
+✅ raise ConfigXato("port xato") from e — yangi xato + asl sabab: e.__cause__ = ValueError, traceback'da "direct cause"
+✅ from'siz raise → "During handling ... another exception occurred" — go'yo except ichida bug bordek ko'rinadi
+⚠️ Exception'dan meros oling, BaseException'dan emas — aks holda except Exception uni ushlamaydi.
+📌 Saqlab qo'ying — Django, requests, SQLAlchemy xatolari aynan shunday qurilgan.
+💬 Savol: raise ... from None nima qiladi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#python #pythonintervyu #exception #raise #tryexcept #dasturlash #dasturchi #backend #programming #pythondeveloper #uzbekistan
