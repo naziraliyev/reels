@@ -1,0 +1,12 @@
+switch'da bitta holat unutildi — xato qachon chiqadi: ilova ishlayotganda yoki kod yozayotganda? 🔒
+Seriya: Dart middle #2 — Flutter / BLoC intervyusida ko'p so'raladi
+✅ sealed class — voris klasslar ro'yxati YOPIQ (faqat shu faylda), shuning uchun kompilyator barcha holatlarni biladi
+✅ switch ifodasi barcha holatni tekshiradi: default kerak emas, birortasi unutilsa — kompilyatsiya xatosi
+✅ Tayyor(:final data) — turini tekshiradi va maydonni darrov oladi; when — qo'shimcha shart
+✅ Amaliy: Yuklanmoqda / Tayyor / Xato holatlarini Flutter ekraniga chiqarish
+⚠️ abstract class + _ => yangi holatni JIM yutadi. sealed'da _ => yozmang — himoyani o'chiradi.
+📌 Saqlab qo'ying — BLoC/Cubit state'lari va API natijalari shu usulda yoziladi.
+💬 Savol: sealed class'dan to'g'ridan-to'g'ri obyekt yaratsa bo'ladimi? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#dart #flutter #flutterdev #flutteruz #dart3 #sealedclass #patternmatching #bloc #dasturlash #dasturchi #mobiledev #uzbekistan

@@ -1,0 +1,131 @@
+{
+ "topic": "dart-sealed-class-exhaustive-switch",
+ "lang": "dart",
+ "accent": "#38bdf8",
+ "caption": "switch'da bitta holat unutildi — xato qachon chiqadi: ilova ishlayotganda yoki kod yozayotganda? 🔒\nSeriya: Dart middle #2 — Flutter / BLoC intervyusida ko'p so'raladi\n✅ sealed class — voris klasslar ro'yxati YOPIQ (faqat shu faylda), shuning uchun kompilyator barcha holatlarni biladi\n✅ switch ifodasi barcha holatni tekshiradi: default kerak emas, birortasi unutilsa — kompilyatsiya xatosi\n✅ Tayyor(:final data) — turini tekshiradi va maydonni darrov oladi; when — qo'shimcha shart\n✅ Amaliy: Yuklanmoqda / Tayyor / Xato holatlarini Flutter ekraniga chiqarish\n⚠️ abstract class + _ => yangi holatni JIM yutadi. sealed'da _ => yozmang — himoyani o'chiradi.\n📌 Saqlab qo'ying — BLoC/Cubit state'lari va API natijalari shu usulda yoziladi.\n💬 Savol: sealed class'dan to'g'ridan-to'g'ri obyekt yaratsa bo'ladimi? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#dart #flutter #flutterdev #flutteruz #dart3 #sealedclass #patternmatching #bloc #dasturlash #dasturchi #mobiledev #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Dart middle",
+   "lines": [
+    "switch'da 1 holat unutildi —",
+    "xato qachon chiqadi?"
+   ],
+   "sub": "sealed class + pattern matching",
+   "footer": "Flutter / BLoC intervyusida ko'p so'raladi"
+  },
+  {
+   "type": "text",
+   "dur": 5.5,
+   "title": "sealed class nima?",
+   "lines": [
+    "sealed — voris klasslar ro'yxati YOPIQ: faqat shu faylda yoziladi.",
+    "Kompilyator barcha holatlarni biladi.",
+    "switch'da birortasi unutilsa — ilova ishga tushmasdan KOMPILYATSIYA xatosi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 8,
+   "title": "3 holat — 1 switch",
+   "desc": [
+    "default yo'q — hammasi tekshirilgan"
+   ],
+   "code": [
+    "sealed class Natija {}",
+    "class Yuklanmoqda extends Natija {}",
+    "class Tayyor extends Natija {",
+    "  final String data; Tayyor(this.data);",
+    "}",
+    "class Xato extends Natija {",
+    "  final String xabar; Xato(this.xabar);",
+    "}",
+    "String matn(Natija n) => switch (n) {",
+    "  Yuklanmoqda() => 'Kuting...',",
+    "  Tayyor(:final data) => 'OK: $data',",
+    "  Xato(:final xabar) => 'Xato: $xabar',",
+    "};"
+   ],
+   "out_title": "matn(Tayyor('3 ta')) →",
+   "out": [
+    "OK: 3 ta",
+    "~:final data — tekshiradi + oladi"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Amaliy: Flutter ekrani",
+   "desc": [
+    "Cubit/BLoC holatini widget'ga aylantiramiz"
+   ],
+   "code": [
+    "Widget build(BuildContext context) {",
+    "  return switch (holat) {",
+    "    Yuklanmoqda() =>",
+    "        const CircularProgressIndicator(),",
+    "    Tayyor(:final data) => Text(data),",
+    "    Xato(:final xabar) when xabar.isEmpty =>",
+    "        const Text(\"Noma'lum xato\"),",
+    "    Xato(:final xabar) => Text(xabar),",
+    "  };",
+    "}"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~Yuklanmoqda → aylana",
+    "~Tayyor('Ali') → Ali",
+    "~Xato('') → Noma'lum xato  (when = shart)"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 7.5,
+   "title": "Yangi holat: class Bosh",
+   "bad_label": "abstract + _ → Bosh JIM o'tib ketadi",
+   "bad": [
+    "abstract class Natija {}",
+    "return switch (n) {",
+    "  Tayyor() => 'OK',",
+    "  _ => '', // Bosh() ham shu yerga!",
+    "};"
+   ],
+   "good_label": "sealed + _'siz → kompilyator to'xtatadi",
+   "good": [
+    "sealed class Natija {}",
+    "return switch (n) {",
+    "  Yuklanmoqda() => 'Kuting...',",
+    "  Tayyor() => 'OK',",
+    "  Xato() => 'Xato',",
+    "}; // error: Bosh() unutilgan"
+   ],
+   "note": "sealed'da _ => yozmang — himoyani o'chiradi"
+  },
+  {
+   "type": "bullets",
+   "dur": 5,
+   "title": "Esda tuting",
+   "items": [
+    "sealed — vorislar yopiq, faqat shu faylda",
+    "switch barcha holatni tekshiradi — default kerak emas",
+    "Tayyor(:final data) — tekshiradi va maydonni oladi"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Dart middle #2",
+    "sealed = xato kompilyatsiyada"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing: sealed class'dan",
+    "obyekt yaratsa bo'ladimi?"
+   ]
+  }
+ ]
+}

@@ -63,7 +63,7 @@ def mono(size, bold=False):
 
 KEYWORDS = {
     "sql": "select from where join inner left right full outer on group by order having limit insert into values update set delete create table alter drop as and or not null is in between like distinct count sum avg min max case when then else end union all exists primary key foreign references index view with over partition row_number rank dense_rank desc asc rows range unbounded preceding following current row".split(),
-    "dart": "void main class extends implements with final const var int double String bool return if else for in while new import async await Future Stream StatelessWidget StatefulWidget State Widget build BuildContext setState override super this true false null late required dynamic List Map Set try catch throw static get set enum switch case break".split(),
+    "dart": "void main class extends implements with final const var int double String bool return if else for in while new import async await Future Stream StatelessWidget StatefulWidget State Widget build BuildContext setState override super this true false null late required dynamic List Map Set try catch throw static get set enum switch case break sealed abstract when factory mixin extension".split(),
     "python": "def return if elif else for while in import from as class try except finally with lambda yield None True False and or not is pass break continue print self async await global nonlocal raise".split(),
     "js": "function return if else for while const let var class new import export from async await true false null undefined this try catch throw switch case break of in".split(),
 }
