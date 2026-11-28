@@ -1,0 +1,152 @@
+{
+ "topic": "python-closure-late-binding-lambda-loop",
+ "lang": "python",
+ "accent": "#38bdf8",
+ "caption": "Python intervyu: sikldagi 3 ta lambda — [0, 1, 2] mi yoki [2, 2, 2]? 🤔\nSeriya: Python o'rta daraja #9 — lambda/key darsimizning chuqur davomi\n📝 Qisqa konspekt:\n✅ Javob: [2, 2, 2] — closure QIYMATNI emas, O'ZGARUVCHINI eslab qoladi (late binding)\n✅ i qiymati lambda CHAQIRILGANDA olinadi — sikl tugaganda i = 2\n✅ Yechim 1: lambda i=i: i — default qiymat yaratilgan paytda saqlanadi\n✅ Yechim 2: functools.partial(kop, n) — argumentni darhol bog'laydi\n⚠️ Amaliyotda: tugma/handler'larni siklda yaratsangiz, hammasi oxirgi qiymatni ishlatadi\n📌 Saqlab qo'ying — intervyuda juda ko'p so'raladi.\n💬 Siz nima deb o'yladingiz: [0, 1, 2] yoki [2, 2, 2]? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #pythonintervyu #pythonquiz #closure #lambda #dasturlash #dasturchi #backend #programming #pythondeveloper #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.5,
+   "title": "Python intervyu",
+   "lines": [
+    "3 ta lambda siklda",
+    "[0, 1, 2] chiqadimi?"
+   ],
+   "sub": "Ko'pchilik shu yerda xato qiladi",
+   "footer": "3 soniya o'ylab ko'ring"
+  },
+  {
+   "type": "code",
+   "dur": 4.5,
+   "title": "Savol",
+   "desc": [
+    "Har bir lambda o'z i sini qaytaradimi?"
+   ],
+   "code": [
+    "fs = []",
+    "for i in range(3):",
+    "    fs.append(lambda: i)",
+    "",
+    "print([f() for f in fs])"
+   ],
+   "out_title": "Nima chiqadi?",
+   "out": [
+    "~[0, 1, 2]  yoki  [2, 2, 2] ?"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Javob: [2, 2, 2]!",
+   "desc": [
+    "Uchala lambda BITTA i ni ko'radi.",
+    "Chaqirilganda sikl tugagan: i = 2"
+   ],
+   "code": [
+    "fs = []",
+    "for i in range(3):",
+    "    fs.append(lambda: i)",
+    "",
+    "print([f() for f in fs])"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~[2, 2, 2]"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7,
+   "title": "Nega? Late binding",
+   "desc": [
+    "Closure qiymatni emas, O'ZGARUVCHINI",
+    "saqlaydi. Qiymat chaqirilganda olinadi"
+   ],
+   "code": [
+    "def tashqi():",
+    "    x = 1",
+    "    g = lambda: x",
+    "    x = 2",
+    "    return g",
+    "",
+    "g = tashqi()",
+    "print(g())",
+    "print(g.__closure__[0].cell_contents)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~2",
+    "~2"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.5,
+   "title": "2 ta yechim",
+   "desc": [
+    "i=i — default qiymat yaratilganda saqlanadi",
+    "partial — argumentni darhol bog'laydi"
+   ],
+   "code": [
+    "fs = [lambda i=i: i for i in range(3)]",
+    "print([f() for f in fs])",
+    "",
+    "from functools import partial",
+    "def kop(n, x):",
+    "    return n * x",
+    "gs = [partial(kop, n) for n in range(3)]",
+    "print([g(10) for g in gs])"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~[0, 1, 2]",
+    "~[0, 10, 20]"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 6,
+   "title": "Amaliy xato: handler'lar",
+   "bad_label": "Chiqadi: och",
+   "bad": [
+    "h = {}",
+    "for nom in [\"saqla\", \"och\"]:",
+    "  h[nom] = lambda: print(nom)",
+    "h[\"saqla\"]()"
+   ],
+   "good_label": "Chiqadi: saqla",
+   "good": [
+    "h = {}",
+    "for nom in [\"saqla\", \"och\"]:",
+    "  h[nom] = lambda nom=nom: print(nom)",
+    "h[\"saqla\"]()"
+   ],
+   "note": "GUI tugmalar, callback, task'lar — hammasida shu tuzoq"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "Closure o'zgaruvchini saqlaydi, qiymatni emas",
+    "Qiymat CHAQIRILGANDA olinadi (late binding)",
+    "Siklda lambda → i=i yoki partial"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 2.5,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #9",
+    "Closure = o'zgaruvchiga havola"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohga yozing:",
+    "[0, 1, 2] deb o'yladingizmi?"
+   ]
+  }
+ ]
+}

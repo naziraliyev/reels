@@ -1,0 +1,13 @@
+Python intervyu: sikldagi 3 ta lambda — [0, 1, 2] mi yoki [2, 2, 2]? 🤔
+Seriya: Python o'rta daraja #9 — lambda/key darsimizning chuqur davomi
+📝 Qisqa konspekt:
+✅ Javob: [2, 2, 2] — closure QIYMATNI emas, O'ZGARUVCHINI eslab qoladi (late binding)
+✅ i qiymati lambda CHAQIRILGANDA olinadi — sikl tugaganda i = 2
+✅ Yechim 1: lambda i=i: i — default qiymat yaratilgan paytda saqlanadi
+✅ Yechim 2: functools.partial(kop, n) — argumentni darhol bog'laydi
+⚠️ Amaliyotda: tugma/handler'larni siklda yaratsangiz, hammasi oxirgi qiymatni ishlatadi
+📌 Saqlab qo'ying — intervyuda juda ko'p so'raladi.
+💬 Siz nima deb o'yladingiz: [0, 1, 2] yoki [2, 2, 2]? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#python #pythonintervyu #pythonquiz #closure #lambda #dasturlash #dasturchi #backend #programming #pythondeveloper #uzbekistan
