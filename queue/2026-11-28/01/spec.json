@@ -1,0 +1,136 @@
+{
+ "topic": "python-sort-tuple-key-stable-multi-key",
+ "lang": "python",
+ "accent": "#a78bfa",
+ "caption": "Ball kamayib, ism alifbo bo'yicha — 1 qatorda saralay olasizmi? 🤔\nSeriya: Python o'rta daraja #8 — 2 ta kalit bo'yicha saralash\n✅ key tuple qaytarsa, Python uni chapdan solishtiradi: 1-element teng bo'lsa — 2-siga o'tadi\n✅ sorted(t, key=lambda x: (-x[1], x[0])) → ball kamayish, ism o'sish\n⚠️ Satrga minus ishlamaydi: -\"11-28\" → TypeError\n✅ Yechim: sort barqaror (stable) — teng elementlar tartibi saqlanadi. Avval IKKINCHI kalit, oxirida ASOSIY kalit (reverse=True ham barqaror)\n📌 Saqlab qo'ying — reyting, buyurtmalar, jadval saralashda kerak bo'ladi.\n💬 Savol: 3 ta kalit bo'lsa, nechta sort kerak va qaysi tartibda? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #pythonintervyu #sorted #lambda #algoritm #dasturlash #dasturchi #backend #programming #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.3,
+   "title": "Python o'rta daraja",
+   "lines": [
+    "Ball kamayib,",
+    "ism alifboda —",
+    "1 qatorda?"
+   ],
+   "sub": "2 ta kalit bo'yicha saralash",
+   "footer": "Intervyu savoli · 30 soniyada"
+  },
+  {
+   "type": "text",
+   "dur": 4.2,
+   "title": "Tushuncha",
+   "lines": [
+    "key tuple qaytarsa, Python uni chapdan solishtiradi.",
+    "1-element teng bo'lsa — 2-siga o'tadi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.8,
+   "title": "Tuple key",
+   "desc": [
+    "-x[1]: minus raqam tartibini teskari qiladi"
+   ],
+   "code": [
+    "t = [(\"Vali\", 90), (\"Ali\", 85),",
+    "     (\"Sardor\", 90), (\"Bobur\", 85)]",
+    "",
+    "# ball kamayish, ism alifbo",
+    "r = sorted(t, key=lambda x: (-x[1], x[0]))",
+    "print(r)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~[('Sardor', 90), ('Vali', 90),",
+    "~ ('Ali', 85), ('Bobur', 85)]"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.5,
+   "title": "Muammo: satrni teskari?",
+   "desc": [
+    "Sana yangi → eski, bir kunda mijoz alifbo"
+   ],
+   "code": [
+    "b = [(\"Vali\", \"11-27\"), (\"Ali\", \"11-28\"),",
+    "     (\"Bobur\", \"11-27\"), (\"Sardor\", \"11-28\")]",
+    "",
+    "sorted(b, key=lambda x: (-x[1], x[0]))"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "!TypeError: bad operand type",
+    "!for unary -: 'str'"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.5,
+   "title": "Yechim: barqaror sort",
+   "desc": [
+    "Stable: teng elementlarning eski tartibi",
+    "saqlanadi → avval 2-kalit, oxirida asosiy"
+   ],
+   "code": [
+    "b.sort(key=lambda x: x[0])   # 1) mijoz",
+    "b.sort(key=lambda x: x[1],   # 2) sana",
+    "       reverse=True)",
+    "print(b)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~[('Ali', '11-28'), ('Sardor', '11-28'),",
+    "~ ('Bobur', '11-27'), ('Vali', '11-27')]"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 5.5,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "Tartib teskari — sana buziladi",
+   "bad": [
+    "b.sort(key=lambda x: x[1],",
+    "       reverse=True)",
+    "b.sort(key=lambda x: x[0])",
+    "# Ali 11-28, Bobur 11-27,",
+    "# Sardor 11-28 ..."
+   ],
+   "good_label": "Oxirgi sort — asosiy kalit",
+   "good": [
+    "b.sort(key=lambda x: x[0])",
+    "b.sort(key=lambda x: x[1],",
+    "       reverse=True)",
+    "# 11-28: Ali, Sardor",
+    "# 11-27: Bobur, Vali"
+   ],
+   "note": "Nega? Oxirgi sort butun ro'yxatni qayta tartiblaydi"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.5,
+   "title": "Esda tuting",
+   "items": [
+    "key=(a, b) → avval a, teng bo'lsa b",
+    "Raqamni teskari qilish: -x",
+    "Satr teskari: 2 ta sort, oxirida asosiy kalit"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #8",
+    "Python sort — barqaror"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohda: 3 ta kalit bo'lsa",
+    "nechta sort kerak?"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+Ball kamayib, ism alifbo bo'yicha — 1 qatorda saralay olasizmi? 🤔
+Seriya: Python o'rta daraja #8 — 2 ta kalit bo'yicha saralash
+✅ key tuple qaytarsa, Python uni chapdan solishtiradi: 1-element teng bo'lsa — 2-siga o'tadi
+✅ sorted(t, key=lambda x: (-x[1], x[0])) → ball kamayish, ism o'sish
+⚠️ Satrga minus ishlamaydi: -"11-28" → TypeError
+✅ Yechim: sort barqaror (stable) — teng elementlar tartibi saqlanadi. Avval IKKINCHI kalit, oxirida ASOSIY kalit (reverse=True ham barqaror)
+📌 Saqlab qo'ying — reyting, buyurtmalar, jadval saralashda kerak bo'ladi.
+💬 Savol: 3 ta kalit bo'lsa, nechta sort kerak va qaysi tartibda? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#python #pythonintervyu #sorted #lambda #algoritm #dasturlash #dasturchi #backend #programming #uzbekistan
