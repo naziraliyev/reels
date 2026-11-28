@@ -1,0 +1,11 @@
+fib(30) — 2 692 537 chaqiruv. Bitta qator qo'shsak — atigi 31 ta! ⚡
+Seriya: Python o'rta daraja #10 — functools.lru_cache
+✅ @lru_cache natijani argumentlar bo'yicha lug'atda saqlaydi: bir xil argument → tayyor javob, qayta hisob yo'q
+✅ maxsize=N to'lsa — eng uzoq ishlatilmagan natija o'chiriladi (LRU = Least Recently Used). fib.cache_info() → hits / misses
+⚠️ Argumentlar hashable bo'lishi shart: list → TypeError: unhashable type: 'list' → tuple bering
+⚠️ Natija list bo'lsa, uni o'zgartirish keshni ham buzadi → tuple qaytaring
+📌 Saqlab qo'ying — rekursiya, og'ir hisob, takroriy so'rovlarda kerak bo'ladi.
+💬 Savol: @lru_cache'ni vaqt bilan o'zgaradigan ma'lumotga (kurs, ob-havo) qo'yish nega xavfli? Izohga yozing!
+👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!
+
+#python #pythonintervyu #functools #lrucache #rekursiya #optimizatsiya #dasturlash #dasturchi #backend #programming #uzbekistan

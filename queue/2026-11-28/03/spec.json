@@ -1,0 +1,149 @@
+{
+ "topic": "python-lru-cache-memoization",
+ "lang": "python",
+ "accent": "#4ade80",
+ "caption": "fib(30) — 2 692 537 chaqiruv. Bitta qator qo'shsak — atigi 31 ta! ⚡\nSeriya: Python o'rta daraja #10 — functools.lru_cache\n✅ @lru_cache natijani argumentlar bo'yicha lug'atda saqlaydi: bir xil argument → tayyor javob, qayta hisob yo'q\n✅ maxsize=N to'lsa — eng uzoq ishlatilmagan natija o'chiriladi (LRU = Least Recently Used). fib.cache_info() → hits / misses\n⚠️ Argumentlar hashable bo'lishi shart: list → TypeError: unhashable type: 'list' → tuple bering\n⚠️ Natija list bo'lsa, uni o'zgartirish keshni ham buzadi → tuple qaytaring\n📌 Saqlab qo'ying — rekursiya, og'ir hisob, takroriy so'rovlarda kerak bo'ladi.\n💬 Savol: @lru_cache'ni vaqt bilan o'zgaradigan ma'lumotga (kurs, ob-havo) qo'yish nega xavfli? Izohga yozing!\n👉 Har kuni Dasturlash, SQL va Flutter bo'yicha darslar — obuna bo'ling!\n\n#python #pythonintervyu #functools #lrucache #rekursiya #optimizatsiya #dasturlash #dasturchi #backend #programming #uzbekistan",
+ "scenes": [
+  {
+   "type": "hook",
+   "dur": 3.4,
+   "title": "Python o'rta daraja",
+   "lines": [
+    "fib(30) — 2.7 mln",
+    "chaqiruv. 1 qator",
+    "bilan — 31 ta?"
+   ],
+   "sub": "functools.lru_cache — keshlash",
+   "footer": "Real ish va intervyu · 40 soniyada"
+  },
+  {
+   "type": "text",
+   "dur": 4.4,
+   "title": "Tushuncha",
+   "lines": [
+    "@lru_cache natijani argumentlar bo'yicha lug'atda saqlaydi.",
+    "Bir xil argument kelsa — qayta hisoblamaydi, tayyorini beradi."
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 6.0,
+   "title": "Muammo: bir xil hisob qayta-qayta",
+   "desc": [
+    "fib(28) ni fib(30) ham, fib(29) ham hisoblaydi"
+   ],
+   "code": [
+    "n = 0",
+    "def fib(k):",
+    "    global n",
+    "    n += 1  # chaqiruvlar soni",
+    "    if k < 2:",
+    "        return k",
+    "    return fib(k - 1) + fib(k - 2)",
+    "",
+    "print(fib(30), n)"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~832040 2692537"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 7.0,
+   "title": "Yechim: @lru_cache",
+   "desc": [
+    "Har bir k faqat 1 marta hisoblanadi"
+   ],
+   "code": [
+    "from functools import lru_cache",
+    "@lru_cache(maxsize=None)  # cheksiz",
+    "def fib(k):",
+    "    global n",
+    "    n += 1",
+    "    if k < 2:",
+    "        return k",
+    "    return fib(k - 1) + fib(k - 2)",
+    "",
+    "n = 0",
+    "print(fib(30), n)",
+    "print(fib.cache_info())"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "~832040 31",
+    "~CacheInfo(hits=28, misses=31,",
+    "~  maxsize=None, currsize=31)"
+   ]
+  },
+  {
+   "type": "code",
+   "dur": 5.8,
+   "title": "Ichki mexanizm: kalit = argumentlar",
+   "desc": [
+    "Kesh — dict, shuning uchun argument",
+    "hashable bo'lishi shart"
+   ],
+   "code": [
+    "@lru_cache",
+    "def jami(s):",
+    "    return sum(s)",
+    "",
+    "jami([1, 2])   # list",
+    "jami((1, 2))   # tuple"
+   ],
+   "out_title": "Natija:",
+   "out": [
+    "!TypeError: unhashable type: 'list'",
+    "~3"
+   ]
+  },
+  {
+   "type": "compare",
+   "dur": 6.0,
+   "title": "Ko'p uchraydigan xato",
+   "bad_label": "list qaytaradi — kesh buziladi",
+   "bad": [
+    "@lru_cache",
+    "def royxat(n):",
+    "    return list(range(n))",
+    "royxat(3).append(99)",
+    "royxat(3)  # [0,1,2,99]"
+   ],
+   "good_label": "tuple qaytaradi — xavfsiz",
+   "good": [
+    "@lru_cache",
+    "def royxat(n):",
+    "    return tuple(range(n))",
+    "# o'zgartirib bo'lmaydi",
+    "royxat(3)  # (0, 1, 2)"
+   ],
+   "note": "Nega? Kesh har safar O'SHA obyektni qaytaradi"
+  },
+  {
+   "type": "bullets",
+   "dur": 4.6,
+   "title": "Esda tuting",
+   "items": [
+    "@lru_cache — bir xil argument, tayyor natija",
+    "Argument hashable, natija o'zgarmas bo'lsin",
+    "maxsize=N to'lsa — eng uzoq ishlatilmagani o'chadi (LRU)"
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 3,
+   "title": "Saqlab qo'ying",
+   "lines": [
+    "Seriya: Python o'rta daraja #10",
+    "Keshlash — 1 qatorda"
+   ],
+   "box_title": "Obuna bo'ling",
+   "box_text": "Dasturlash  ·  SQL  ·  Flutter",
+   "footer": [
+    "Izohda: kurs narxini keshlash",
+    "nega xavfli?"
+   ]
+  }
+ ]
+}
